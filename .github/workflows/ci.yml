@@ -1,0 +1,22 @@
+name: CI
+on:
+  pull_request:
+  push:
+    branches:
+      - "main"
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 7
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 19
+          cache: "pnpm"
+      - run: pnpm install
+      - run: npx prettier check .
