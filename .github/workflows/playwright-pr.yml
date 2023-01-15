@@ -41,3 +41,5 @@ jobs:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           PLAYWRIGHT_TEST_BASE_URL: ${{ needs.test_setup.outputs.preview_url }}
           OTP_SECRET: ${{ secrets.OTP_SECRET }}
+          OTP_USER: ${{ secrets.OTP_USER }}
+          OTP_SERVICE: ${{ secrets.OTP_SERVICE }}
