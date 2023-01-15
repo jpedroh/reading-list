@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  gap: 4rem;
+  padding: 4rem;
+  min-height: 100vh;
+  max-width: 90vw;
+  margin: 0 auto;
+}
+
+.container aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.container > aside > ul {
+  display: flex;
+  flex-direction: column;
+}

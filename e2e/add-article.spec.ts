@@ -1,0 +1,29 @@
+import { test, expect } from "@playwright/test";
+import prisma from "../modules/shared/prisma";
+import { authenticator } from "otplib";
+import { env } from "../modules/shared/env";
+
+const BASE_URL =
+  process.env.PLAYWRIGHT_TEST_BASE_URL ?? "http://localhost:3000";
+
+test.describe("AddArticle", () => {
+  test.beforeAll(async () => {
+    await prisma.article.deleteMany();
+  });
+
+  test("adds an article", async ({ page }) => {
+    await page.goto(`${BASE_URL}/add`);
+
+    await page.getByLabel(/url/i).type("https://example.com");
+    await page.getByLabel(/otp/i).type(authenticator.generate(env.OTP_SECRET));
+    await page.getByLabel(/tags/i).type("react");
+
+    const navigationPromise = page.waitForNavigation({ url: BASE_URL });
+    await page.getByRole("button", { name: /add/i }).click();
+    await navigationPromise;
+
+    expect(
+      await page.getByRole("link", { name: /example domain/i }).count()
+    ).toBe(1);
+  });
+});

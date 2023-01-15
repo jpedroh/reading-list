@@ -1,0 +1,27 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Article {
+  id  String @default(uuid()) @id
+  title String
+  url String
+  addedAt DateTime
+  tags ArticleTag[]
+}
+
+model ArticleTag {
+  article Article @relation(fields: [articleId], references: [id], onDelete: Cascade)
+  articleId String
+  tag String
+
+  @@id([articleId, tag])
+}
