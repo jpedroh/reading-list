@@ -24,4 +24,18 @@ test.describe("AddArticle", () => {
       await page.getByRole("link", { name: /example domain/i }).count()
     ).toBe(1);
   });
+
+  test("Ctrl + Space opens the modal", async ({ page }) => {
+    await page.goto(BASE_URL);
+
+    expect(
+      await page.getByRole("dialog", { name: "Add new article" }).count()
+    ).toBe(0);
+
+    await page.press("body", "Control+ ");
+
+    expect(
+      await page.getByRole("dialog", { name: "Add new article" }).count()
+    ).toBe(1);
+  });
 });
