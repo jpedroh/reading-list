@@ -75,7 +75,7 @@ test.describe("ArticleList", () => {
     expect(page.getByRole("link", { name: /angular/i })).toBeDefined();
     expect(page.getByRole("link", { name: /react/i })).toBeDefined();
 
-    await page.getByRole("textbox", { name: /type to search/i }).type("react");
+    await page.getByRole("textbox", { name: /search/i }).type("react");
 
     expect(await page.getByRole("link", { name: /react/i }).count()).toBe(1);
     expect(await page.getByRole("link", { name: /angular/i }).count()).toBe(0);
