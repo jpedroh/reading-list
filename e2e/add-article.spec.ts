@@ -1,5 +1,4 @@
-import { test, expect } from "@playwright/test";
-import prisma from "../modules/shared/prisma";
+import { expect, test } from "@playwright/test";
 import { authenticator } from "otplib";
 import { env } from "../modules/shared/env";
 
@@ -7,10 +6,6 @@ const BASE_URL =
   process.env.PLAYWRIGHT_TEST_BASE_URL ?? "http://localhost:3000";
 
 test.describe("AddArticle", () => {
-  test.beforeAll(async () => {
-    await prisma.article.deleteMany();
-  });
-
   test("adds an article", async ({ page }) => {
     await page.goto(`${BASE_URL}`);
 

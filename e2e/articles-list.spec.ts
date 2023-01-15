@@ -6,8 +6,6 @@ const BASE_URL =
 
 test.describe("ArticleList", () => {
   test.beforeAll(async () => {
-    await prisma.article.deleteMany();
-
     await prisma.article.create({
       data: {
         title: "React Article",
