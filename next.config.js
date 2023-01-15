@@ -7,9 +7,11 @@ const nextConfig = {
     config,
     { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }
   ) => {
-    config.plugins.push(new webpack.IgnorePlugin({ resourceRegExp: /^pg-native$/ }))
-    return config
+    config.plugins.push(
+      new webpack.IgnorePlugin({ resourceRegExp: /^pg-native$/ })
+    );
+    return config;
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
