@@ -1,23 +1,23 @@
 .header {
-    @apply flex items-center justify-between w-full;
+  @apply flex items-center justify-between w-full;
 }
 
 .content {
-    @apply flex gap-8 w-full
+  @apply flex gap-8 w-full;
 }
 
 .content aside {
-    @apply flex flex-col gap-8 sticky bottom-6 self-end;
+  @apply flex flex-col gap-8 sticky bottom-6 self-end;
 }
 
 .content aside input[type="text"] {
-    @apply w-full
+  @apply w-full;
 }
 
 .content h3 {
-    @apply uppercase text-sm text-zinc-400 font-bold mb-2
+  @apply uppercase text-sm text-zinc-400 font-bold mb-2;
 }
 
 .content main {
-    @apply flex-grow flex flex-col gap-4
+  @apply flex-grow flex flex-col gap-4;
 }

@@ -1,10 +1,10 @@
-'use client'
+"use client";
 
 import { InputHTMLAttributes } from "react";
-import styles from './index.module.css';
+import styles from "./index.module.css";
 
-type Props = Omit<InputHTMLAttributes<HTMLInputElement>, "className">
+type Props = Omit<InputHTMLAttributes<HTMLInputElement>, "className">;
 
 export function Input(props: Props) {
-    return <input className={styles.container} {...props} />
+  return <input className={styles.container} {...props} />;
 }
