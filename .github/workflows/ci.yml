@@ -19,4 +19,4 @@ jobs:
           node-version: 19
           cache: "pnpm"
       - run: pnpm install
-      - run: npx prettier check .
+      - run: npx prettier --check .
