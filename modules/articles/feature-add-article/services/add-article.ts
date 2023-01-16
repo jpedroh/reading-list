@@ -18,8 +18,8 @@ export async function addArticle(data: AddArticleDto) {
 }
 
 function isOtpValid(token: string) {
-  if (env.VERCEL_ENV !== "production") return token === "000000";
-  return authenticator.verify({ token, secret: env.OTP_SECRET });
+  const isDevBypass = env.VERCEL_ENV !== "production" && token === "000000";
+  return authenticator.verify({ token, secret: env.OTP_SECRET }) || isDevBypass;
 }
 
 async function getTitleFromUrl(url: string) {
