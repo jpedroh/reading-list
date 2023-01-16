@@ -1,4 +1,5 @@
 import { Article } from "../../../domain";
+import styles from "./index.module.css";
 
 export function ArticleRow({ article }: { article: Article }) {
   return (
@@ -6,19 +7,14 @@ export function ArticleRow({ article }: { article: Article }) {
       href={article.url}
       target="_blank"
       rel="noreferrer"
-      className="border border-zinc-700 bg-zinc-800 bg-opacity-30 hover:bg-opacity-100 transition-all duration-300 rounded-xl p-4 flex flex-col gap-4"
+      className={styles.container}
     >
-      <h1 className="text-xl font-bold">{article.title}</h1>
-      <div className="flex items-center justify-between text-zinc-400 overflow-auto">
-        <span className="hidden md:block">{article.addedAt}</span>
-        <ul className="flex gap-2">
+      <h1>{article.title}</h1>
+      <div>
+        <span>{article.addedAt}</span>
+        <ul>
           {article.tags.map((tag) => (
-            <li
-              className={`bg-blue-800 bg-opacity-50 text-white py-1 text-sm px-3 rounded-xl`}
-              key={tag}
-            >
-              {tag}
-            </li>
+            <li key={tag}>{tag}</li>
           ))}
         </ul>
       </div>
