@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <header className={styles.header}>
-        <h1 className="text-4xl font-bold">My Reading List</h1>
+        <h1>My Reading List</h1>
         <AddArticleEntrypoint />
       </header>
       <section className={styles.content}>
