@@ -21,12 +21,12 @@ export function TagsFilter({ availableTags }: Props) {
   }
 
   return (
-    <ul className="flex flex-col gap-2">
+    <ul className="flex md:flex-col gap-2 overflow-auto">
       {availableTags.map((tag) => {
         return (
           <label
             key={tag.name}
-            className={`border border-zinc-700 bg-zinc-800 ${
+            className={`border border-zinc-700 bg-zinc-800 flex-shrink-0 ${
               value.includes(tag.name) ? "" : "bg-opacity-30"
             } hover:bg-opacity-100 transition-all duration-300 rounded-xl flex gap-2 cursor-pointer p-3`}
           >

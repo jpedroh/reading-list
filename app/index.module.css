@@ -1,17 +1,25 @@
 .header {
-  @apply flex items-center justify-between w-full;
+  @apply flex items-center justify-between gap-4;
+}
+
+.header h1 {
+  @apply text-2xl md:text-4xl font-bold;
 }
 
 .content {
-  @apply flex gap-8 w-full;
+  @apply flex flex-col md:flex-row gap-8 w-full;
 }
 
 .content aside {
-  @apply flex flex-col gap-8 sticky bottom-6 self-end;
+  @apply flex flex-col gap-8 sticky bottom-6 self-end w-full md:w-[unset];
 }
 
 .content aside input[type="text"] {
   @apply w-full;
+}
+
+.content aside > section:nth-of-type(3) {
+  @apply hidden md:block;
 }
 
 .content h3 {
