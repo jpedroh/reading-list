@@ -28,5 +28,5 @@ export default async function handler(
 
   if (env.VERCEL) await res.revalidate("/");
 
-  return res.redirect("/");
+  return res.redirect(303, "/");
 }
