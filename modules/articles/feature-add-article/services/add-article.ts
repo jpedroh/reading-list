@@ -19,9 +19,7 @@ export async function addArticle(data: AddArticleDto) {
 
 function isOtpValid(token: string) {
   if (env.VERCEL_ENV !== "production") return token === "000000";
-  return authenticator
-    .create({ window: 2 })
-    .verify({ token, secret: env.OTP_SECRET });
+  return authenticator.verify({ token, secret: env.OTP_SECRET });
 }
 
 async function getTitleFromUrl(url: string) {
