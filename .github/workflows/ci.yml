@@ -27,4 +27,5 @@ jobs:
           OTP_SECRET: ${{ secrets.otp_secret }}
           OTP_USER: ${{ secrets.otp_user }}
           OTP_SERVICE: ${{ secrets.otp_service }}
+          DATABASE_URL: ${{ secrets.database_url }}
       - run: npx nx affected --target=lint --parallel=3
