@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "nx exec -- next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "nx exec -- next lint",
     "test:e2e": "playwright test"
   },
   "dependencies": {
@@ -41,6 +41,17 @@
     "postcss": "^8.4.21",
     "prettier": "^2.8.3",
     "prisma": "^4.8.1",
-    "tailwindcss": "^3.2.4"
+    "tailwindcss": "^3.2.4",
+    "nx": "15.8.1",
+    "@nrwl/nx-cloud": "latest"
+  },
+  "nx": {
+    "targets": {
+      "build": {
+        "outputs": [
+          "{projectRoot}/.next"
+        ]
+      }
+    }
   }
 }
