@@ -1,11 +1,12 @@
 name: CI
 on:
-  pull_request:
   push:
     branches:
-      - "main"
+      - main
+  pull_request:
+
 jobs:
-  prettier:
+  main:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -18,20 +19,12 @@ jobs:
         with:
           node-version: 19
           cache: "pnpm"
+      - uses: nrwl/nx-set-shas@v3
       - run: pnpm install
-      - run: npx prettier --check .
-  eslint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - uses: pnpm/action-setup@v2.2.4
-        with:
-          version: 7
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 19
-          cache: "pnpm"
-      - run: pnpm install
-      - run: pnpm lint
+      - run: npx nx format:check
+      - run: npx nx affected --target=build --parallel=3
+        env:
+          OTP_SECRET: ${{ secrets.otp_secret }}
+          OTP_USER: ${{ secrets.otp_user }}
+          OTP_SERVICE: ${{ secrets.otp_service }}
+      - run: npx nx affected --target=lint --parallel=3
