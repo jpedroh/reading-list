@@ -3,6 +3,7 @@
 import { useAtom } from "jotai";
 import { ChangeEvent } from "react";
 import { tagsAtom } from "../../hooks/use-search-tags";
+import styles from "./index.module.css";
 
 type Props = {
   availableTags: readonly { name: string; total: number }[];
@@ -21,15 +22,10 @@ export function TagsFilter({ availableTags }: Props) {
   }
 
   return (
-    <ul className="flex flex-col gap-2">
+    <div className={styles.container}>
       {availableTags.map((tag) => {
         return (
-          <label
-            key={tag.name}
-            className={`border border-zinc-700 bg-zinc-800 ${
-              value.includes(tag.name) ? "" : "bg-opacity-30"
-            } hover:bg-opacity-100 transition-all duration-300 rounded-xl flex gap-2 cursor-pointer p-3`}
-          >
+          <label key={tag.name} data-selected={value.includes(tag.name)}>
             <input
               type="checkbox"
               checked={value.includes(tag.name)}
@@ -42,6 +38,6 @@ export function TagsFilter({ availableTags }: Props) {
           </label>
         );
       })}
-    </ul>
+    </div>
   );
 }
