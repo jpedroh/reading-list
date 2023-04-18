@@ -5,7 +5,7 @@ import { FormEvent, ReactNode, useState, useTransition } from 'react';
 
 import { Input } from "../../../../shared/components/input";
 import styles from "./index.module.css";
-import { AddArticleDto } from '../../../domain';
+import { AddArticleDto, AddArticleSchema } from '../../../domain';
 
 async function submitArticle(payload: AddArticleDto) {
   const response = await fetch(`api/article`, {
@@ -17,7 +17,7 @@ async function submitArticle(payload: AddArticleDto) {
   }
 }
 
-export function AddArticleForm({ children, onCreated }: { children: ReactNode, onCreated: () => {} }) {
+export function AddArticleForm({ children, onCreated }: { children: ReactNode, onCreated: () => void }) {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const [isFetching, setIsFetching] = useState(false);
@@ -29,19 +29,21 @@ export function AddArticleForm({ children, onCreated }: { children: ReactNode, o
     try {
       evt.preventDefault();
 
-      console.log('testing')
+      const payload = AddArticleSchema.safeParse(Object.fromEntries(new FormData(evt.target as HTMLFormElement)))
+      if (!payload.success) {
+        throw new Error("Validation error")
+      }
+
       setErrorMessage('');
       setIsFetching(true);
-      await submitArticle(Object.fromEntries(new FormData(evt.target as HTMLFormElement)))
+      await submitArticle(payload.data)
       setIsFetching(false);
       onCreated();
-      console.log('testing')
 
       startTransition(() => {
         router.refresh();
       });
     } catch (error) {
-      console.log(error)
       setErrorMessage(error.message)
       setIsFetching(false);
     }
