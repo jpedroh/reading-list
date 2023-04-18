@@ -28,9 +28,7 @@ export function AddArticleDialog({ children }: { children: ReactNode }) {
       </button>
 
       <Modal isOpen={isOpen} close={closeModal} title={"Add new article"}>
-        <AddArticleForm onCreated={closeModal}>
-          {children}
-        </AddArticleForm>
+        <AddArticleForm onCreated={closeModal}>{children}</AddArticleForm>
       </Modal>
     </>
   );
