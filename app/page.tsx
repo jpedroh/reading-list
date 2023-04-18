@@ -5,6 +5,8 @@ import { SearchByTermEntrypoint } from "../modules/articles/feature-search-by-te
 import { ShortcutsGuideEntrypoint } from "../modules/articles/feature-shortcuts-guide";
 import styles from "./index.module.css";
 
+export const revalidate = 0;
+
 export default function Home() {
   return (
     <>
