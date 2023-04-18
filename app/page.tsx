@@ -10,6 +10,7 @@ export default function Home() {
     <>
       <header className={styles.header}>
         <h1>My Reading List</h1>
+        {/* @ts-expect-error Server Component */}
         <AddArticleEntrypoint />
       </header>
       <section className={styles.content}>
