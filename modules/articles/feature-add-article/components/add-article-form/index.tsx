@@ -44,7 +44,7 @@ export function AddArticleForm({ children, onCreated }: { children: ReactNode, o
         router.refresh();
       });
     } catch (error) {
-      setErrorMessage(error.message)
+      setErrorMessage(error instanceof Error ? error.message : "Internal server error")
       setIsFetching(false);
     }
   }
