@@ -7,6 +7,10 @@ import styles from "./index.module.css";
 
 export const revalidate = 0;
 
+export const metadata = {
+  title: 'Reading List',
+};
+
 export default function Home() {
   return (
     <>
