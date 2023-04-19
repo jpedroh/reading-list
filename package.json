@@ -12,11 +12,11 @@
   "dependencies": {
     "@headlessui/react": "^1.7.7",
     "@next/font": "13.1.2",
-    "@prisma/client": "^4.8.1",
     "@types/node": "18.11.18",
     "@types/react": "18.0.26",
     "@types/react-dom": "18.0.10",
     "dotenv": "^16.0.3",
+    "drizzle-orm": "^0.24.2",
     "eslint": "8.31.0",
     "eslint-config-next": "13.3.0",
     "jotai": "^1.13.0",
@@ -39,10 +39,10 @@
     "@types/pg": "^8.6.6",
     "@types/qrcode": "^1.5.0",
     "autoprefixer": "^10.4.13",
+    "drizzle-kit": "^0.17.5",
     "nx": "15.8.1",
     "postcss": "^8.4.21",
     "prettier": "^2.8.3",
-    "prisma": "^4.8.1",
     "tailwindcss": "^3.2.4"
   },
   "nx": {

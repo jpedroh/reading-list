@@ -1,6 +1,11 @@
-import prisma from "../../../shared/prisma";
+import { articleTags, db } from "../../../shared/database";
 
 export async function fetchTags() {
-  const tags = await prisma.articleTag.findMany({ distinct: "tag" });
-  return tags.map(({ tag }) => ({ value: tag, label: tag }));
+  return db
+    .select({
+      value: articleTags.tag,
+      label: articleTags.tag,
+    })
+    .from(articleTags)
+    .groupBy(({ value }) => value);
 }

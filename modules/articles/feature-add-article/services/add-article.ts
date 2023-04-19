@@ -1,8 +1,13 @@
+import { randomUUID } from "crypto";
 import parse from "node-html-parser";
 import { authenticator } from "otplib";
+import {
+  articles,
+  articleTags,
+  db,
+  NewArticle,
+} from "../../../shared/database";
 import { env } from "../../../shared/env";
-import prisma from "../../../shared/prisma";
-import { Article } from "../../domain";
 import { AddArticleDto } from "../../domain";
 
 export async function addArticle(data: AddArticleDto) {
@@ -10,11 +15,14 @@ export async function addArticle(data: AddArticleDto) {
     throw new Error("Invalid OTP provided");
   }
 
-  return saveArticle({
-    title: await getTitleFromUrl(data.url),
-    url: data.url,
-    tags: data.tags,
-  });
+  return saveArticle(
+    {
+      id: randomUUID(),
+      title: await getTitleFromUrl(data.url),
+      url: data.url,
+    },
+    data.tags
+  );
 }
 
 function isOtpValid(token: string) {
@@ -33,20 +41,18 @@ async function getTitleFromUrl(url: string) {
   return titleElement.innerText;
 }
 
-function saveArticle(article: Omit<Article, "id" | "addedAt">) {
-  return prisma.article
-    .create({
-      data: {
-        ...article,
-        addedAt: new Date(),
-        tags: {
-          createMany: {
-            data: article.tags.map((tag) => ({ tag })),
-          },
-        },
-      },
-    })
-    .catch((cause) => {
-      throw new Error("Internal server error", { cause });
+async function saveArticle(article: NewArticle, tags: string[]) {
+  try {
+    return await db.transaction(async (tx) => {
+      await tx.insert(articles).values({ ...article, addedAt: new Date() });
+      await tx.insert(articleTags).values(
+        tags.map((tag) => {
+          return { articleId: article.id, tag };
+        })
+      );
     });
+  } catch (cause) {
+    console.error(cause);
+    throw new Error("Internal server error", { cause });
+  }
 }
