@@ -1,11 +1,18 @@
+import { CreatableSelect } from "../../shared/components/creatable-select";
 import { AddArticleDialog } from "./components/add-article-dialog";
-import { AddArticleForm } from "./components/add-article-form";
+import { fetchTags } from "./services/fetch-tags";
 
-export function AddArticleEntrypoint() {
+export async function AddArticleEntrypoint() {
+  const availableTags = await fetchTags();
+
   return (
     <AddArticleDialog>
-      {/* @ts-expect-error Server Component */}
-      <AddArticleForm />
+      <CreatableSelect
+        name="tags"
+        required
+        isMulti={true}
+        options={availableTags}
+      />
     </AddArticleDialog>
   );
 }

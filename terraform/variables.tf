@@ -13,16 +13,6 @@ variable "otp_secret_dev_preview" {
   sensitive = true
 }
 
-variable "database_url_production" {
-  type      = string
-  sensitive = true
-}
-
-variable "database_url_dev_preview" {
-  type      = string
-  sensitive = true
-}
-
 variable "otp_user" {
   type      = string
   sensitive = true
@@ -34,6 +24,31 @@ variable "otp_service" {
 }
 
 variable "github_token" {
+  type      = string
+  sensitive = true
+}
+
+variable "database_host" {
+  type      = string
+  sensitive = true
+}
+
+variable "database_username_production" {
+  type      = string
+  sensitive = true
+}
+
+variable "database_password_production" {
+  type      = string
+  sensitive = true
+}
+
+variable "database_username_preview" {
+  type      = string
+  sensitive = true
+}
+
+variable "database_password_preview" {
   type      = string
   sensitive = true
 }

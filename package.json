@@ -12,17 +12,18 @@
   "dependencies": {
     "@headlessui/react": "^1.7.7",
     "@next/font": "13.1.2",
-    "@prisma/client": "^4.8.1",
+    "@planetscale/database": "^1.7.0",
     "@types/node": "18.11.18",
     "@types/react": "18.0.26",
     "@types/react-dom": "18.0.10",
     "dotenv": "^16.0.3",
+    "drizzle-orm": "^0.24.2",
     "eslint": "8.31.0",
-    "eslint-config-next": "13.1.2",
+    "eslint-config-next": "13.3.0",
     "jotai": "^1.13.0",
     "jotai-location": "^0.3.3",
     "kysely": "^0.23.3",
-    "next": "13.1.2",
+    "next": "13.3.0",
     "node-html-parser": "^6.1.4",
     "otplib": "^12.0.1",
     "pg": "^8.8.0",
@@ -34,16 +35,16 @@
     "zod": "^3.20.2"
   },
   "devDependencies": {
+    "@nrwl/nx-cloud": "latest",
     "@playwright/test": "^1.29.2",
     "@types/pg": "^8.6.6",
     "@types/qrcode": "^1.5.0",
     "autoprefixer": "^10.4.13",
+    "drizzle-kit": "0.17.1-609a4f0",
+    "nx": "15.8.1",
     "postcss": "^8.4.21",
     "prettier": "^2.8.3",
-    "prisma": "^4.8.1",
-    "tailwindcss": "^3.2.4",
-    "nx": "15.8.1",
-    "@nrwl/nx-cloud": "latest"
+    "tailwindcss": "^3.2.4"
   },
   "nx": {
     "targets": {

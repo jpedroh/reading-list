@@ -3,6 +3,7 @@
 import { ReactNode, useState } from "react";
 import { Modal } from "../../../../shared/components/modal";
 import { useKeyboardInteraction } from "../../../../shared/hooks/useKeyboardInteraction";
+import { AddArticleForm } from "../add-article-form";
 
 export function AddArticleDialog({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +28,7 @@ export function AddArticleDialog({ children }: { children: ReactNode }) {
       </button>
 
       <Modal isOpen={isOpen} close={closeModal} title={"Add new article"}>
-        {children}
+        <AddArticleForm onCreated={closeModal}>{children}</AddArticleForm>
       </Modal>
     </>
   );
