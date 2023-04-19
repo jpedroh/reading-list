@@ -7,6 +7,9 @@ const envSchema = z.object({
   VERCEL: z.any().optional(),
   VERCEL_ENV: z.enum(["production", "preview", "development"]).optional(),
   DATABASE_URL: z.string(),
+  DATABASE_HOST: z.string(),
+  DATABASE_USERNAME: z.string(),
+  DATABASE_PASSWORD: z.string(),
 });
 
 export const env = envSchema.parse(process.env);

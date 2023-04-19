@@ -1,18 +1,19 @@
+import { connect } from "@planetscale/database";
 import { InferModel } from "drizzle-orm";
-import { drizzle } from "drizzle-orm/node-postgres";
 import {
-  foreignKey,
-  pgTable,
+  index,
+  mysqlTable,
   serial,
   text,
   timestamp,
-  uuid,
-} from "drizzle-orm/pg-core";
-import { Pool } from "pg";
+  uniqueIndex,
+  varchar,
+} from "drizzle-orm/mysql-core";
+import { drizzle } from "drizzle-orm/planetscale-serverless";
 import { env } from "./env";
 
-export const articles = pgTable("Article", {
-  id: uuid("id").primaryKey(),
+export const articles = mysqlTable("Article", {
+  id: varchar("id", { length: 36 }).primaryKey(),
   title: text("title").notNull(),
   url: text("url").notNull(),
   addedAt: timestamp("addedAt").defaultNow().notNull(),
@@ -21,18 +22,21 @@ export const articles = pgTable("Article", {
 export type Article = InferModel<typeof articles>;
 export type NewArticle = InferModel<typeof articles, "insert">;
 
-export const articleTags = pgTable(
+export const articleTags = mysqlTable(
   "ArticleTag",
   {
-    articleId: uuid("articleId").primaryKey(),
-    tag: text("tag").primaryKey(),
+    id: serial("id").primaryKey(),
+    articleId: varchar("articleId", { length: 36 }),
+    tag: varchar("tag", { length: 255 }),
   },
   (articleTags) => {
     return {
-      articleFk: foreignKey({
-        columns: [articleTags.articleId],
-        foreignColumns: [articles.id],
-      }),
+      articleIdx: index("name_idx").on(articleTags.articleId),
+      tagIdx: index("name_idx").on(articleTags.tag),
+      uniqueArticleIdTag: uniqueIndex("unique_article_id_tag").on(
+        articleTags.articleId,
+        articleTags.tag
+      ),
     };
   }
 );
@@ -40,8 +44,10 @@ export const articleTags = pgTable(
 export type ArticleTag = InferModel<typeof articleTags>;
 export type NewArticleTag = InferModel<typeof articleTags, "insert">;
 
-const pool = new Pool({
-  connectionString: env.DATABASE_URL,
+const connection = connect({
+  host: env.DATABASE_HOST,
+  username: env.DATABASE_USERNAME,
+  password: env.DATABASE_PASSWORD,
 });
 
-export const db = drizzle(pool);
+export const db = drizzle(connection);

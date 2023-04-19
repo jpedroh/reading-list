@@ -7,6 +7,9 @@ dependencies:
   '@next/font':
     specifier: 13.1.2
     version: 13.1.2
+  '@planetscale/database':
+    specifier: ^1.7.0
+    version: 1.7.0
   '@types/node':
     specifier: 18.11.18
     version: 18.11.18
@@ -21,7 +24,7 @@ dependencies:
     version: 16.0.3
   drizzle-orm:
     specifier: ^0.24.2
-    version: 0.24.2(@types/pg@8.6.6)(kysely@0.23.3)(pg@8.8.0)
+    version: 0.24.2(@planetscale/database@1.7.0)(@types/pg@8.6.6)(kysely@0.23.3)(pg@8.8.0)
   eslint:
     specifier: 8.31.0
     version: 8.31.0
@@ -85,8 +88,8 @@ devDependencies:
     specifier: ^10.4.13
     version: 10.4.13(postcss@8.4.21)
   drizzle-kit:
-    specifier: ^0.17.5
-    version: 0.17.5
+    specifier: 0.17.1-609a4f0
+    version: 0.17.1-609a4f0
   nx:
     specifier: 15.8.1
     version: 15.8.1
@@ -834,6 +837,11 @@ packages:
       picocolors: 1.0.0
       tiny-glob: 0.2.9
       tslib: 2.4.1
+    dev: false
+
+  /@planetscale/database@1.7.0:
+    resolution: {integrity: sha512-lWR6biXChUyQnxsT4RT1CIeR3ZJvwTQXiQ+158MnY3VjLwjHEGakDzdH9kwUGPk6CHvu6UeqRXp1DgUOVHJFTw==}
+    engines: {node: '>=16'}
     dev: false
 
   /@playwright/test@1.29.2:
@@ -1662,8 +1670,8 @@ packages:
       wordwrap: 1.0.0
     dev: true
 
-  /drizzle-kit@0.17.5:
-    resolution: {integrity: sha512-oS4qG3d4m7RUHqdhPZSjYh6QSarxbHKyalBeW1cBpJp2F5DB5xvEan6qfaKdasYkI10DNdPuvXcZOR31tiRIGA==}
+  /drizzle-kit@0.17.1-609a4f0:
+    resolution: {integrity: sha512-bXflv8YQPe8gE+OSqllxVJEiwzupHjzu6tcBqfO4avrlspiP3shFJfDuHeiv+ztpKcG+8KXAuuFRIplJtD89LA==}
     hasBin: true
     dependencies:
       camelcase: 7.0.1
@@ -1674,12 +1682,13 @@ packages:
       glob: 8.1.0
       hanji: 0.0.5
       json-diff: 0.9.0
+      minimatch: 7.4.6
       zod: 3.20.2
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /drizzle-orm@0.24.2(@types/pg@8.6.6)(kysely@0.23.3)(pg@8.8.0):
+  /drizzle-orm@0.24.2(@planetscale/database@1.7.0)(@types/pg@8.6.6)(kysely@0.23.3)(pg@8.8.0):
     resolution: {integrity: sha512-rmZUqEtTzvkH+AdLSQ7hA2gx5S5Sn6Gwwf3C64kKAoV5qj0Mol02wBAsuEA2FoJo7LhvFQxbsnHgdnupTOMDEA==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
@@ -1735,6 +1744,7 @@ packages:
       sqlite3:
         optional: true
     dependencies:
+      '@planetscale/database': 1.7.0
       '@types/pg': 8.6.6
       kysely: 0.23.3
       pg: 8.8.0
@@ -3325,6 +3335,13 @@ packages:
 
   /minimatch@5.1.6:
     resolution: {integrity: sha512-lKwV/1brpG6mBUFHtb7NUmtABCb2WZZmm2wNiOA5hAb8VdCS4B3dtMWyvcoViccwAW/COERjXLt0zP1zXUN26g==}
+    engines: {node: '>=10'}
+    dependencies:
+      brace-expansion: 2.0.1
+    dev: true
+
+  /minimatch@7.4.6:
+    resolution: {integrity: sha512-sBz8G/YjVniEz6lKPNpKxXwazJe4c19fEfV2GDMX6AjFz+MX9uDWIZW8XreVhkFW3fkIdTv/gxWr/Kks5FFAVw==}
     engines: {node: '>=10'}
     dependencies:
       brace-expansion: 2.0.1
