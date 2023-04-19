@@ -26,8 +26,8 @@ export const articleTags = mysqlTable(
   "ArticleTag",
   {
     id: serial("id").primaryKey(),
-    articleId: varchar("articleId", { length: 36 }),
-    tag: varchar("tag", { length: 255 }),
+    articleId: varchar("articleId", { length: 36 }).notNull(),
+    tag: varchar("tag", { length: 255 }).notNull(),
   },
   (articleTags) => {
     return {
