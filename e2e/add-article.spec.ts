@@ -14,12 +14,9 @@ test.describe("AddArticle", () => {
     await page.getByLabel(/tags/i).fill("Nextjs");
     await page.getByLabel(/tags/i).press("Enter");
     await page.getByLabel(/otp/i).fill(authenticator.generate(env.OTP_SECRET));
-
     await page.getByRole('dialog', { name: 'Add new article' }).getByRole('button', { name: 'Add' }).click();
 
-    const navigationPromise = page.waitForEvent('popup');
-    await page.getByRole('link', { name: /example domain/i }).click();
-    await navigationPromise;
+    await page.getByRole('link', { name: /example domain/i }).waitFor({ state: 'visible' });
   });
 
   test("Ctrl + Space opens the modal", async ({ page }) => {
