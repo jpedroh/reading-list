@@ -35,21 +35,21 @@ resource "vercel_project_environment_variable" "database_host" {
   project_id = vercel_project.reading_list.id
   key        = "DATABASE_HOST"
   value      = var.database_host
-  target     = ["production"]
+  target     = ["production", "development", "preview"]
 }
 
 resource "vercel_project_environment_variable" "database_username" {
   project_id = vercel_project.reading_list.id
   key        = "DATABASE_USERNAME"
   value      = var.database_username
-  target     = ["production"]
+  target     = ["production", "development", "preview"]
 }
 
 resource "vercel_project_environment_variable" "database_password" {
   project_id = vercel_project.reading_list.id
   key        = "DATABASE_PASSWORD"
   value      = var.database_password
-  target     = ["production"]
+  target     = ["production", "development", "preview"]
 }
 
 resource "vercel_project_environment_variable" "otp_user" {
