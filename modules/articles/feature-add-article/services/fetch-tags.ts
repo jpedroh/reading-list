@@ -1,4 +1,4 @@
-import { articleTags, db } from "../../../infra/database";
+import { articleTags, db } from "../../../shared/database";
 
 export async function fetchTags() {
   return db

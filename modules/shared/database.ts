@@ -9,7 +9,7 @@ import {
   uuid,
 } from "drizzle-orm/pg-core";
 import { Pool } from "pg";
-import { env } from "../shared/env";
+import { env } from "./env";
 
 export const articles = pgTable("Article", {
   id: uuid("id").primaryKey(),

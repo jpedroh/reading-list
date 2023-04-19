@@ -1,5 +1,5 @@
 import { eq } from "drizzle-orm";
-import { Article, articleTags, articles, db } from "../../../infra/database";
+import { Article, articleTags, articles, db } from "../../../shared/database";
 
 export async function fetchArticles() {
   const rows = await db

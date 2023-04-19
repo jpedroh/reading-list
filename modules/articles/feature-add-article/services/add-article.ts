@@ -1,7 +1,7 @@
 import { randomUUID } from "crypto";
 import parse from "node-html-parser";
 import { authenticator } from "otplib";
-import { articles, articleTags, db, NewArticle } from "../../../infra/database";
+import { articles, articleTags, db, NewArticle } from "../../../shared/database";
 import { env } from "../../../shared/env";
 import { AddArticleDto } from "../../domain";
 
