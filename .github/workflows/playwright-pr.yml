@@ -33,9 +33,6 @@ jobs:
           cache: "pnpm"
       - run: pnpm install
       - run: npx playwright install --with-deps
-      - run: npx prisma db push
-        env:
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
       - run: pnpm run test:e2e
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
