@@ -35,7 +35,10 @@ jobs:
       - run: npx playwright install --with-deps
       - run: pnpm run test:e2e
         env:
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DATABASE_URL: ${{ secrets.database_url }}
+          DATABASE_HOST: ${{ secrets.database_host }}
+          DATABASE_USERNAME: ${{ secrets.database_username }}
+          DATABASE_PASSWORD: ${{ secrets.database_password }}
           PLAYWRIGHT_TEST_BASE_URL: ${{ needs.test_setup.outputs.preview_url }}
           OTP_SECRET: ${{ secrets.OTP_SECRET }}
           OTP_USER: ${{ secrets.OTP_USER }}
