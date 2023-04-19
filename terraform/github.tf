@@ -37,3 +37,10 @@ resource "github_actions_secret" "database_password" {
   secret_name     = "database_password"
   plaintext_value = var.database_password_preview
 }
+
+
+resource "github_actions_secret" "database_url" {
+  repository      = "reading-list"
+  secret_name     = "database_url"
+  plaintext_value = var.database_url_preview
+}
