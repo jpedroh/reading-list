@@ -31,18 +31,25 @@ resource "vercel_project_environment_variable" "otp_secret_dev_preview" {
   target     = ["development", "preview"]
 }
 
-resource "vercel_project_environment_variable" "database_url_production" {
+resource "vercel_project_environment_variable" "database_host" {
   project_id = vercel_project.reading_list.id
-  key        = "DATABASE_URL"
-  value      = var.database_url_production
+  key        = "DATABASE_HOST"
+  value      = var.database_host
   target     = ["production"]
 }
 
-resource "vercel_project_environment_variable" "database_url_dev_preview" {
+resource "vercel_project_environment_variable" "database_username" {
   project_id = vercel_project.reading_list.id
-  key        = "DATABASE_URL"
-  value      = var.database_url_dev_preview
-  target     = ["development", "preview"]
+  key        = "DATABASE_USERNAME"
+  value      = var.database_username
+  target     = ["production"]
+}
+
+resource "vercel_project_environment_variable" "database_password" {
+  project_id = vercel_project.reading_list.id
+  key        = "DATABASE_PASSWORD"
+  value      = var.database_password
+  target     = ["production"]
 }
 
 resource "vercel_project_environment_variable" "otp_user" {
