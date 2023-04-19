@@ -1,17 +1,13 @@
-import prisma from "../../../shared/prisma";
+import { desc, sql } from "drizzle-orm";
+import { articleTags, db } from "../../../infra/database";
 
 export async function fetchAvailableTags() {
-  const availableTags = await prisma.articleTag.groupBy({
-    by: ["tag"],
-    _count: {
-      tag: true,
-    },
-    orderBy: {
-      _count: {
-        tag: "desc",
-      },
-    },
-  });
-
-  return availableTags.map((tag) => ({ name: tag.tag, total: tag._count.tag }));
+  return db
+    .select({
+      name: articleTags.tag,
+      total: sql<number>`count(${articleTags.tag})::int`.as("total"),
+    })
+    .from(articleTags)
+    .groupBy(articleTags.tag)
+    .orderBy(({ total }) => desc(total));
 }
