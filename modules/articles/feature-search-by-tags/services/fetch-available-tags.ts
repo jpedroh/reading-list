@@ -5,7 +5,7 @@ export async function fetchAvailableTags() {
   return db
     .select({
       name: articleTags.tag,
-      total: sql<number>`count(${articleTags.tag})::int`.as("total"),
+      total: sql<number>`count(${articleTags.tag})`.as("total"),
     })
     .from(articleTags)
     .groupBy(articleTags.tag)

@@ -1,11 +1,12 @@
-import { eq } from "drizzle-orm";
+import { eq, desc } from "drizzle-orm";
 import { Article, articleTags, articles, db } from "../../../shared/database";
 
 export async function fetchArticles() {
   const rows = await db
     .select()
     .from(articles)
-    .leftJoin(articleTags, eq(articles.id, articleTags.articleId));
+    .leftJoin(articleTags, eq(articles.id, articleTags.articleId))
+    .orderBy(({ Article: { addedAt } }) => desc(addedAt));
 
   const result = rows.reduce<
     Record<
