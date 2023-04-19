@@ -6,6 +6,7 @@ const envSchema = z.object({
   OTP_SERVICE: z.string(),
   VERCEL: z.any().optional(),
   VERCEL_ENV: z.enum(["production", "preview", "development"]).optional(),
+  DATABASE_URL: z.string(),
 });
 
 export const env = envSchema.parse(process.env);

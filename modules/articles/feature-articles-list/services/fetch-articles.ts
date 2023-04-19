@@ -1,14 +1,35 @@
-import prisma from "../../../shared/prisma";
+import { eq } from "drizzle-orm";
+import { Article, articleTags, articles, db } from "../../../infra/database";
 
 export async function fetchArticles() {
-  const articles = await prisma.article.findMany({
-    include: { tags: true },
-    orderBy: { addedAt: "desc" },
-  });
+  const rows = await db
+    .select()
+    .from(articles)
+    .leftJoin(articleTags, eq(articles.id, articleTags.articleId));
 
-  return articles.map((article) => ({
-    ...article,
-    tags: article.tags.map((v) => v.tag),
-    addedAt: article.addedAt.toDateString(),
-  }));
+  const result = rows.reduce<
+    Record<
+      string,
+      Omit<Article, "addedAt"> & { addedAt: string } & { tags: string[] }
+    >
+  >((acc, row) => {
+    const article = row.Article;
+    const tag = row.ArticleTag;
+
+    if (!acc[article.id]) {
+      acc[article.id] = {
+        ...article,
+        addedAt: article.addedAt.toDateString(),
+        tags: [],
+      };
+    }
+
+    if (tag) {
+      acc[article.id].tags.push(tag.tag);
+    }
+
+    return acc;
+  }, {});
+
+  return Object.values(result);
 }
