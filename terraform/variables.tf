@@ -33,12 +33,22 @@ variable "database_host" {
   sensitive = true
 }
 
-variable "database_username" {
+variable "database_username_production" {
   type      = string
   sensitive = true
 }
 
-variable "database_password" {
+variable "database_password_production" {
+  type      = string
+  sensitive = true
+}
+
+variable "database_username_preview" {
+  type      = string
+  sensitive = true
+}
+
+variable "database_password_preview" {
   type      = string
   sensitive = true
 }

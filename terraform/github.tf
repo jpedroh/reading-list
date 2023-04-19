@@ -29,11 +29,11 @@ resource "github_actions_secret" "database_host" {
 resource "github_actions_secret" "database_username" {
   repository      = "reading-list"
   secret_name     = "database_username"
-  plaintext_value = var.database_username
+  plaintext_value = var.database_username_preview
 }
 
 resource "github_actions_secret" "database_password" {
   repository      = "reading-list"
   secret_name     = "database_password"
-  plaintext_value = var.database_password
+  plaintext_value = var.database_password_preview
 }

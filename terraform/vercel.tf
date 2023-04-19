@@ -35,21 +35,35 @@ resource "vercel_project_environment_variable" "database_host" {
   project_id = vercel_project.reading_list.id
   key        = "DATABASE_HOST"
   value      = var.database_host
-  target     = ["production", "development", "preview"]
+  target     = ["production", "preview"]
 }
 
-resource "vercel_project_environment_variable" "database_username" {
+resource "vercel_project_environment_variable" "database_username_production" {
   project_id = vercel_project.reading_list.id
   key        = "DATABASE_USERNAME"
-  value      = var.database_username
-  target     = ["production", "development", "preview"]
+  value      = var.database_username_production
+  target     = ["production"]
 }
 
-resource "vercel_project_environment_variable" "database_password" {
+resource "vercel_project_environment_variable" "database_password_production" {
   project_id = vercel_project.reading_list.id
   key        = "DATABASE_PASSWORD"
-  value      = var.database_password
-  target     = ["production", "development", "preview"]
+  value      = var.database_password_production
+  target     = ["production"]
+}
+
+resource "vercel_project_environment_variable" "database_username_preview" {
+  project_id = vercel_project.reading_list.id
+  key        = "DATABASE_USERNAME"
+  value      = var.database_username_preview
+  target     = ["preview"]
+}
+
+resource "vercel_project_environment_variable" "database_password_preview" {
+  project_id = vercel_project.reading_list.id
+  key        = "DATABASE_PASSWORD"
+  value      = var.database_password_preview
+  target     = ["preview"]
 }
 
 resource "vercel_project_environment_variable" "otp_user" {
