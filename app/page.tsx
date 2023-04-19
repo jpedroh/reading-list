@@ -6,6 +6,7 @@ import { ShortcutsGuideEntrypoint } from "../modules/articles/feature-shortcuts-
 import styles from "./index.module.css";
 
 export const revalidate = 0;
+export const runtime = 'experimental-edge';
 
 export const metadata = {
   title: 'Reading List',
