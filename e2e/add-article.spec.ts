@@ -32,4 +32,18 @@ test.describe("AddArticle", () => {
       await page.getByRole("dialog", { name: "Add new article" }).count()
     ).toBe(1);
   });
+
+  test("providing invalid OTP shows an error message", async ({ page }) => {
+    await page.goto(`${BASE_URL}`);
+    await page.getByRole('button', { name: 'Add new article' }).click();
+
+    await page.getByLabel(/url/i).fill("https://example.com");
+    await page.getByLabel(/tags/i).fill("Nextjs");
+    await page.getByLabel(/tags/i).press("Enter");
+    await page.getByLabel(/otp/i).fill("555555");
+
+    await page.getByRole('dialog', { name: 'Add new article' }).getByRole('button', { name: 'Add' }).click();
+
+    await page.getByText(/invalid otp provided/i).waitFor({ state: 'visible' })
+  });
 });
