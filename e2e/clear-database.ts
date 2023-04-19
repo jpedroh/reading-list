@@ -37,7 +37,7 @@ export type NewArticleTag = InferModel<typeof articleTags, "insert">;
 
 export default async function clearDatabase() {
     const connection = await mysql.createConnection(process.env.DATABASE_URL ?? "");
-    const db = drizzle(connection);
+    const db = drizzle(connection as any);
     await db.delete(articles).execute()
     await db.delete(articleTags).execute()
 }
