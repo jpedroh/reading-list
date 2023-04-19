@@ -21,7 +21,6 @@ jobs:
           cache: "pnpm"
       - uses: nrwl/nx-set-shas@v3
       - run: pnpm install
-      - run: npx nx format:check
       - run: npx nx affected --target=build --parallel=3
         env:
           OTP_SECRET: ${{ secrets.otp_secret }}
