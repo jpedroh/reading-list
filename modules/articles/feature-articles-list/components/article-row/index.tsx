@@ -12,7 +12,7 @@ export function ArticleRow({ article }: { article: Article }) {
       <h1>{article.title}</h1>
       <div>
         <span>{article.addedAt}</span>
-        <ul>
+        <ul data-testid="tags">
           {article.tags.map((tag) => (
             <li key={tag}>{tag}</li>
           ))}

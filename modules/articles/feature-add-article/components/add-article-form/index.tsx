@@ -35,9 +35,12 @@ export function AddArticleForm({
     try {
       evt.preventDefault();
 
-      const payload = AddArticleSchema.safeParse(
-        Object.fromEntries(new FormData(evt.target as HTMLFormElement))
-      );
+      const formData = new FormData(evt.target as HTMLFormElement)
+      const payload = AddArticleSchema.safeParse({
+        url: formData.get('url'),
+        tags: formData.getAll('tags'),
+        otp: formData.get('otp')
+      });
       if (!payload.success) {
         throw new Error("Validation error");
       }
