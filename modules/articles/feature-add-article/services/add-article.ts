@@ -13,31 +13,39 @@ import {
 import { env } from "../../../shared/env";
 import { AddArticleSchema } from "../../domain";
 
-export async function addArticle(formData: FormData) {
-  const payload = AddArticleSchema.safeParse({
-    url: formData.get("url"),
-    tags: formData.getAll("tags"),
-    otp: formData.get("otp"),
-  });
+type Result<T> = { success: true; data: T } | { success: false; error: string };
 
-  if (!payload.success) {
-    throw new Error("Validation error");
+export async function addArticle(formData: FormData): Promise<Result<void>> {
+  try {
+    const payload = AddArticleSchema.safeParse({
+      url: formData.get("url"),
+      tags: formData.getAll("tags"),
+      otp: formData.get("otp"),
+    });
+
+    if (!payload.success) {
+      return { success: false, error: "Validation error" };
+    }
+
+    if (!isOtpValid(payload.data.otp)) {
+      return { success: false, error: "Invalid OTP provided" };
+    }
+    await saveArticle(
+      {
+        id: randomUUID(),
+        title: await getTitleFromUrl(payload.data.url),
+        url: payload.data.url,
+      },
+      payload.data.tags
+    );
+
+    revalidatePath("/");
+
+    return { success: true, data: undefined };
+  } catch (error) {
+    console.error(error);
+    return { success: false, error: "Internal server error" };
   }
-
-  if (!isOtpValid(payload.data.otp)) {
-    throw new Error("Invalid OTP provided");
-  }
-
-  await saveArticle(
-    {
-      id: randomUUID(),
-      title: await getTitleFromUrl(payload.data.url),
-      url: payload.data.url,
-    },
-    payload.data.tags
-  );
-
-  revalidatePath("/");
 }
 
 function isOtpValid(token: string) {

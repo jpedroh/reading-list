@@ -17,16 +17,14 @@ export function AddArticleForm({
 
   async function handleSubmit(formData: FormData) {
     startTransition(() => {
-      addArticle(formData)
-        .then(() => {
+      setErrorMessage("");
+      addArticle(formData).then((result) => {
+        if (result.success) {
           onCreated();
-          setErrorMessage("");
-        })
-        .catch((error) => {
-          setErrorMessage(
-            error instanceof Error ? error.message : "Internal server error"
-          );
-        });
+        } else {
+          setErrorMessage(result.error);
+        }
+      });
     });
   }
 
