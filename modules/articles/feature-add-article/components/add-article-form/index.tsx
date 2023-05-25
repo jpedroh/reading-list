@@ -1,21 +1,9 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { FormEvent, ReactNode, useState, useTransition } from "react";
-
+import { ReactNode, useState, useTransition } from "react";
 import { Input } from "../../../../shared/components/input";
+import { addArticle } from "../../services/add-article";
 import styles from "./index.module.css";
-import { AddArticleDto, AddArticleSchema } from "../../../domain";
-
-async function submitArticle(payload: AddArticleDto) {
-  const response = await fetch(`api/article`, {
-    method: "POST",
-    body: JSON.stringify(payload),
-  });
-  if (response.status >= 400) {
-    throw new Error((await response.json()).message);
-  }
-}
 
 export function AddArticleForm({
   children,
@@ -24,46 +12,27 @@ export function AddArticleForm({
   children: ReactNode;
   onCreated: () => void;
 }) {
-  const router = useRouter();
-  const [isPending, startTransition] = useTransition();
-  const [isFetching, setIsFetching] = useState(false);
+  const [isMutating, startTransition] = useTransition();
   const [errorMessage, setErrorMessage] = useState("");
 
-  const isMutating = isFetching || isPending;
-
-  async function handleSubmit(evt: FormEvent<HTMLFormElement>) {
-    try {
-      evt.preventDefault();
-
-      const formData = new FormData(evt.target as HTMLFormElement)
-      const payload = AddArticleSchema.safeParse({
-        url: formData.get('url'),
-        tags: formData.getAll('tags'),
-        otp: formData.get('otp')
-      });
-      if (!payload.success) {
-        throw new Error("Validation error");
-      }
-
-      setErrorMessage("");
-      setIsFetching(true);
-      await submitArticle(payload.data);
-      setIsFetching(false);
-      onCreated();
-
-      startTransition(() => {
-        router.refresh();
-      });
-    } catch (error) {
-      setErrorMessage(
-        error instanceof Error ? error.message : "Internal server error"
-      );
-      setIsFetching(false);
-    }
+  async function handleSubmit(formData: FormData) {
+    startTransition(() => {
+      addArticle(formData)
+        .then(() => {
+          onCreated();
+          setErrorMessage("");
+        })
+        .catch((error) => {
+          setErrorMessage(
+            error instanceof Error ? error.message : "Internal server error"
+          );
+        });
+    });
   }
 
   return (
-    <form className={styles.container} onSubmit={handleSubmit}>
+    // @ts-expect-error NextJS server action
+    <form action={handleSubmit} className={styles.container}>
       <label>
         <span>URL</span>
         <Input
@@ -84,7 +53,7 @@ export function AddArticleForm({
         <Input name="otp" type={"text"} required placeholder="000000" />
       </label>
 
-      {errorMessage && (
+      {!isMutating && errorMessage && (
         <p
           role="alert"
           className="bg-red-700 text-white border border-red-900 p-3 rounded"

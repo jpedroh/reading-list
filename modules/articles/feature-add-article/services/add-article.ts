@@ -1,4 +1,7 @@
+"use server";
+
 import { randomUUID } from "crypto";
+import { revalidatePath } from "next/cache";
 import parse from "node-html-parser";
 import { authenticator } from "otplib";
 import {
@@ -8,21 +11,33 @@ import {
   NewArticle,
 } from "../../../shared/database";
 import { env } from "../../../shared/env";
-import { AddArticleDto } from "../../domain";
+import { AddArticleSchema } from "../../domain";
 
-export async function addArticle(data: AddArticleDto) {
-  if (!isOtpValid(data.otp)) {
+export async function addArticle(formData: FormData) {
+  const payload = AddArticleSchema.safeParse({
+    url: formData.get("url"),
+    tags: formData.getAll("tags"),
+    otp: formData.get("otp"),
+  });
+
+  if (!payload.success) {
+    throw new Error("Validation error");
+  }
+
+  if (!isOtpValid(payload.data.otp)) {
     throw new Error("Invalid OTP provided");
   }
 
-  return saveArticle(
+  await saveArticle(
     {
       id: randomUUID(),
-      title: await getTitleFromUrl(data.url),
-      url: data.url,
+      title: await getTitleFromUrl(payload.data.url),
+      url: payload.data.url,
     },
-    data.tags
+    payload.data.tags
   );
+
+  revalidatePath("/");
 }
 
 function isOtpValid(token: string) {
