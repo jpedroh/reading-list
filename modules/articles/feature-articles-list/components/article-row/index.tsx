@@ -1,6 +1,8 @@
 import { Article } from "../../../domain";
 import styles from "./index.module.css";
 
+const formatter = new new Intl.DateTimeFormat('en-US');
+
 export function ArticleRow({ article }: { article: Article }) {
   return (
     <a
@@ -11,7 +13,7 @@ export function ArticleRow({ article }: { article: Article }) {
     >
       <h1>{article.title}</h1>
       <div>
-        <span>{article.addedAt}</span>
+        <span>{formatter.format(article.addedAt)}</span>
         <ul data-testid="tags">
           {article.tags.map((tag) => (
             <li key={tag}>{tag}</li>
