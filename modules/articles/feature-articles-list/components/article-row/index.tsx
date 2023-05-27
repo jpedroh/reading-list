@@ -13,7 +13,7 @@ export function ArticleRow({ article }: { article: Article }) {
     >
       <h1>{article.title}</h1>
       <div>
-        <span>{formatter.format(article.addedAt)}</span>
+        <span>{formatter.format(new Date(article.addedAt))}</span>
         <ul data-testid="tags">
           {article.tags.map((tag) => (
             <li key={tag}>{tag}</li>
