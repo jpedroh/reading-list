@@ -1,10 +1,10 @@
-import { asc } from "drizzle-orm";
+import { desc } from "drizzle-orm";
 import { articles, db } from "../../../shared/database";
 
 export async function fetchArticles() {
   const rows = await db.query.articles.findMany({
     with: { articleTags: true },
-    orderBy: [asc(articles.addedAt)],
+    orderBy: [desc(articles.addedAt)],
   });
 
   return rows.map(({ articleTags, ...article }) => {
