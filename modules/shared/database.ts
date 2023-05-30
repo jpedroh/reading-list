@@ -1,5 +1,5 @@
 import { connect } from "@planetscale/database";
-import { InferModel } from "drizzle-orm";
+import { InferModel, relations } from "drizzle-orm";
 import {
   index,
   mysqlTable,
@@ -18,6 +18,10 @@ export const articles = mysqlTable("Article", {
   url: text("url").notNull(),
   addedAt: timestamp("addedAt").defaultNow().notNull(),
 });
+
+export const articlesRelations = relations(articles, ({ many }) => ({
+  articleTags: many(articleTags),
+}));
 
 export type Article = InferModel<typeof articles>;
 export type NewArticle = InferModel<typeof articles, "insert">;
@@ -41,6 +45,13 @@ export const articleTags = mysqlTable(
   }
 );
 
+export const articleTagsRelations = relations(articleTags, ({ one }) => ({
+  article: one(articles, {
+    fields: [articleTags.articleId],
+    references: [articles.id],
+  }),
+}));
+
 export type ArticleTag = InferModel<typeof articleTags>;
 export type NewArticleTag = InferModel<typeof articleTags, "insert">;
 
@@ -50,4 +61,11 @@ const connection = connect({
   password: env.DATABASE_PASSWORD,
 });
 
-export const db = drizzle(connection);
+export const db = drizzle(connection, {
+  schema: {
+    articles,
+    articleTags,
+    articlesRelations,
+    articleTagsRelations,
+  },
+});
