@@ -23,8 +23,8 @@ dependencies:
     specifier: ^16.0.3
     version: 16.0.3
   drizzle-orm:
-    specifier: ^0.24.2
-    version: 0.24.2(@planetscale/database@1.7.0)(@types/pg@8.6.6)(kysely@0.23.3)(mysql2@3.2.3)(pg@8.8.0)
+    specifier: ^0.26.0
+    version: 0.26.0(@planetscale/database@1.7.0)(@types/pg@8.6.6)(kysely@0.23.3)(mysql2@3.2.3)(pg@8.8.0)
   eslint:
     specifier: 8.31.0
     version: 8.31.0
@@ -1674,8 +1674,8 @@ packages:
       - supports-color
     dev: true
 
-  /drizzle-orm@0.24.2(@planetscale/database@1.7.0)(@types/pg@8.6.6)(kysely@0.23.3)(mysql2@3.2.3)(pg@8.8.0):
-    resolution: {integrity: sha512-rmZUqEtTzvkH+AdLSQ7hA2gx5S5Sn6Gwwf3C64kKAoV5qj0Mol02wBAsuEA2FoJo7LhvFQxbsnHgdnupTOMDEA==}
+  /drizzle-orm@0.26.0(@planetscale/database@1.7.0)(@types/pg@8.6.6)(kysely@0.23.3)(mysql2@3.2.3)(pg@8.8.0):
+    resolution: {integrity: sha512-ztjhHehcuG5+lpGYxfT/L5I+yd/Z0dOf0fV3cS2ywBU01wkpxjwl4EJZVT7kVzjYfM8kwMGDghAPRPBCK0vULA==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
       '@cloudflare/workers-types': '>=3'
@@ -1685,6 +1685,7 @@ packages:
       '@types/better-sqlite3': '*'
       '@types/pg': '*'
       '@types/sql.js': '*'
+      '@vercel/postgres': '*'
       better-sqlite3: '>=7'
       bun-types: '*'
       knex: '*'
@@ -1710,6 +1711,8 @@ packages:
       '@types/pg':
         optional: true
       '@types/sql.js':
+        optional: true
+      '@vercel/postgres':
         optional: true
       better-sqlite3:
         optional: true

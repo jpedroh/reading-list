@@ -3,5 +3,5 @@ export type Article = {
   title: string;
   tags: string[];
   url: string;
-  addedAt: string;
+  addedAt: Date;
 };
