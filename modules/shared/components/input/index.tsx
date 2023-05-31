@@ -1,10 +1,13 @@
 "use client";
 
-import { InputHTMLAttributes } from "react";
+import { InputHTMLAttributes, forwardRef } from "react";
 import styles from "./index.module.css";
 
 type Props = Omit<InputHTMLAttributes<HTMLInputElement>, "className">;
 
-export function Input(props: Props) {
-  return <input className={styles.container} {...props} />;
-}
+export const Input = forwardRef<HTMLInputElement, Props>(function Input(
+  props,
+  ref
+) {
+  return <input ref={ref} className={styles.container} {...props} />;
+});
