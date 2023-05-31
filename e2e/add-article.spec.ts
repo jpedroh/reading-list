@@ -16,6 +16,8 @@ test.describe("AddArticle", () => {
     await page.getByLabel(/tags/i).fill("Frontend");
     await page.getByLabel(/tags/i).press("Enter");
     await page.getByLabel(/otp/i).fill(authenticator.generate(env.OTP_SECRET));
+
+    await expect(page.getByLabel(/title/i)).toHaveValue(/example domain/i, { timeout: 30_000 });
     await page
       .getByRole("dialog", { name: "Add new article" })
       .getByRole("button", { name: "Add" })
