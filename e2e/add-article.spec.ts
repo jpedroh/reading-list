@@ -10,30 +10,41 @@ test.describe("AddArticle", () => {
     await page.goto(`${BASE_URL}`);
     await page.getByRole("button", { name: "Add new article" }).click();
 
-    await page.getByLabel(/url/i).fill("https://example.com");
-    await page.getByLabel(/tags/i).fill("Nextjs");
-    await page.getByLabel(/tags/i).press("Enter");
-    await page.getByLabel(/tags/i).fill("Frontend");
-    await page.getByLabel(/tags/i).press("Enter");
-    await page.getByLabel(/otp/i).fill(authenticator.generate(env.OTP_SECRET));
+    const dialog = page.getByRole("dialog", { name: "Add new article" });
+    await expect(dialog).toBeAttached();
 
-    await expect(page.getByLabel(/title/i)).toHaveValue(/example domain/i, { timeout: 30_000 });
-    await page
-      .getByRole("dialog", { name: "Add new article" })
-      .getByRole("button", { name: "Add" })
-      .click();
+    await expect(dialog.getByLabel(/url/i)).toBeFocused();
+    await dialog.getByLabel(/url/i).fill("https://example.com");
+    await page.press("body", "Tab");
 
-    await page
-      .getByRole("link", { name: /example domain/i })
-      .waitFor({ state: "visible" });
-    await page
-      .getByTestId("tags")
-      .getByText(/nextjs/i)
-      .waitFor({ state: "visible" });
-    await page
-      .getByTestId("tags")
-      .getByText(/frontend/i)
-      .waitFor({ state: "visible" });
+    await expect(dialog.getByLabel(/title/i)).toBeFocused();
+    await expect(page.getByLabel(/title/i)).toHaveValue(/example domain/i);
+    await page.press("body", "Tab");
+
+    await expect(dialog.getByLabel(/tags/i)).toBeFocused();
+    await dialog.getByLabel(/tags/i).fill("Nextjs");
+    await page.press("body", "Enter");
+    await dialog.getByLabel(/tags/i).fill("Frontend");
+    await page.press("body", "Enter");
+    await page.press("body", "Tab");
+
+    await expect(dialog.getByLabel(/otp/i)).toBeFocused();
+    await dialog
+      .getByLabel(/otp/i)
+      .fill(authenticator.generate(env.OTP_SECRET));
+    await page.press("body", "Tab");
+
+    await expect(dialog.getByRole("button", { name: /add/i })).toBeFocused();
+    await page.press("body", "Enter");
+
+    await expect(dialog).not.toBeAttached();
+
+    const article = page.getByRole("link", { name: /example domain/i });
+    const articleTags = page.getByTestId("tags");
+
+    await expect(article).toBeAttached();
+    await expect(articleTags.getByText(/nextjs/i)).toBeAttached();
+    await expect(articleTags.getByText(/frontend/i)).toBeAttached();
   });
 
   test("it shows the page title when I fill the URL", async ({ page }) => {
