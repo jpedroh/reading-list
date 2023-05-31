@@ -19,6 +19,7 @@ export async function addArticle(formData: FormData): Promise<Result<void>> {
   try {
     const payload = AddArticleSchema.safeParse({
       url: formData.get("url"),
+      title: formData.get("title"),
       tags: formData.getAll("tags"),
       otp: formData.get("otp"),
     });
@@ -33,7 +34,7 @@ export async function addArticle(formData: FormData): Promise<Result<void>> {
     await saveArticle(
       {
         id: randomUUID(),
-        title: await getTitleFromUrl(payload.data.url),
+        title: payload.data.title,
         url: payload.data.url,
       },
       payload.data.tags
@@ -53,12 +54,12 @@ function isOtpValid(token: string) {
   return authenticator.verify({ token, secret: env.OTP_SECRET }) || isDevBypass;
 }
 
-async function getTitleFromUrl(url: string) {
+export async function getTitleFromUrl(url: string) {
   const pageHtml = await fetch(url).then((r) => r.text());
   const titleElement = parse(pageHtml).querySelector("title");
 
   if (!titleElement) {
-    throw new Error("Could not derive title from URL");
+    return "";
   }
 
   return titleElement.innerText;

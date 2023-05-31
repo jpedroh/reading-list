@@ -1,8 +1,8 @@
 "use client";
 
-import { ReactNode, useState, useTransition } from "react";
+import { ReactNode, useRef, useState, useTransition } from "react";
 import { Input } from "../../../../shared/components/input";
-import { addArticle } from "../../services/add-article";
+import { addArticle, getTitleFromUrl } from "../../services/add-article";
 import styles from "./index.module.css";
 
 export function AddArticleForm({
@@ -12,6 +12,7 @@ export function AddArticleForm({
   children: ReactNode;
   onCreated: () => void;
 }) {
+  const titleRef = useRef<HTMLInputElement>(null);
   const [isMutating, startTransition] = useTransition();
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -28,6 +29,13 @@ export function AddArticleForm({
     });
   }
 
+  async function handleUrlChange(url: string) {
+    const title = await getTitleFromUrl(url);
+    if (titleRef.current) {
+      titleRef.current.value = title;
+    }
+  }
+
   return (
     // @ts-expect-error NextJS server action
     <form action={handleSubmit} className={styles.container}>
@@ -37,7 +45,19 @@ export function AddArticleForm({
           name="url"
           type={"text"}
           required
+          onBlur={(evt) => handleUrlChange(evt.target.value)}
           placeholder="https://example.com"
+        />
+      </label>
+
+      <label>
+        <span>Title</span>
+        <Input
+          ref={titleRef}
+          name="title"
+          type={"text"}
+          required
+          placeholder="Example title"
         />
       </label>
 
