@@ -30,6 +30,7 @@ export function AddArticleForm({
   }
 
   async function handleUrlChange(url: string) {
+    if (!url) return;
     const title = await getTitleFromUrl(url);
     if (titleRef.current) {
       titleRef.current.value = title;

@@ -12,6 +12,7 @@ import {
 } from "../../../shared/database";
 import { env } from "../../../shared/env";
 import { AddArticleSchema } from "../../domain";
+import { string } from "zod";
 
 type Result<T> = { success: true; data: T } | { success: false; error: string };
 
@@ -55,6 +56,10 @@ function isOtpValid(token: string) {
 }
 
 export async function getTitleFromUrl(url: string) {
+  if (string().url().safeParse(url).success === false) {
+    return "";
+  }
+
   const pageHtml = await fetch(url).then((r) => r.text());
   const titleElement = parse(pageHtml).querySelector("title");
 
