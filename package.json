@@ -22,7 +22,7 @@
     "eslint-config-next": "13.3.0",
     "jotai": "^1.13.0",
     "jotai-location": "^0.3.3",
-    "kysely": "^0.23.3",
+    "kysely": "^0.25.0",
     "mysql2": "^3.2.3",
     "next": "^13.4.0",
     "node-html-parser": "^6.1.4",

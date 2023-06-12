@@ -28,7 +28,7 @@ dependencies:
     version: 16.0.3
   drizzle-orm:
     specifier: ^0.26.0
-    version: 0.26.0(@planetscale/database@1.7.0)(@types/pg@8.6.6)(kysely@0.23.3)(mysql2@3.2.3)(pg@8.8.0)
+    version: 0.26.0(@planetscale/database@1.7.0)(@types/pg@8.6.6)(kysely@0.25.0)(mysql2@3.2.3)(pg@8.8.0)
   eslint:
     specifier: 8.31.0
     version: 8.31.0
@@ -42,8 +42,8 @@ dependencies:
     specifier: ^0.3.3
     version: 0.3.3(jotai@1.13.0)
   kysely:
-    specifier: ^0.23.3
-    version: 0.23.3
+    specifier: ^0.25.0
+    version: 0.25.0
   mysql2:
     specifier: ^3.2.3
     version: 3.2.3
@@ -1688,7 +1688,7 @@ packages:
       - supports-color
     dev: true
 
-  /drizzle-orm@0.26.0(@planetscale/database@1.7.0)(@types/pg@8.6.6)(kysely@0.23.3)(mysql2@3.2.3)(pg@8.8.0):
+  /drizzle-orm@0.26.0(@planetscale/database@1.7.0)(@types/pg@8.6.6)(kysely@0.25.0)(mysql2@3.2.3)(pg@8.8.0):
     resolution: {integrity: sha512-ztjhHehcuG5+lpGYxfT/L5I+yd/Z0dOf0fV3cS2ywBU01wkpxjwl4EJZVT7kVzjYfM8kwMGDghAPRPBCK0vULA==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
@@ -1749,7 +1749,7 @@ packages:
     dependencies:
       '@planetscale/database': 1.7.0
       '@types/pg': 8.6.6
-      kysely: 0.23.3
+      kysely: 0.25.0
       mysql2: 3.2.3
       pg: 8.8.0
     dev: false
@@ -3205,8 +3205,8 @@ packages:
       object.assign: 4.1.4
     dev: false
 
-  /kysely@0.23.3:
-    resolution: {integrity: sha512-spRhosWRLkI0Ox8PRBdstskdRfvoLPsJ5GEpDA/PPrX6NwuiygdsFxHBrMkdU3CX+VxLhj4Wn5P7rFAwaf7JuA==}
+  /kysely@0.25.0:
+    resolution: {integrity: sha512-srn0efIMu5IoEBk0tBmtGnoUss4uwvxtbFQWG/U2MosfqIace1l43IFP1PmEpHRDp+Z79xIcKEqmHH3dAvQdQA==}
     engines: {node: '>=14.0.0'}
     dev: false
 
