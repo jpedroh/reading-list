@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.7",
-    "@next/font": "13.1.2",
+    "@next/font": "13.4.5",
     "@planetscale/database": "^1.7.0",
     "@types/node": "18.11.18",
     "@types/react": "18.0.26",

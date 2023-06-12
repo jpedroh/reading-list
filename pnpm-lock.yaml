@@ -9,8 +9,8 @@ dependencies:
     specifier: ^1.7.7
     version: 1.7.7(react-dom@18.2.0)(react@18.2.0)
   '@next/font':
-    specifier: 13.1.2
-    version: 13.1.2
+    specifier: 13.4.5
+    version: 13.4.5
   '@planetscale/database':
     specifier: ^1.7.0
     version: 1.7.0
@@ -555,8 +555,8 @@ packages:
       glob: 7.1.7
     dev: false
 
-  /@next/font@13.1.2:
-    resolution: {integrity: sha512-NXGXGFGiOKEnvBIHq9cdFTKbHO2/4B3Zd9K27M7j1DioIQVar7oVRqZMYs0h3XMVEZLwjjkdAtqRPCzzd3RtXg==}
+  /@next/font@13.4.5:
+    resolution: {integrity: sha512-pjgtnnyamcFK9rv/WKr9WDmVBcd50VK4zZX9E846jowRm8FadjiumDOV80elXUtYW9GXSpAiqWqNMw/kVXNuQQ==}
     dev: false
 
   /@next/swc-darwin-arm64@13.4.0:
