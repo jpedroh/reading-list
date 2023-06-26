@@ -24,7 +24,7 @@
     "jotai-location": "^0.3.3",
     "kysely": "^0.25.0",
     "mysql2": "^3.2.3",
-    "next": "^13.4.0",
+    "next": "^13.4.7",
     "node-html-parser": "^6.1.5",
     "otplib": "^12.0.1",
     "pg": "^8.8.0",
