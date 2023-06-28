@@ -2,21 +2,7 @@ name: Playwright Tests
 on:
   pull_request:
 jobs:
-  test_setup:
-    name: Test setup
-    runs-on: ubuntu-latest
-    permissions: read-all
-    outputs:
-      preview_url: ${{ steps.waitForVercelPreviewDeployment.outputs.url }}
-    steps:
-      - name: Wait for Vercel preview deployment to be ready
-        uses: patrickedqvist/wait-for-vercel-preview@main
-        id: waitForVercelPreviewDeployment
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          max_timeout: 300
   test_e2e:
-    needs: test_setup
     name: Playwright tests
     timeout-minutes: 5
     runs-on: ubuntu-latest
@@ -32,15 +18,31 @@ jobs:
         with:
           node-version: 19
           cache: "pnpm"
+      - uses: actions/cache@v2
+        id: playwright-cache
+        with:
+          path: |
+            ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('**/pnpm-lock.yaml') }}
       - run: pnpm install
-      - run: npx playwright install --with-deps
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+      - run: npx playwright install-deps
+        if: steps.playwright-cache.outputs.cache-hit == 'true'  
+      - name: Wait for Vercel preview deployment to be ready
+        uses: patrickedqvist/wait-for-vercel-preview@main
+        id: waitForVercelPreviewDeployment
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          max_timeout: 300
       - run: pnpm run test:e2e
         env:
           DATABASE_URL: ${{ secrets.database_url }}
           DATABASE_HOST: ${{ secrets.database_host }}
           DATABASE_USERNAME: ${{ secrets.database_username }}
           DATABASE_PASSWORD: ${{ secrets.database_password }}
-          PLAYWRIGHT_TEST_BASE_URL: ${{ needs.test_setup.outputs.preview_url }}
+          PLAYWRIGHT_TEST_BASE_URL: ${{ steps.waitForVercelPreviewDeployment.outputs.url }}
           OTP_SECRET: ${{ secrets.OTP_SECRET }}
           OTP_USER: ${{ secrets.OTP_USER }}
           OTP_SERVICE: ${{ secrets.OTP_SERVICE }}
