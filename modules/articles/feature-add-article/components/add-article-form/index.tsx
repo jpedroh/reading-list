@@ -38,7 +38,6 @@ export function AddArticleForm({
   }
 
   return (
-    // @ts-expect-error NextJS server action
     <form action={handleSubmit} className={styles.container}>
       <label>
         <span>URL</span>
