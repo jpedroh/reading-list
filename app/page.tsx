@@ -14,7 +14,6 @@ export default function Home() {
     <>
       <header className={styles.header}>
         <h1>My Reading List</h1>
-        {/* @ts-expect-error Server Component */}
         <AddArticleEntrypoint />
       </header>
       <section className={styles.content}>
@@ -25,7 +24,6 @@ export default function Home() {
           </section>
           <section>
             <h3>Tags</h3>
-            {/* @ts-expect-error Server Component */}
             <SearchByTagsEntrypoint />
           </section>
           <section>
@@ -34,7 +32,6 @@ export default function Home() {
           </section>
         </aside>
         <main>
-          {/* @ts-expect-error Server Component */}
           <ArticlesListEntrypoint />
         </main>
       </section>
