@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@headlessui/react':
-    specifier: ^1.7.7
-    version: 1.7.7(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^1.7.15
+    version: 1.7.15(react-dom@18.2.0)(react@18.2.0)
   '@next/font':
     specifier: 13.4.5
     version: 13.4.5
@@ -889,8 +889,8 @@ packages:
       '@floating-ui/core': 1.1.0
     dev: false
 
-  /@headlessui/react@1.7.7(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-BqDOd/tB9u2tA0T3Z0fn18ktw+KbVwMnkxxsGPIH2hzssrQhKB5n/6StZOyvLYP/FsYtvuXfi9I0YowKPv2c1w==}
+  /@headlessui/react@1.7.15(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-OTO0XtoRQ6JPB1cKNFYBZv2Q0JMqMGNhYP1CjPvcJvjz8YGokz8oAj89HIYZGN0gZzn/4kk9iUpmMF4Q21Gsqw==}
     engines: {node: '>=10'}
     peerDependencies:
       react: ^16 || ^17 || ^18
