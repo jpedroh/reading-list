@@ -65,8 +65,8 @@ devDependencies:
     specifier: ^1.35.1
     version: 1.35.1
   '@types/node':
-    specifier: 18.11.18
-    version: 18.11.18
+    specifier: 20.4.0
+    version: 20.4.0
   '@types/qrcode':
     specifier: ^1.5.0
     version: 1.5.0
@@ -1206,7 +1206,7 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
     dependencies:
-      '@types/node': 18.11.18
+      '@types/node': 20.4.0
       playwright-core: 1.35.1
     optionalDependencies:
       fsevents: 2.3.2
@@ -1414,8 +1414,8 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: true
 
-  /@types/node@18.11.18:
-    resolution: {integrity: sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA==}
+  /@types/node@20.4.0:
+    resolution: {integrity: sha512-jfT7iTf/4kOQ9S7CHV9BIyRaQqHu67mOjsIQBC3BKZvzvUB6zLxEwJ6sBE3ozcvP8kF6Uk5PXN0Q+c0dfhGX0g==}
     dev: true
 
   /@types/parse-json@4.0.0:
@@ -1428,7 +1428,7 @@ packages:
   /@types/qrcode@1.5.0:
     resolution: {integrity: sha512-x5ilHXRxUPIMfjtM+1vf/GPTRWZ81nqscursm5gMznJeK9M0YnZ1c3bEvRLQ0zSSgedLx1J6MGL231ObQGGhaA==}
     dependencies:
-      '@types/node': 18.11.18
+      '@types/node': 20.4.0
     dev: true
 
   /@types/react-dom@18.2.6:
