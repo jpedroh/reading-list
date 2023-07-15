@@ -50,7 +50,15 @@ yarn install
 pnpm install
 ```
 
-Create a `.env.local` file similar to `.env.example` and add your variables. Whilst in production we use PlanetScale, however, you can use any MySQL database in development mode thanks to Drizzle and Kysely abstraction. See [Drizzle](https://www.trufflesuite.com/drizzle).
+Create a `.env.local` file similar to `.env.example` and add your variables. Whilst in production we use PlanetScale, however, you can use any MySQL database in development mode thanks to Drizzle and Kysely abstraction. See [Drizzle](https://www.trufflesuite.com/drizzle). Once you have your database setup, run the migrations:
+
+```bash
+npm run db:push
+# or
+yarn db:push
+# or
+pnpm db:push
+```
 
 Finally, run the development server:
 
