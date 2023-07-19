@@ -1,11 +1,11 @@
 import type { Config } from "drizzle-kit";
-import "dotenv/config";
-
-import { env } from "process";
+import { env } from "./modules/shared/env";
 
 export default {
   schema: "./modules/shared/database.ts",
+  out: "./drizzle/generated",
   dbCredentials: {
-    url: env.DATABASE_URL ?? "",
-  }
+    connectionString: env.DATABASE_URL,
+  },
+  driver: "mysql2"
 } satisfies Config;
