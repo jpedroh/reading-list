@@ -15,5 +15,4 @@ export const env = {
   DATABASE_HOST: z.string().parse(process.env.DATABASE_HOST),
   DATABASE_USERNAME: z.string().parse(process.env.DATABASE_USERNAME),
   DATABASE_PASSWORD: z.string().parse(process.env.DATABASE_PASSWORD),
-  DATABASE_URL: z.string().parse(process.env.DATABASE_URL),
 };
