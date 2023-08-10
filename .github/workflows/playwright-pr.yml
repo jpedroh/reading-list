@@ -30,19 +30,20 @@ jobs:
         if: steps.playwright-cache.outputs.cache-hit != 'true'
       - run: npx playwright install-deps
         if: steps.playwright-cache.outputs.cache-hit == 'true'
-      - name: Wait for Vercel preview deployment to be ready
-        uses: patrickedqvist/wait-for-vercel-preview@main
-        id: waitForVercelPreviewDeployment
+      - name: Wait for Cloudflare Pages preview deployment to be ready
+        uses: WalshyDev/cf-pages-await@v1
+        id: waitForCfPagesPreviewDeployment
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          max_timeout: 300
+          apiToken: ${{ secrets.cloudflare_wait_for_deploy_api_token  }}
+          accountId: ${{ secrets.cloudflare_account_id }}
+          project: ${{ secrets.cloudflare_project_name }}
       - run: pnpm run test:e2e
         env:
           DATABASE_URL: ${{ secrets.database_url }}
           DATABASE_HOST: ${{ secrets.database_host }}
           DATABASE_USERNAME: ${{ secrets.database_username }}
           DATABASE_PASSWORD: ${{ secrets.database_password }}
-          PLAYWRIGHT_TEST_BASE_URL: ${{ steps.waitForVercelPreviewDeployment.outputs.url }}
+          PLAYWRIGHT_TEST_BASE_URL: ${{ steps.waitForCfPagesPreviewDeployment.outputs.url }}
           OTP_SECRET: ${{ secrets.OTP_SECRET }}
           OTP_USER: ${{ secrets.OTP_USER }}
           OTP_SERVICE: ${{ secrets.OTP_SERVICE }}
