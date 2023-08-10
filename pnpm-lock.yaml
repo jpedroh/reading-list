@@ -38,9 +38,9 @@ dependencies:
   node-html-parser:
     specifier: ^6.1.5
     version: 6.1.5
-  otplib:
-    specifier: ^12.0.1
-    version: 12.0.1
+  otp-io:
+    specifier: ^1.2.6
+    version: 1.2.6
   qrcode:
     specifier: ^1.5.3
     version: 1.5.3
@@ -60,7 +60,7 @@ dependencies:
 devDependencies:
   '@nrwl/nx-cloud':
     specifier: latest
-    version: 16.0.5
+    version: 16.3.0
   '@playwright/test':
     specifier: ^1.35.1
     version: 1.35.1
@@ -1070,10 +1070,10 @@ packages:
       fastq: 1.15.0
     dev: true
 
-  /@nrwl/nx-cloud@16.0.5:
-    resolution: {integrity: sha512-1p82ym8WE9ziejwgPslstn19iV/VkHfHfKr/5YOnfCHQS+NxUf92ogcYhHXtqWLblVZ9Zs4W4pkSXK4e04wCmQ==}
+  /@nrwl/nx-cloud@16.3.0:
+    resolution: {integrity: sha512-nJrGsVufhY74KcP7kM7BqFOGAoO5OEF6+wfiM295DgmEG9c1yW+x5QiQaC42K9SWYn/eKQa1X7466ZA5lynXoQ==}
     dependencies:
-      nx-cloud: 16.0.5
+      nx-cloud: 16.3.0
     transitivePeerDependencies:
       - debug
     dev: true
@@ -1178,39 +1178,6 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
-
-  /@otplib/core@12.0.1:
-    resolution: {integrity: sha512-4sGntwbA/AC+SbPhbsziRiD+jNDdIzsZ3JUyfZwjtKyc/wufl1pnSIaG4Uqx8ymPagujub0o92kgBnB89cuAMA==}
-    dev: false
-
-  /@otplib/plugin-crypto@12.0.1:
-    resolution: {integrity: sha512-qPuhN3QrT7ZZLcLCyKOSNhuijUi9G5guMRVrxq63r9YNOxxQjPm59gVxLM+7xGnHnM6cimY57tuKsjK7y9LM1g==}
-    dependencies:
-      '@otplib/core': 12.0.1
-    dev: false
-
-  /@otplib/plugin-thirty-two@12.0.1:
-    resolution: {integrity: sha512-MtT+uqRso909UkbrrYpJ6XFjj9D+x2Py7KjTO9JDPhL0bJUYVu5kFP4TFZW4NFAywrAtFRxOVY261u0qwb93gA==}
-    dependencies:
-      '@otplib/core': 12.0.1
-      thirty-two: 1.0.2
-    dev: false
-
-  /@otplib/preset-default@12.0.1:
-    resolution: {integrity: sha512-xf1v9oOJRyXfluBhMdpOkr+bsE+Irt+0D5uHtvg6x1eosfmHCsCC6ej/m7FXiWqdo0+ZUI6xSKDhJwc8yfiOPQ==}
-    dependencies:
-      '@otplib/core': 12.0.1
-      '@otplib/plugin-crypto': 12.0.1
-      '@otplib/plugin-thirty-two': 12.0.1
-    dev: false
-
-  /@otplib/preset-v11@12.0.1:
-    resolution: {integrity: sha512-9hSetMI7ECqbFiKICrNa4w70deTUfArtwXykPUvSHWOdzOlfa9ajglu7mNCntlvxycTiOAXkQGwjQCzzDEMRMg==}
-    dependencies:
-      '@otplib/core': 12.0.1
-      '@otplib/plugin-crypto': 12.0.1
-      '@otplib/plugin-thirty-two': 12.0.1
-    dev: false
 
   /@parcel/watcher@2.0.4:
     resolution: {integrity: sha512-cTDi+FUDBIUOBKEtj+nhiJ71AZVlkAsQFuGQTun5tV9mwQBQgZvhCzG+URPQc8myeN32yRVZEfVAPCs1RW+Jvg==}
@@ -3741,11 +3708,11 @@ packages:
       boolbase: 1.0.0
     dev: false
 
-  /nx-cloud@16.0.5:
-    resolution: {integrity: sha512-13P7r0aKikjBtmdZrNorwXzVPeVIV4MLEwqGY+DEG6doLBtI5KqEQk/d5B5l2dCF2BEi/LXEmLYCmf9gwbOJ+Q==}
+  /nx-cloud@16.3.0:
+    resolution: {integrity: sha512-hmNgpeLO4v4WDSWa8YhwX+q+9ohIyY8iqxlWyIKixWzQH2XfRgYFjOLH4IDLGOlKa3hg7MB6+4+75cK9CfSmKw==}
     hasBin: true
     dependencies:
-      '@nrwl/nx-cloud': 16.0.5
+      '@nrwl/nx-cloud': 16.3.0
       axios: 1.1.3
       chalk: 4.1.2
       dotenv: 10.0.0
@@ -3925,12 +3892,9 @@ packages:
       type-check: 0.4.0
     dev: true
 
-  /otplib@12.0.1:
-    resolution: {integrity: sha512-xDGvUOQjop7RDgxTQ+o4pOol0/3xSZzawTiPKRrHnQWAy0WjhNs/5HdIDJCrqC4MBynmjXgULc6YfioaxZeFgg==}
-    dependencies:
-      '@otplib/core': 12.0.1
-      '@otplib/preset-default': 12.0.1
-      '@otplib/preset-v11': 12.0.1
+  /otp-io@1.2.6:
+    resolution: {integrity: sha512-+xzN/hv2cZ+pxU8aCRKdKOqHigq3s3Tn5Ab0Ls03a9W7h3d/S2M9N/551KKamZy298mRSPsuk+wJbQl2Te5lEw==}
+    engines: {node: '>=14'}
     dev: false
 
   /p-limit@2.3.0:
@@ -4631,11 +4595,6 @@ packages:
     dependencies:
       any-promise: 1.3.0
     dev: true
-
-  /thirty-two@1.0.2:
-    resolution: {integrity: sha512-OEI0IWCe+Dw46019YLl6V10Us5bi574EvlJEOcAkB29IzQ/mYD1A6RyNHLjZPiHCmuodxvgF6U+vZO1L15lxVA==}
-    engines: {node: '>=0.2.6'}
-    dev: false
 
   /through@2.3.8:
     resolution: {integrity: sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==}

@@ -1,14 +1,17 @@
-import qrcode from "qrcode";
-import { authenticator } from "otplib";
-import { env } from "../../modules/shared/env";
 import Image from "next/image";
+import { generateKey, getKeyUri } from "otp-io";
+import qrcode from "qrcode";
+import { env } from "../../modules/shared/env";
+
+export const runtime = "edge";
 
 function generateOtpQrCode() {
-  const otpUri = authenticator.keyuri(
-    env.OTP_USER,
-    env.OTP_SERVICE,
-    env.OTP_SECRET
-  );
+  const otpUri = getKeyUri({
+    type: "totp",
+    secret: generateKey(() => Buffer.from(env.OTP_SECRET)),
+    name: env.OTP_USER,
+    issuer: env.OTP_SERVICE,
+  });
   return qrcode.toDataURL(otpUri);
 }
 

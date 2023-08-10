@@ -39,10 +39,10 @@ export const articleTags = mysqlTable(
       tagIdx: index("name_idx").on(articleTags.tag),
       uniqueArticleIdTag: uniqueIndex("unique_article_id_tag").on(
         articleTags.articleId,
-        articleTags.tag
+        articleTags.tag,
       ),
     };
-  }
+  },
 );
 
 export const articleTagsRelations = relations(articleTags, ({ one }) => ({
