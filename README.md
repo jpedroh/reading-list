@@ -1,20 +1,24 @@
 ![image](./.github/assets/cover.png)
 
 # Reading List
+
 Find all your articles in one place.
 
 ---
 
 ## Table of Contents
+
 - [About](#about)
 - [Features](#features)
 - [Technologies](#technologies)
 - [Getting Started](#getting-started)
 
 ## About
+
 Reading List is a decentralized application that allows users to save tech related articles to a community reading list. Initially, built as a tool for [João's](https://github.com/jpedroh) personal use, Reading List is now growing and becoming a community driven project.
 
 ## Features
+
 - [x] Save articles to a community reading list
 - [x] Add tags to articles
 - [x] Filter articles by tags
@@ -23,6 +27,7 @@ Reading List is a decentralized application that allows users to save tech relat
 - [x] Responsive design
 
 ## Technologies
+
 - [Next.js](https://nextjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Drizzle](https://www.trufflesuite.com/drizzle)

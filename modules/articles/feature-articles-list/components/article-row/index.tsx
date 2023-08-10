@@ -1,7 +1,7 @@
 import { Article } from "../../../domain";
 import styles from "./index.module.css";
 
-const formatter = new Intl.DateTimeFormat('en-US');
+const formatter = new Intl.DateTimeFormat("en-US");
 
 export function ArticleRow({ article }: { article: Article }) {
   return (

@@ -1,9 +1,11 @@
 "use server";
 
-import { randomUUID } from "crypto";
 import { revalidatePath } from "next/cache";
 import parse from "node-html-parser";
-import { authenticator } from "otplib";
+import { generateKey, totp } from "otp-io";
+import { hmac } from "otp-io/crypto";
+
+import { string } from "zod";
 import {
   articles,
   articleTags,
@@ -12,7 +14,6 @@ import {
 } from "../../../shared/database";
 import { env } from "../../../shared/env";
 import { AddArticleSchema } from "../../domain";
-import { string } from "zod";
 
 type Result<T> = { success: true; data: T } | { success: false; error: string };
 
@@ -29,16 +30,16 @@ export async function addArticle(formData: FormData): Promise<Result<void>> {
       return { success: false, error: "Validation error" };
     }
 
-    if (!isOtpValid(payload.data.otp)) {
+    if (!(await isOtpValid(payload.data.otp))) {
       return { success: false, error: "Invalid OTP provided" };
     }
     await saveArticle(
       {
-        id: randomUUID(),
+        id: self.crypto.randomUUID(),
         title: payload.data.title,
         url: payload.data.url,
       },
-      payload.data.tags
+      payload.data.tags,
     );
 
     revalidatePath("/");
@@ -50,9 +51,11 @@ export async function addArticle(formData: FormData): Promise<Result<void>> {
   }
 }
 
-function isOtpValid(token: string) {
+async function isOtpValid(token: string) {
   const isDevBypass = env.VERCEL_ENV !== "production" && token === "000000";
-  return authenticator.verify({ token, secret: env.OTP_SECRET }) || isDevBypass;
+  const key = generateKey(() => Buffer.from(env.OTP_SECRET));
+  const issuedToken = await totp(hmac, { secret: { bytes: key.bytes } });
+  return isDevBypass || issuedToken === token;
 }
 
 export async function getTitleFromUrl(url: string) {
@@ -77,7 +80,7 @@ async function saveArticle(article: NewArticle, tags: string[]) {
       await tx.insert(articleTags).values(
         tags.map((tag) => {
           return { articleId: article.id, tag };
-        })
+        }),
       );
     });
   } catch (cause) {

@@ -1,6 +1,7 @@
 import { expect, test } from "@playwright/test";
-import { authenticator } from "otplib";
 import { env } from "../modules/shared/env";
+import { generateKey, totp } from "otp-io";
+import { hmac } from "otp-io/crypto";
 
 const BASE_URL =
   process.env.PLAYWRIGHT_TEST_BASE_URL ?? "http://localhost:3000";
@@ -29,9 +30,9 @@ test.describe("AddArticle", () => {
     await page.press("body", "Tab");
 
     await expect(dialog.getByLabel(/otp/i)).toBeFocused();
-    await dialog
-      .getByLabel(/otp/i)
-      .fill(authenticator.generate(env.OTP_SECRET));
+    const key = generateKey(() => Buffer.from(env.OTP_SECRET));
+    const issuedToken = await totp(hmac, { secret: { bytes: key.bytes } });
+    await dialog.getByLabel(/otp/i).fill(issuedToken);
     await page.press("body", "Tab");
 
     await expect(dialog.getByRole("button", { name: /add/i })).toBeFocused();
@@ -61,13 +62,13 @@ test.describe("AddArticle", () => {
     await page.goto(BASE_URL);
 
     expect(
-      await page.getByRole("dialog", { name: "Add new article" }).count()
+      await page.getByRole("dialog", { name: "Add new article" }).count(),
     ).toBe(0);
 
     await page.press("body", "Control+ ");
 
     expect(
-      await page.getByRole("dialog", { name: "Add new article" }).count()
+      await page.getByRole("dialog", { name: "Add new article" }).count(),
     ).toBe(1);
   });
 

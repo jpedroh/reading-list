@@ -22,7 +22,7 @@
     "mysql2": "^3.4.2",
     "next": "^13.4.7",
     "node-html-parser": "^6.1.5",
-    "otplib": "^12.0.1",
+    "otp-io": "^1.2.6",
     "qrcode": "^1.5.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -32,8 +32,8 @@
   "devDependencies": {
     "@nrwl/nx-cloud": "latest",
     "@playwright/test": "^1.35.1",
-    "@types/qrcode": "^1.5.0",
     "@types/node": "18.11.18",
+    "@types/qrcode": "^1.5.0",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
     "autoprefixer": "^10.4.14",
