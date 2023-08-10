@@ -37,7 +37,6 @@ jobs:
           apiToken: ${{ secrets.cloudflare_wait_for_deploy_api_token  }}
           accountId: ${{ secrets.cloudflare_account_id }}
           project: ${{ secrets.cloudflare_project_name }}
-          commitHash: ${{ github.sha }}
       - run: pnpm run test:e2e
         env:
           DATABASE_URL: ${{ secrets.database_url }}
