@@ -8,9 +8,6 @@ dependencies:
   '@headlessui/react':
     specifier: ^1.7.15
     version: 1.7.15(react-dom@18.2.0)(react@18.2.0)
-  '@next/font':
-    specifier: 13.4.5
-    version: 13.4.5
   '@planetscale/database':
     specifier: ^1.7.0
     version: 1.7.0
@@ -966,10 +963,6 @@ packages:
     dependencies:
       glob: 7.1.7
     dev: true
-
-  /@next/font@13.4.5:
-    resolution: {integrity: sha512-pjgtnnyamcFK9rv/WKr9WDmVBcd50VK4zZX9E846jowRm8FadjiumDOV80elXUtYW9GXSpAiqWqNMw/kVXNuQQ==}
-    dev: false
 
   /@next/swc-darwin-arm64@13.4.7:
     resolution: {integrity: sha512-VZTxPv1b59KGiv/pZHTO5Gbsdeoxcj2rU2cqJu03btMhHpn3vwzEK0gUSVC/XW96aeGO67X+cMahhwHzef24/w==}

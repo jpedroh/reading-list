@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.15",
-    "@next/font": "13.4.5",
     "@planetscale/database": "^1.7.0",
     "@sentry/nextjs": "^7.63.0",
     "dotenv": "^16.3.1",
