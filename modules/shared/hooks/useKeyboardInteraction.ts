@@ -8,7 +8,7 @@ type Props = {
 export function useKeyboardInteraction({ key, interaction }: Props) {
   useEffect(() => {
     function handle(evt: KeyboardEvent) {
-      if (evt.key.toUpperCase() === key && evt.ctrlKey) {
+      if (evt.key?.toUpperCase() === key && evt.ctrlKey) {
         evt.preventDefault();
         interaction();
       }
