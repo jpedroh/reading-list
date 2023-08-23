@@ -18,8 +18,8 @@ dependencies:
     specifier: ^16.3.1
     version: 16.3.1
   drizzle-orm:
-    specifier: ^0.27.0
-    version: 0.27.0(@planetscale/database@1.7.0)(kysely@0.25.0)(mysql2@3.4.2)
+    specifier: ^0.28.3
+    version: 0.28.3(@planetscale/database@1.7.0)(kysely@0.25.0)(mysql2@3.4.2)
   jotai:
     specifier: ^2.0.0
     version: 2.0.0(react@18.2.0)
@@ -2230,8 +2230,8 @@ packages:
       - supports-color
     dev: true
 
-  /drizzle-orm@0.27.0(@planetscale/database@1.7.0)(kysely@0.25.0)(mysql2@3.4.2):
-    resolution: {integrity: sha512-LGiJ0icB+wQwgbSCOvAjONY8Ec6G/EDzQQP5PmUaQYeI9OqgpVKHC2T1fFIbvk5dabWsbokJ5NOciVAxriStig==}
+  /drizzle-orm@0.28.3(@planetscale/database@1.7.0)(kysely@0.25.0)(mysql2@3.4.2):
+    resolution: {integrity: sha512-7LwNEBJH5EFvkD0vm7RdKWDZsFP9CYR4AWN2fMwns/ezexoX3+UNoVOWGRPJf1qsj357SESldrNEueFvUDfZxA==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
       '@cloudflare/workers-types': '>=3'
