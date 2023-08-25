@@ -20,7 +20,7 @@
     "jotai-location": "^0.5.1",
     "kysely": "^0.25.0",
     "mysql2": "^3.4.2",
-    "next": "^13.4.7",
+    "next": "^13.4.19",
     "node-html-parser": "^6.1.5",
     "otp-io": "^1.2.6",
     "qrcode": "^1.5.3",
