@@ -36,8 +36,8 @@ dependencies:
     specifier: ^13.4.19
     version: 13.4.19(@babel/core@7.21.4)(react-dom@18.2.0)(react@18.2.0)
   node-html-parser:
-    specifier: ^6.1.5
-    version: 6.1.5
+    specifier: ^6.1.6
+    version: 6.1.6
   otp-io:
     specifier: ^1.2.6
     version: 1.2.6
@@ -3941,8 +3941,8 @@ packages:
     hasBin: true
     dev: true
 
-  /node-html-parser@6.1.5:
-    resolution: {integrity: sha512-fAaM511feX++/Chnhe475a0NHD8M7AxDInsqQpz6x63GRF7xYNdS8Vo5dKsIVPgsOvG7eioRRTZQnWBrhDHBSg==}
+  /node-html-parser@6.1.6:
+    resolution: {integrity: sha512-C/MGDQ2NjdjzUq41bW9kW00MPZecAe/oo89vZEFLDfWoQVDk/DdML1yuxVVKLDMFIFax2VTq6Vpfzyn7z5yYgQ==}
     dependencies:
       css-select: 5.1.0
       he: 1.2.0
