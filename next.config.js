@@ -3,6 +3,9 @@ const nextConfig = {
   experimental: {
     serverActions: true,
   },
+  eslint: {
+    ignoreDuringBuilds: true
+  }
 };
 
 // Injected content via Sentry wizard below

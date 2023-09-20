@@ -8,6 +8,13 @@ on:
 jobs:
   main:
     runs-on: ubuntu-latest
+    env:
+      NXCACHE_AWS_ACCESS_KEY_ID: ${{secrets.nxcache_aws_access_key_id}}
+      NXCACHE_AWS_SECRET_ACCESS_KEY: ${{secrets.nxcache_aws_secret_access_key}}
+      NXCACHE_AWS_ENDPOINT: ${{secrets.nxcache_aws_endpoint}}
+      NXCACHE_AWS_REGION: ${{secrets.nxcache_aws_region}}
+      NXCACHE_AWS_BUCKET: ${{secrets.nxcache_aws_bucket}}
+      NXCACHE_AWS_FORCE_PATH_STYLE: ${{secrets.nxcache_aws_force_path_style}}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -37,10 +44,4 @@ jobs:
           DATABASE_HOST: ${{ secrets.database_host }}
           DATABASE_USERNAME: ${{ secrets.database_username }}
           DATABASE_PASSWORD: ${{ secrets.database_password }}
-          NXCACHE_AWS_ACCESS_KEY_ID: ${{secrets.nxcache_aws_access_key_id}}
-          NXCACHE_AWS_SECRET_ACCESS_KEY: ${{secrets.nxcache_aws_secret_access_key}}
-          NXCACHE_AWS_ENDPOINT: ${{secrets.nxcache_aws_endpoint}}
-          NXCACHE_AWS_REGION: ${{secrets.nxcache_aws_region}}
-          NXCACHE_AWS_BUCKET: ${{secrets.nxcache_aws_bucket}}
-          NXCACHE_AWS_FORCE_PATH_STYLE: ${{secrets.nxcache_aws_force_path_style}}
       - run: npx nx affected --target=lint --parallel=3
