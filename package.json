@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "nx exec -- next build",
+    "pack": "next-on-pages",
     "start": "next start",
     "lint": "nx exec -- next lint",
     "test:e2e": "playwright test",
@@ -30,7 +31,8 @@
     "zod": "^3.22.2"
   },
   "devDependencies": {
-    "@nrwl/nx-cloud": "latest",
+    "@cloudflare/next-on-pages": "^1.6.1",
+    "@nx-aws-plugin/nx-aws-cache": "^3.0.1",
     "@playwright/test": "^1.38.0",
     "@types/node": "20.6.2",
     "@types/qrcode": "^1.5.2",
@@ -54,6 +56,11 @@
       "build": {
         "outputs": [
           "{projectRoot}/.next"
+        ]
+      },
+      "pack": {
+        "outputs": [
+          "{projectRoot}/.vercel"
         ]
       }
     }
