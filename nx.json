@@ -1,10 +1,13 @@
 {
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/nx-cloud",
+      "runner": "@nx-aws-plugin/nx-aws-cache",
       "options": {
-        "cacheableOperations": ["build", "lint"],
-        "accessToken": "NWJkMWZhZmItNWZiYS00ZWJlLThhMTMtZjgxNmRmMzYwZTc4fHJlYWQtd3JpdGU="
+        "cacheableOperations": [
+          "pack",
+          "build",
+          "lint"
+        ]
       }
     }
   },
