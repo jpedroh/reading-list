@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "nx exec -- next build",
-    "pack": "next-on-pages",
+    "pack": "nx exec -- next-on-pages",
     "start": "next start",
     "lint": "nx exec -- next lint",
     "test:e2e": "playwright test",
