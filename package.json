@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.6.1",
-    "@nx-aws-plugin/nx-aws-cache": "^3.0.1",
+    "@nx-aws-plugin/nx-aws-cache": "^3.1.0",
     "@playwright/test": "^1.38.1",
     "@types/node": "20.7.0",
     "@types/qrcode": "^1.5.2",
