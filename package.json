@@ -21,7 +21,7 @@
     "jotai-location": "^0.5.1",
     "kysely": "^0.26.3",
     "mysql2": "^3.6.1",
-    "next": "^13.5.2",
+    "next": "^13.5.3",
     "node-html-parser": "^6.1.10",
     "otp-io": "^1.2.6",
     "qrcode": "^1.5.3",
