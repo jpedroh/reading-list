@@ -24,8 +24,8 @@ dependencies:
     specifier: ^2.4.3
     version: 2.4.3(@types/react@18.2.26)(react@18.2.0)
   jotai-location:
-    specifier: ^0.5.1
-    version: 0.5.1(jotai@2.4.3)
+    specifier: ^0.5.2
+    version: 0.5.2(jotai@2.4.3)
   kysely:
     specifier: ^0.26.3
     version: 0.26.3
@@ -6102,8 +6102,8 @@ packages:
     hasBin: true
     dev: true
 
-  /jotai-location@0.5.1(jotai@2.4.3):
-    resolution: {integrity: sha512-6b34X6PpUaXmHCcyxdMFUHgRLUEp+SFHq9UxHbg5HxHC1LddVyVZbPJI+P15+SOQJcUTH3KrsIeKmeLko+Vw/A==}
+  /jotai-location@0.5.2(jotai@2.4.3):
+    resolution: {integrity: sha512-4S9hDh1wYp4SG4Laq3+Xd0GdW7jwnWlbEuL8U22kv3wUZW892n6gXlNhwU0LaoXnWoGG0gtjSLBuFm5iodFKLg==}
     peerDependencies:
       jotai: '>=1.11.0'
     dependencies:
