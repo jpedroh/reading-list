@@ -31,7 +31,7 @@
     "zod": "^3.22.2"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.6.2",
+    "@cloudflare/next-on-pages": "^1.6.3",
     "@nx-aws-plugin/nx-aws-cache": "^3.1.0",
     "@playwright/test": "^1.38.1",
     "@types/node": "20.8.3",
