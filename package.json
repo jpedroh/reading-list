@@ -33,7 +33,7 @@
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.6.3",
     "@nx-aws-plugin/nx-aws-cache": "^3.1.0",
-    "@playwright/test": "^1.38.1",
+    "@playwright/test": "^1.39.0",
     "@types/node": "20.8.6",
     "@types/qrcode": "^1.5.2",
     "@types/react": "18.2.26",
