@@ -43,7 +43,7 @@
     "autoprefixer": "^10.4.15",
     "drizzle-kit": "0.19.13",
     "eslint": "8.51.0",
-    "eslint-config-next": "13.5.4",
+    "eslint-config-next": "13.5.5",
     "nx": "16.10.0",
     "postcss": "^8.4.31",
     "prettier": "^3.0.3",
