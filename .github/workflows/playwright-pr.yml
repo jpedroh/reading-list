@@ -16,7 +16,7 @@ jobs:
           version: 7
       - uses: actions/setup-node@v4
         with:
-          node-version: 19
+          node-version: 20
           cache: "pnpm"
       - uses: actions/cache@v3
         id: playwright-cache
