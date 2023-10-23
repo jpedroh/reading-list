@@ -59,8 +59,8 @@ dependencies:
 
 devDependencies:
   '@cloudflare/next-on-pages':
-    specifier: ^1.7.0
-    version: 1.7.0(vercel@32.2.5)(wrangler@3.8.0)
+    specifier: ^1.7.2
+    version: 1.7.2(vercel@32.2.5)(wrangler@3.8.0)
   '@nx-aws-plugin/nx-aws-cache':
     specifier: ^3.1.0
     version: 3.1.0(@nx/devkit@16.8.1)(@nx/workspace@16.8.1)(nx@17.0.1)
@@ -1016,8 +1016,8 @@ packages:
       mime: 3.0.0
     dev: true
 
-  /@cloudflare/next-on-pages@1.7.0(vercel@32.2.5)(wrangler@3.8.0):
-    resolution: {integrity: sha512-Zcs3oA1ieByJhnqxdtaBTfYkCfAmhYdnw3kAecECqETV1TqjeG/YZwwgTsLBOW/JdxGxmEuC5yP0xjMLbwb4Ig==}
+  /@cloudflare/next-on-pages@1.7.2(vercel@32.2.5)(wrangler@3.8.0):
+    resolution: {integrity: sha512-Jr1s8CIo/S1e6/5R0jKmUueOcJMEGYp96viBUvw0rCRLo3Uw88V+tYr0eubzlTbvhI0Vq4aSLLtiyco9kLsJBQ==}
     hasBin: true
     peerDependencies:
       vercel: '>=30.0.0'
@@ -1030,7 +1030,7 @@ packages:
       cookie: 0.5.0
       esbuild: 0.15.18
       js-yaml: 4.1.0
-      package-manager-manager: 0.1.2
+      package-manager-manager: 0.2.0
       pcre-to-regexp: 1.1.0
       semver: 7.5.4
       vercel: 32.2.5
@@ -6944,8 +6944,8 @@ packages:
     engines: {node: '>=6'}
     dev: false
 
-  /package-manager-manager@0.1.2:
-    resolution: {integrity: sha512-uMRn4geEUBbdTvz+sj+tZaIIMWsbOQG5yOJD2KeeqXbmfoNxUBNOWyWM0afLDPDrl7ZTJ8//hJ7V2BhlNl9WiQ==}
+  /package-manager-manager@0.2.0:
+    resolution: {integrity: sha512-V02gl0bafXJ2gcY6j+5IHM7UdnYwmF+2OsFZuqVcha6iMSStD4dpIOBOsypnUIwOi4jLcPz6RQuyifmAE3mG8g==}
     dependencies:
       js-yaml: 4.1.0
       shellac: 0.8.0
