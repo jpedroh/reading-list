@@ -20,7 +20,7 @@
     "jotai": "^2.5.0",
     "jotai-location": "^0.5.2",
     "kysely": "^0.26.3",
-    "mysql2": "^3.6.2",
+    "mysql2": "^3.6.3",
     "next": "^14.0.1",
     "node-html-parser": "^6.1.11",
     "otp-io": "^1.2.6",
