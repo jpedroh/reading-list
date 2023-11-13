@@ -35,7 +35,7 @@
     "@nx-aws-plugin/nx-aws-cache": "^3.1.0",
     "@playwright/test": "^1.39.0",
     "@types/node": "20.9.0",
-    "@types/qrcode": "^1.5.4",
+    "@types/qrcode": "^1.5.5",
     "@types/react": "18.2.37",
     "@types/react-dom": "18.2.15",
     "@typescript-eslint/eslint-plugin": "^6.9.1",

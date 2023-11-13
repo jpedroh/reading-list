@@ -71,8 +71,8 @@ devDependencies:
     specifier: 20.9.0
     version: 20.9.0
   '@types/qrcode':
-    specifier: ^1.5.4
-    version: 1.5.4
+    specifier: ^1.5.5
+    version: 1.5.5
   '@types/react':
     specifier: 18.2.37
     version: 18.2.37
@@ -2959,8 +2959,8 @@ packages:
   /@types/prop-types@15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
 
-  /@types/qrcode@1.5.4:
-    resolution: {integrity: sha512-ufYqUO7wUBq49hugJry+oIYKscvxIQerJSmXeny215aJKfrepN04DDZP8FCgxvV82kOqKPULCE4PIW3qUmZrRA==}
+  /@types/qrcode@1.5.5:
+    resolution: {integrity: sha512-CdfBi/e3Qk+3Z/fXYShipBT13OJ2fDO2Q2w5CIP5anLTLIndQG9z6P1cnm+8zCWSpm5dnxMFd/uREtb0EXuQzg==}
     dependencies:
       '@types/node': 20.9.0
     dev: true
