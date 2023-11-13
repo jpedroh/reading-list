@@ -7,7 +7,7 @@
 }
 
 .content {
-  @apply flex flex-col md:flex-row gap-8 w-full;
+  @apply flex flex-col gap-8 w-full md:grid md:grid-cols-[300px_1fr];
 }
 
 .content aside {
