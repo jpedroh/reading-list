@@ -7,7 +7,7 @@ export default {
   schema: "./modules/shared/database.ts",
   out: "./drizzle/generated",
   dbCredentials: {
-    connectionString: DATABASE_URL,
+    uri: DATABASE_URL,
   },
   driver: "mysql2",
 } satisfies Config;
