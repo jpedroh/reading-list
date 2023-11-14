@@ -4,14 +4,11 @@ import { generateKey, totp } from "otp-io";
 import { hmac } from "otp-io/crypto";
 import { randomBytes } from "crypto";
 
-const BASE_URL =
-  process.env.PLAYWRIGHT_TEST_BASE_URL ?? "http://localhost:3000";
-
 test.describe("AddArticle", () => {
   test("adds an article", async ({ page }) => {
     const randomTitle = randomBytes(64).toString("base64");
 
-    await page.goto(`${BASE_URL}`);
+    await page.goto("/");;
     await page.getByRole("button", { name: "Add new article" }).click();
 
     const dialog = page.getByRole("dialog", { name: "Add new article" });
@@ -53,7 +50,7 @@ test.describe("AddArticle", () => {
   });
 
   test("it shows the page title when I fill the URL", async ({ page }) => {
-    await page.goto(`${BASE_URL}`);
+    await page.goto("/");;
     await page.getByRole("button", { name: "Add new article" }).click();
 
     await page.getByLabel(/url/i).fill("https://example.com");
@@ -63,7 +60,7 @@ test.describe("AddArticle", () => {
   });
 
   test("Ctrl + Space opens the modal", async ({ page }) => {
-    await page.goto(BASE_URL);
+    await page.goto("/");;
 
     expect(
       await page.getByRole("dialog", { name: "Add new article" }).count(),
@@ -77,7 +74,7 @@ test.describe("AddArticle", () => {
   });
 
   test("providing invalid OTP shows an error message", async ({ page }) => {
-    await page.goto(`${BASE_URL}`);
+    await page.goto("/");;
     await page.getByRole("button", { name: "Add new article" }).click();
 
     await page.getByLabel(/url/i).fill("https://example.com");

@@ -1,9 +1,6 @@
 import { expect, test } from "@playwright/test";
 import { db, articles } from "../../modules/shared/database";
 
-const BASE_URL =
-  process.env.PLAYWRIGHT_TEST_BASE_URL ?? "http://localhost:3000";
-
 test.describe("Search", () => {
   test("if there's an article with a title that contains the search string, it appears on the results", async ({
     page,
@@ -23,7 +20,7 @@ test.describe("Search", () => {
       },
     ]);
 
-    await page.goto(`${BASE_URL}`);
+    await page.goto("/");;
 
     const articleOne = page.getByRole("link", { name: /example title/i });
     const articleTwo = page.getByRole("link", {
