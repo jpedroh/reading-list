@@ -4,8 +4,8 @@ import dotenv from "dotenv";
 dotenv.config();
 
 export default defineConfig({
-  globalSetup: require.resolve("./e2e/clear-database"),
-  globalTeardown: require.resolve("./e2e/clear-database"),
+  globalSetup: require.resolve("./e2e/fixtures/clear-database"),
+  globalTeardown: require.resolve("./e2e/fixtures/clear-database"),
   fullyParallel: Boolean(process.env.CI),
   webServer: {
     command: "pnpm run start",

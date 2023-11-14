@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { env } from "../modules/shared/env";
+import { env } from "../../modules/shared/env";
 import { generateKey, totp } from "otp-io";
 import { hmac } from "otp-io/crypto";
 import { randomBytes } from "crypto";
