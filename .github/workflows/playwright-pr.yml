@@ -32,6 +32,7 @@ jobs:
         if: steps.playwright-cache.outputs.cache-hit == 'true'
       - run: pnpm run build
         env:
+          PLAYWRIGHT_TEST_BASE_URL: "http://localhost:3000"
           DATABASE_URL: ${{ secrets.database_url }}
           DATABASE_HOST: ${{ secrets.database_host }}
           DATABASE_USERNAME: ${{ secrets.database_username }}
@@ -41,6 +42,7 @@ jobs:
           OTP_SERVICE: ${{ secrets.OTP_SERVICE }}
       - run: pnpm run test:e2e
         env:
+          PLAYWRIGHT_TEST_BASE_URL: "http://localhost:3000"
           DATABASE_URL: ${{ secrets.database_url }}
           DATABASE_HOST: ${{ secrets.database_host }}
           DATABASE_USERNAME: ${{ secrets.database_username }}
