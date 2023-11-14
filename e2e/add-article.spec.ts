@@ -2,12 +2,15 @@ import { expect, test } from "@playwright/test";
 import { env } from "../modules/shared/env";
 import { generateKey, totp } from "otp-io";
 import { hmac } from "otp-io/crypto";
+import { randomBytes } from "crypto";
 
 const BASE_URL =
   process.env.PLAYWRIGHT_TEST_BASE_URL ?? "http://localhost:3000";
 
 test.describe("AddArticle", () => {
   test("adds an article", async ({ page }) => {
+    const randomTitle = randomBytes(64).toString('base64');
+
     await page.goto(`${BASE_URL}`);
     await page.getByRole("button", { name: "Add new article" }).click();
 
@@ -20,6 +23,7 @@ test.describe("AddArticle", () => {
 
     await expect(dialog.getByLabel(/title/i)).toBeFocused();
     await expect(page.getByLabel(/title/i)).toHaveValue(/example domain/i);
+    await page.getByLabel(/title/i).fill(randomTitle);
     await page.press("body", "Tab");
 
     await expect(dialog.getByLabel(/tags/i)).toBeFocused();
@@ -40,7 +44,7 @@ test.describe("AddArticle", () => {
 
     await expect(dialog).not.toBeAttached();
 
-    const article = page.getByRole("link", { name: /example domain/i });
+    const article = page.getByRole("link", { name: randomTitle });
     const articleTags = page.getByTestId("tags");
 
     await expect(article).toBeAttached();
