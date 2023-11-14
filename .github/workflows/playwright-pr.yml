@@ -4,9 +4,25 @@ on:
 jobs:
   test_e2e:
     name: Playwright tests
-    timeout-minutes: 5
+    timeout-minutes: 20
     runs-on: ubuntu-latest
-    permissions: read-all
+    container:
+      image: mcr.microsoft.com/playwright:v1.39.0-jammy
+    env:
+      PLAYWRIGHT_TEST_BASE_URL: "http://localhost:3000"
+      DATABASE_URL: ${{ secrets.database_url }}
+      DATABASE_HOST: ${{ secrets.database_host }}
+      DATABASE_USERNAME: ${{ secrets.database_username }}
+      DATABASE_PASSWORD: ${{ secrets.database_password }}
+      NXCACHE_AWS_ACCESS_KEY_ID: ${{secrets.nxcache_aws_access_key_id}}
+      NXCACHE_AWS_SECRET_ACCESS_KEY: ${{secrets.nxcache_aws_secret_access_key}}
+      NXCACHE_AWS_ENDPOINT: ${{secrets.nxcache_aws_endpoint}}
+      NXCACHE_AWS_REGION: ${{secrets.nxcache_aws_region}}
+      NXCACHE_AWS_BUCKET: ${{secrets.nxcache_aws_bucket}}
+      NXCACHE_AWS_FORCE_PATH_STYLE: ${{secrets.nxcache_aws_force_path_style}}
+      OTP_SECRET: ${{ secrets.OTP_SECRET }}
+      OTP_USER: ${{ secrets.OTP_USER }}
+      OTP_SERVICE: ${{ secrets.OTP_SERVICE }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -18,32 +34,5 @@ jobs:
         with:
           node-version: 20
           cache: "pnpm"
-      - uses: actions/cache@v3
-        id: playwright-cache
-        with:
-          path: |
-            ~/.cache/ms-playwright
-          key: ${{ runner.os }}-playwright-${{ hashFiles('**/pnpm-lock.yaml') }}
       - run: pnpm install
-      - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
-        if: steps.playwright-cache.outputs.cache-hit != 'true'
-      - run: npx playwright install-deps
-        if: steps.playwright-cache.outputs.cache-hit == 'true'
-      - name: Wait for Cloudflare Pages preview deployment to be ready
-        uses: WalshyDev/cf-pages-await@v1
-        id: waitForCfPagesPreviewDeployment
-        with:
-          apiToken: ${{ secrets.cloudflare_wait_for_deploy_api_token  }}
-          accountId: ${{ secrets.cloudflare_account_id }}
-          project: ${{ secrets.cloudflare_project_name }}
       - run: pnpm run test:e2e
-        env:
-          DATABASE_URL: ${{ secrets.database_url }}
-          DATABASE_HOST: ${{ secrets.database_host }}
-          DATABASE_USERNAME: ${{ secrets.database_username }}
-          DATABASE_PASSWORD: ${{ secrets.database_password }}
-          PLAYWRIGHT_TEST_BASE_URL: ${{ steps.waitForCfPagesPreviewDeployment.outputs.url }}
-          OTP_SECRET: ${{ secrets.OTP_SECRET }}
-          OTP_USER: ${{ secrets.OTP_USER }}
-          OTP_SERVICE: ${{ secrets.OTP_SERVICE }}

@@ -1,11 +1,17 @@
-import type { PlaywrightTestConfig } from "@playwright/test";
+import { defineConfig } from "@playwright/test";
 import dotenv from "dotenv";
 
 dotenv.config();
 
-const config: PlaywrightTestConfig = {
+export default defineConfig({
   globalSetup: require.resolve("./e2e/clear-database"),
   globalTeardown: require.resolve("./e2e/clear-database"),
-};
-
-export default config;
+  fullyParallel: Boolean(process.env.CI),
+  webServer: {
+    command: "pnpm run start",
+    url: "http://127.0.0.1:3000",
+    timeout: 120 * 1000,
+    reuseExistingServer: !process.env.CI,
+  },
+  reporter: process.env.CI ? "github" : "list",
+});
