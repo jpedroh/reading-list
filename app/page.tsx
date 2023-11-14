@@ -7,6 +7,8 @@ import styles from "./index.module.css";
 
 export const runtime = "edge";
 
+export const dynamic = "force-dynamic";
+
 export const metadata = {
   title: "Reading List",
 };
