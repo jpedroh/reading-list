@@ -9,7 +9,7 @@ const BASE_URL =
 
 test.describe("AddArticle", () => {
   test("adds an article", async ({ page }) => {
-    const randomTitle = randomBytes(64).toString('base64');
+    const randomTitle = randomBytes(64).toString("base64");
 
     await page.goto(`${BASE_URL}`);
     await page.getByRole("button", { name: "Add new article" }).click();
