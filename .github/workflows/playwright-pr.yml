@@ -4,8 +4,10 @@ on:
 jobs:
   test_e2e:
     name: Playwright tests
-    timeout-minutes: 5
+    timeout-minutes: 20
     runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.39.0-jammy
     env:
       PLAYWRIGHT_TEST_BASE_URL: "http://localhost:3000"
       DATABASE_URL: ${{ secrets.database_url }}
@@ -32,16 +34,5 @@ jobs:
         with:
           node-version: 20
           cache: "pnpm"
-      - uses: actions/cache@v3
-        id: playwright-cache
-        with:
-          path: |
-            ~/.cache/ms-playwright
-          key: ${{ runner.os }}-playwright-${{ hashFiles('**/pnpm-lock.yaml') }}
       - run: pnpm install
-      - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
-        if: steps.playwright-cache.outputs.cache-hit != 'true'
-      - run: npx playwright install-deps
-        if: steps.playwright-cache.outputs.cache-hit == 'true'
       - run: pnpm run test:e2e
