@@ -6,7 +6,21 @@ jobs:
     name: Playwright tests
     timeout-minutes: 5
     runs-on: ubuntu-latest
-    permissions: read-all
+    env:
+      PLAYWRIGHT_TEST_BASE_URL: "http://localhost:3000"
+      DATABASE_URL: ${{ secrets.database_url }}
+      DATABASE_HOST: ${{ secrets.database_host }}
+      DATABASE_USERNAME: ${{ secrets.database_username }}
+      DATABASE_PASSWORD: ${{ secrets.database_password }}
+      NXCACHE_AWS_ACCESS_KEY_ID: ${{secrets.nxcache_aws_access_key_id}}
+      NXCACHE_AWS_SECRET_ACCESS_KEY: ${{secrets.nxcache_aws_secret_access_key}}
+      NXCACHE_AWS_ENDPOINT: ${{secrets.nxcache_aws_endpoint}}
+      NXCACHE_AWS_REGION: ${{secrets.nxcache_aws_region}}
+      NXCACHE_AWS_BUCKET: ${{secrets.nxcache_aws_bucket}}
+      NXCACHE_AWS_FORCE_PATH_STYLE: ${{secrets.nxcache_aws_force_path_style}}
+      OTP_SECRET: ${{ secrets.OTP_SECRET }}
+      OTP_USER: ${{ secrets.OTP_USER }}
+      OTP_SERVICE: ${{ secrets.OTP_SERVICE }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -31,22 +45,4 @@ jobs:
       - run: npx playwright install-deps
         if: steps.playwright-cache.outputs.cache-hit == 'true'
       - run: pnpm run build
-        env:
-          PLAYWRIGHT_TEST_BASE_URL: "http://localhost:3000"
-          DATABASE_URL: ${{ secrets.database_url }}
-          DATABASE_HOST: ${{ secrets.database_host }}
-          DATABASE_USERNAME: ${{ secrets.database_username }}
-          DATABASE_PASSWORD: ${{ secrets.database_password }}
-          OTP_SECRET: ${{ secrets.OTP_SECRET }}
-          OTP_USER: ${{ secrets.OTP_USER }}
-          OTP_SERVICE: ${{ secrets.OTP_SERVICE }}
       - run: pnpm run test:e2e
-        env:
-          PLAYWRIGHT_TEST_BASE_URL: "http://localhost:3000"
-          DATABASE_URL: ${{ secrets.database_url }}
-          DATABASE_HOST: ${{ secrets.database_host }}
-          DATABASE_USERNAME: ${{ secrets.database_username }}
-          DATABASE_PASSWORD: ${{ secrets.database_password }}
-          OTP_SECRET: ${{ secrets.OTP_SECRET }}
-          OTP_USER: ${{ secrets.OTP_USER }}
-          OTP_SERVICE: ${{ secrets.OTP_SERVICE }}
