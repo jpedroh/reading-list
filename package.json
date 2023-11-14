@@ -7,7 +7,7 @@
     "build": "nx exec -- next build",
     "pack": "nx exec -- next-on-pages",
     "start": "next start",
-    "lint": "nx exec -- next lint",
+    "lint": "nx exec -- next lint && tsc",
     "test:e2e": "nx exec -- playwright test",
     "db:push": "drizzle-kit push:mysql --config ./drizzle.config.ts"
   },
