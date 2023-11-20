@@ -34,7 +34,7 @@
     "@cloudflare/next-on-pages": "^1.7.3",
     "@nx-aws-plugin/nx-aws-cache": "^3.1.0",
     "@playwright/test": "^1.40.0",
-    "@types/node": "20.9.1",
+    "@types/node": "20.9.2",
     "@types/qrcode": "^1.5.5",
     "@types/react": "18.2.37",
     "@types/react-dom": "18.2.15",
