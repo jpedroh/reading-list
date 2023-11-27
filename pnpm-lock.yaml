@@ -21,11 +21,11 @@ dependencies:
     specifier: ^0.29.0
     version: 0.29.0(@planetscale/database@1.11.0)(kysely@0.26.3)(mysql2@3.6.5)
   jotai:
-    specifier: ^2.5.1
-    version: 2.5.1(@types/react@18.2.38)(react@18.2.0)
+    specifier: ^2.6.0
+    version: 2.6.0(@types/react@18.2.38)(react@18.2.0)
   jotai-location:
     specifier: ^0.5.2
-    version: 0.5.2(jotai@2.5.1)
+    version: 0.5.2(jotai@2.6.0)
   kysely:
     specifier: ^0.26.3
     version: 0.26.3
@@ -6114,16 +6114,16 @@ packages:
     hasBin: true
     dev: true
 
-  /jotai-location@0.5.2(jotai@2.5.1):
+  /jotai-location@0.5.2(jotai@2.6.0):
     resolution: {integrity: sha512-4S9hDh1wYp4SG4Laq3+Xd0GdW7jwnWlbEuL8U22kv3wUZW892n6gXlNhwU0LaoXnWoGG0gtjSLBuFm5iodFKLg==}
     peerDependencies:
       jotai: '>=1.11.0'
     dependencies:
-      jotai: 2.5.1(@types/react@18.2.38)(react@18.2.0)
+      jotai: 2.6.0(@types/react@18.2.38)(react@18.2.0)
     dev: false
 
-  /jotai@2.5.1(@types/react@18.2.38)(react@18.2.0):
-    resolution: {integrity: sha512-vanPCCSuHczUXNbVh/iUunuMfrWRL4FdBtAbTRmrfqezJcKb8ybBTg8iivyYuUHapjcDETyJe1E4inlo26bVHA==}
+  /jotai@2.6.0(@types/react@18.2.38)(react@18.2.0):
+    resolution: {integrity: sha512-Vt6hsc04Km4j03l+Ax+Sc+FVft5cRJhqgxt6GTz6GM2eM3DyX3CdBdzcG0z2FrlZToL1/0OAkqDghIyARWnSuQ==}
     engines: {node: '>=12.20.0'}
     peerDependencies:
       '@types/react': '>=17.0.0'
