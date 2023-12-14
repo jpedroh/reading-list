@@ -14,7 +14,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@planetscale/database": "^1.11.0",
-    "@sentry/nextjs": "^7.86.0",
+    "@sentry/nextjs": "^7.87.0",
     "dotenv": "^16.3.1",
     "drizzle-orm": "^0.29.1",
     "jotai": "^2.6.0",
