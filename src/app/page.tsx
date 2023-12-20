@@ -1,10 +1,10 @@
-import { AddArticleEntrypoint } from "@reading-list/modules/articles/add-article/server";
+import { Button } from "@reading-list/modules/shared/ui";
+import Link from "next/link";
 import { ArticlesListEntrypoint } from "../../modules/articles/feature-articles-list";
 import { SearchByTagsEntrypoint } from "../../modules/articles/feature-search-by-tags";
 import { SearchByTermEntrypoint } from "../../modules/articles/feature-search-by-term";
 import { ShortcutsGuideEntrypoint } from "../../modules/articles/feature-shortcuts-guide";
 import styles from "./index.module.css";
-import Link from "next/link";
 
 export const runtime = "edge";
 
@@ -19,8 +19,9 @@ export default function Home() {
     <>
       <header className={styles.header}>
         <h1>My Reading List</h1>
-        <Link href={"/add-article"}>New Article</Link>
-        {/* <AddArticleEntrypoint /> */}
+        <Button asChild>
+          <Link href={"/add-article"}>Add new article</Link>
+        </Button>
       </header>
       <section className={styles.content}>
         <aside>

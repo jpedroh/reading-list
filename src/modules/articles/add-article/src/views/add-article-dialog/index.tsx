@@ -1,6 +1,6 @@
 "use client";
 
-import { CreatableSelect, Input, Modal } from "@reading-list/modules/shared/ui";
+import { Button, CreatableSelect, Input, Modal } from "@reading-list/modules/shared/ui";
 import { useRouter } from "next/navigation";
 import { useRef, useState, useTransition } from "react";
 import { addArticle, getTitleFromUrl } from "../../services/add-article";
@@ -90,9 +90,9 @@ export function AddArticleDialog({ availableTags }: Props) {
             {errorMessage}
           </p>
         )}
-        <button disabled={isMutating} type="submit">
+        <Button disabled={isMutating} type="submit">
           {isMutating ? "Loading" : "Add"}
-        </button>
+        </Button>
       </form>
     </Modal>
   );
