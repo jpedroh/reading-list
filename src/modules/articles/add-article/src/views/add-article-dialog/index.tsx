@@ -1,11 +1,12 @@
 "use client";
 
-import { Button, CreatableSelect, Input, Modal } from "@reading-list/modules/shared/ui";
+import { CreatableSelect, Input, Modal } from "@reading-list/modules/shared/ui";
 import { useRouter } from "next/navigation";
 import { useRef, useState, useTransition } from "react";
 import { addArticle, getTitleFromUrl } from "../../services/add-article";
 import { fetchTags } from "../../services/fetch-tags";
 import styles from "./index.module.css";
+import { SubmitButton } from "./submit-button";
 
 type Props = {
   availableTags: Awaited<ReturnType<typeof fetchTags>>;
@@ -90,9 +91,7 @@ export function AddArticleDialog({ availableTags }: Props) {
             {errorMessage}
           </p>
         )}
-        <Button disabled={isMutating} type="submit">
-          {isMutating ? "Loading" : "Add"}
-        </Button>
+        <SubmitButton>Add</SubmitButton>
       </form>
     </Modal>
   );
