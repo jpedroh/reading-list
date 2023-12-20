@@ -1,4 +1,5 @@
-import { AddArticleEntrypoint } from "../../modules/articles/feature-add-article";
+import { Button } from "@reading-list/modules/shared/ui";
+import Link from "next/link";
 import { ArticlesListEntrypoint } from "../../modules/articles/feature-articles-list";
 import { SearchByTagsEntrypoint } from "../../modules/articles/feature-search-by-tags";
 import { SearchByTermEntrypoint } from "../../modules/articles/feature-search-by-term";
@@ -18,7 +19,9 @@ export default function Home() {
     <>
       <header className={styles.header}>
         <h1>My Reading List</h1>
-        <AddArticleEntrypoint />
+        <Button asChild>
+          <Link href={"/add-article"}>Add new article</Link>
+        </Button>
       </header>
       <section className={styles.content}>
         <aside>

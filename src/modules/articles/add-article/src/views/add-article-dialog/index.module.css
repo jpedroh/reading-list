@@ -1,0 +1,7 @@
+.container {
+  @apply flex flex-col gap-4;
+}
+
+.container label {
+  @apply flex flex-col gap-2;
+}

@@ -1,25 +1,29 @@
 "use server";
 
-import { revalidatePath } from "next/cache";
-import parse from "node-html-parser";
-import { generateKey, totp } from "otp-io";
-import { hmac } from "otp-io/crypto";
-
 import {
-  articles,
-  articleTags,
-  db,
   NewArticle,
+  articleTags,
+  articles,
+  db,
 } from "@reading-list/modules/shared/database";
 import { env } from "@reading-list/modules/shared/env";
-import { string } from "zod";
-import { AddArticleSchema } from "../../domain";
+import { revalidatePath } from "next/cache";
+import { generateKey, totp } from "otp-io";
+import { hmac } from "otp-io/crypto";
+import { z } from "zod";
 
 type Result<T> = { success: true; data: T } | { success: false; error: string };
 
+const addArticleSchema = z.object({
+  url: z.string().url(),
+  title: z.string(),
+  tags: z.preprocess((x) => (Array.isArray(x) ? x : [x]), z.array(z.string())),
+  otp: z.string().max(6),
+});
+
 export async function addArticle(formData: FormData): Promise<Result<void>> {
   try {
-    const payload = AddArticleSchema.safeParse({
+    const payload = addArticleSchema.safeParse({
       url: formData.get("url"),
       title: formData.get("title"),
       tags: formData.getAll("tags"),
@@ -35,6 +39,7 @@ export async function addArticle(formData: FormData): Promise<Result<void>> {
     }
     await saveArticle(
       {
+        // eslint-disable-next-line
         id: self.crypto.randomUUID(),
         title: payload.data.title,
         url: payload.data.url,
@@ -56,21 +61,6 @@ async function isOtpValid(token: string) {
   const key = generateKey(() => Buffer.from(env.OTP_SECRET));
   const issuedToken = await totp(hmac, { secret: { bytes: key.bytes } });
   return isDevBypass || issuedToken === token;
-}
-
-export async function getTitleFromUrl(url: string) {
-  if (string().url().safeParse(url).success === false) {
-    return "";
-  }
-
-  const pageHtml = await fetch(url).then((r) => r.text());
-  const titleElement = parse(pageHtml).querySelector("title");
-
-  if (!titleElement) {
-    return "";
-  }
-
-  return titleElement.innerText;
 }
 
 async function saveArticle(article: NewArticle, tags: string[]) {

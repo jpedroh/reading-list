@@ -9,15 +9,19 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
+      "@reading-list/modules/articles/add-article": [
+        "src/modules/articles/add-article/src/index.ts"
+      ],
+      "@reading-list/modules/articles/add-article/server": [
+        "src/modules/articles/add-article/src/server.ts"
+      ],
       "@reading-list/modules/shared/database": [
         "src/modules/shared/database/src/index.ts"
       ],
       "@reading-list/modules/shared/env": [
         "src/modules/shared/env/src/index.ts"
       ],
-      "@reading-list/modules/shared/ui": [
-        "src/modules/shared/ui/src/index.ts"
-      ],
+      "@reading-list/modules/shared/ui": ["src/modules/shared/ui/src/index.ts"],
       "@reading-list/modules/shared/ui/server": [
         "src/modules/shared/ui/src/server.ts"
       ]
