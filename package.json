@@ -35,6 +35,7 @@
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.8.2",
     "@nx-aws-plugin/nx-aws-cache": "^3.1.0",
+    "@nx/eslint-plugin": "^17.2.6",
     "@nx/js": "17.2.6",
     "@nx/next": "^17.2.6",
     "@nx/react": "17.2.6",
