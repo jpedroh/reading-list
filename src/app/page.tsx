@@ -1,4 +1,5 @@
 import { Button } from "@reading-list/modules/shared/ui";
+import { Header } from "@reading-list/modules/shared/ui/server";
 import Link from "next/link";
 import { ArticlesListEntrypoint } from "../../modules/articles/feature-articles-list";
 import { SearchByTagsEntrypoint } from "../../modules/articles/feature-search-by-tags";
@@ -17,12 +18,12 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <header className={styles.header}>
-        <h1>My Reading List</h1>
+      <Header>
+        <Header.Title>My Reading List</Header.Title>
         <Button asChild>
           <Link href={"/add-article"}>Add new article</Link>
         </Button>
-      </header>
+      </Header>
       <section className={styles.content}>
         <aside>
           <section>

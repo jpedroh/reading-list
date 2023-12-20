@@ -1,11 +1,3 @@
-.header {
-  @apply flex items-center justify-between gap-4;
-}
-
-.header h1 {
-  @apply text-2xl md:text-4xl font-bold;
-}
-
 .content {
   @apply flex flex-col gap-8 w-full md:grid md:grid-cols-[300px_1fr];
 }
