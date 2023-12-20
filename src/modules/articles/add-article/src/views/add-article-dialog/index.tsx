@@ -18,13 +18,16 @@ type Props = {
 export function AddArticleDialog({ availableTags }: Props) {
   const router = useRouter();
   const titleRef = useRef<HTMLInputElement>(null);
-  const [state, formAction] = useFormState(async (_: unknown, formData: FormData) => {
-    const response = await addArticle(formData);
-    if (response.success) {
-      router.push("/")
-    }
-    return response;
-  }, null)
+  const [state, formAction] = useFormState(
+    async (_: unknown, formData: FormData) => {
+      const response = await addArticle(formData);
+      if (response.success) {
+        router.push("/");
+      }
+      return response;
+    },
+    null,
+  );
 
   function closeModal() {
     router.back();
