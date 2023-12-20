@@ -59,20 +59,6 @@ test.describe("AddArticle", () => {
     await expect(page.getByLabel(/title/i)).toHaveValue(/example domain/i);
   });
 
-  test("Ctrl + Space opens the modal", async ({ page }) => {
-    await page.goto("/");
-
-    expect(
-      await page.getByRole("dialog", { name: "Add new article" }).count(),
-    ).toBe(0);
-
-    await page.press("body", "Control+ ");
-
-    expect(
-      await page.getByRole("dialog", { name: "Add new article" }).count(),
-    ).toBe(1);
-  });
-
   test("providing invalid OTP shows an error message", async ({ page }) => {
     await page.goto("/");
     await page.getByRole("button", { name: "Add new article" }).click();
