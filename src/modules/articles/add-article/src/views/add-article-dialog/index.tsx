@@ -2,9 +2,11 @@
 
 import { CreatableSelect, Input, Modal } from "@reading-list/modules/shared/ui";
 import { useRouter } from "next/navigation";
-import { useRef, useState, useTransition } from "react";
+import { useRef } from "react";
+import { useFormState } from "react-dom";
 import { addArticle, getTitleFromUrl } from "../../services/add-article";
 import { fetchTags } from "../../services/fetch-tags";
+import { ErrorAlert } from "./error-alert";
 import styles from "./index.module.css";
 import { SubmitButton } from "./submit-button";
 
@@ -15,24 +17,16 @@ type Props = {
 export function AddArticleDialog({ availableTags }: Props) {
   const router = useRouter();
   const titleRef = useRef<HTMLInputElement>(null);
-  const [isMutating, startTransition] = useTransition();
-  const [errorMessage, setErrorMessage] = useState("");
+  const [state, formAction] = useFormState(async (_: unknown, formData: FormData) => {
+    const response = await addArticle(formData);
+    if (response.success) {
+      router.push("/")
+    }
+    return response;
+  }, null)
 
   function closeModal() {
     router.back();
-  }
-
-  async function handleSubmit(formData: FormData) {
-    startTransition(() => {
-      setErrorMessage("");
-      addArticle(formData).then((result) => {
-        if (result.success) {
-          router.push("/");
-        } else {
-          setErrorMessage(result.error);
-        }
-      });
-    });
   }
 
   async function handleUrlChange(url: string) {
@@ -45,7 +39,7 @@ export function AddArticleDialog({ availableTags }: Props) {
 
   return (
     <Modal isOpen={true} close={closeModal} title={"Add new article"}>
-      <form action={handleSubmit} className={styles.container}>
+      <form action={formAction} className={styles.container}>
         <label>
           <span>URL</span>
           <Input
@@ -83,14 +77,7 @@ export function AddArticleDialog({ availableTags }: Props) {
           <Input name="otp" type={"text"} required placeholder="000000" />
         </label>
 
-        {!isMutating && errorMessage && (
-          <p
-            role="alert"
-            className="bg-red-700 text-white border border-red-900 p-3 rounded"
-          >
-            {errorMessage}
-          </p>
-        )}
+        {state && !state?.success && <ErrorAlert>{state.error}</ErrorAlert>}
         <SubmitButton>Add</SubmitButton>
       </form>
     </Modal>
