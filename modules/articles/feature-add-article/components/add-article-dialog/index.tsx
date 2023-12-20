@@ -1,8 +1,7 @@
 "use client";
 
+import { Modal, useKeyboardInteraction } from "@reading-list/modules/shared/ui";
 import { ReactNode, useState } from "react";
-import { Modal } from "../../../../shared/components/modal";
-import { useKeyboardInteraction } from "../../../../shared/hooks/useKeyboardInteraction";
 import { AddArticleForm } from "../add-article-form";
 
 export function AddArticleDialog({ children }: { children: ReactNode }) {

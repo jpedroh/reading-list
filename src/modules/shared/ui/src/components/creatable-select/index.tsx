@@ -1,8 +1,9 @@
 "use client";
 
+import { ComponentPropsWithoutRef } from "react";
 import ReactCreatableSelect from "react-select/creatable";
 
-export function CreatableSelect(props: any) {
+export function CreatableSelect(props: ComponentPropsWithoutRef<typeof ReactCreatableSelect>) {
   return (
     <ReactCreatableSelect
       classNames={{
