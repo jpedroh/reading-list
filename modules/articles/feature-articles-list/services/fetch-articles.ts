@@ -1,5 +1,5 @@
 import { desc } from "drizzle-orm";
-import { articles, db } from "../../../shared/database";
+import { articles, db } from "@reading-list/modules/shared/database";
 
 export async function fetchArticles() {
   const rows = await db.query.articles.findMany({

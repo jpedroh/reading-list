@@ -3,11 +3,7 @@
     "default": {
       "runner": "@nx-aws-plugin/nx-aws-cache",
       "options": {
-        "cacheableOperations": [
-          "pack",
-          "build",
-          "lint"
-        ]
+        "cacheableOperations": ["pack", "build", "lint"]
       }
     }
   },
@@ -28,5 +24,15 @@
   },
   "affected": {
     "defaultBase": "main"
+  },
+  "generators": {
+    "@nx/react": {
+      "application": {
+        "babel": true
+      },
+      "library": {
+        "unitTestRunner": "none"
+      }
+    }
   }
 }

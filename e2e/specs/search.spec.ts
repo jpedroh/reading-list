@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { db, articles } from "../../modules/shared/database";
+import { db, articles } from "@reading-list/modules/shared/database";
 
 test.describe("Search", () => {
   test("if there's an article with a title that contains the search string, it appears on the results", async ({
@@ -20,7 +20,7 @@ test.describe("Search", () => {
       },
     ]);
 
-    await page.goto("/");;
+    await page.goto("/");
 
     const articleOne = page.getByRole("link", { name: /example title/i });
     const articleTwo = page.getByRole("link", {

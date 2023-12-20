@@ -5,14 +5,14 @@ import parse from "node-html-parser";
 import { generateKey, totp } from "otp-io";
 import { hmac } from "otp-io/crypto";
 
-import { string } from "zod";
 import {
   articles,
   articleTags,
   db,
   NewArticle,
-} from "../../../shared/database";
-import { env } from "../../../shared/env";
+} from "@reading-list/modules/shared/database";
+import { env } from "@reading-list/modules/shared/env";
+import { string } from "zod";
 import { AddArticleSchema } from "../../domain";
 
 type Result<T> = { success: true; data: T } | { success: false; error: string };

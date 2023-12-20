@@ -1,0 +1,21 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "target": "ES2015",
+    "module": "esnext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "@reading-list/modules/shared/database": [
+        "src/modules/shared/database/src/index.ts"
+      ],
+      "@reading-list/modules/shared/env": [
+        "src/modules/shared/env/src/index.ts"
+      ]
+    }
+  },
+  "exclude": ["node_modules"]
+}

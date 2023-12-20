@@ -42,3 +42,6 @@ dev.db
 
 
 .nx/cache
+
+# Next.js
+.next
