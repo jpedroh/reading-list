@@ -1,7 +1,7 @@
 "use client";
 
+import { Input } from "@reading-list/modules/shared/ui";
 import { ReactNode, useRef, useState, useTransition } from "react";
-import { Input } from "../../../../shared/components/input";
 import { addArticle, getTitleFromUrl } from "../../services/add-article";
 import styles from "./index.module.css";
 

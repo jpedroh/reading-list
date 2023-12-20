@@ -1,9 +1,9 @@
 "use client";
 
+import { useKeyboardInteraction } from "@reading-list/modules/shared/ui";
 import { useAtom } from "jotai";
 import { atomWithHash } from "jotai-location";
 import { useRef } from "react";
-import { useKeyboardInteraction } from "../../shared/hooks/useKeyboardInteraction";
 import styles from "./index.module.css";
 
 const searchTermAtom = atomWithHash("searchTerm", "");
