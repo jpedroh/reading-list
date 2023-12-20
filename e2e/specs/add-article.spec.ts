@@ -9,7 +9,7 @@ test.describe("AddArticle", () => {
     const randomTitle = randomBytes(64).toString("base64");
 
     await page.goto("/");
-    await page.getByRole("button", { name: "Add new article" }).click();
+    await page.getByRole("link", { name: "Add new article" }).click();
 
     const dialog = page.getByRole("dialog", { name: "Add new article" });
     await expect(dialog).toBeAttached();
@@ -51,7 +51,7 @@ test.describe("AddArticle", () => {
 
   test("it shows the page title when I fill the URL", async ({ page }) => {
     await page.goto("/");
-    await page.getByRole("button", { name: "Add new article" }).click();
+    await page.getByRole("link", { name: "Add new article" }).click();
 
     await page.getByLabel(/url/i).fill("https://example.com");
     await page.press("body", "Tab");
@@ -61,7 +61,7 @@ test.describe("AddArticle", () => {
 
   test("providing invalid OTP shows an error message", async ({ page }) => {
     await page.goto("/");
-    await page.getByRole("button", { name: "Add new article" }).click();
+    await page.getByRole("link", { name: "Add new article" }).click();
 
     await page.getByLabel(/url/i).fill("https://example.com");
     await page.getByLabel(/tags/i).fill("Nextjs");
