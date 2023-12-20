@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { generateKey, getKeyUri } from "otp-io";
 import qrcode from "qrcode";
-import { env } from "../../modules/shared/env";
+import { env } from "../../../modules/shared/env";
 
 export const runtime = "edge";
 
