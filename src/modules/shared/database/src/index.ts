@@ -60,6 +60,7 @@ const connection = connect({
   username: env.DATABASE_USERNAME,
   password: env.DATABASE_PASSWORD,
   fetch: (url, init) => {
+    // eslint-disable-next-line
     delete (init as any)["cache"]; // Remove cache header
     return fetch(url, init);
   },
