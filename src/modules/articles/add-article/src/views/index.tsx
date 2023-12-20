@@ -1,6 +1,6 @@
 import { CreatableSelect } from "@reading-list/modules/shared/ui";
-import { AddArticleDialog } from "./components/add-article-dialog";
-import { fetchTags } from "./services/fetch-tags";
+import { AddArticleDialog } from "./add-article-dialog";
+import { fetchTags } from "../services/fetch-tags";
 
 export async function AddArticleEntrypoint() {
   const availableTags = await fetchTags();

@@ -1,4 +1,4 @@
-import { AddArticleEntrypoint } from "../../modules/articles/feature-add-article";
+import { AddArticleEntrypoint } from "@reading-list/modules/articles/add-article/server";
 import { ArticlesListEntrypoint } from "../../modules/articles/feature-articles-list";
 import { SearchByTagsEntrypoint } from "../../modules/articles/feature-search-by-tags";
 import { SearchByTermEntrypoint } from "../../modules/articles/feature-search-by-term";

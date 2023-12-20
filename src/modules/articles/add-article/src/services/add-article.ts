@@ -1,25 +1,30 @@
 "use server";
 
+import {
+  NewArticle,
+  articleTags,
+  articles,
+  db,
+} from "@reading-list/modules/shared/database";
+import { env } from "@reading-list/modules/shared/env";
 import { revalidatePath } from "next/cache";
 import parse from "node-html-parser";
 import { generateKey, totp } from "otp-io";
 import { hmac } from "otp-io/crypto";
-
-import {
-  articles,
-  articleTags,
-  db,
-  NewArticle,
-} from "@reading-list/modules/shared/database";
-import { env } from "@reading-list/modules/shared/env";
-import { string } from "zod";
-import { AddArticleSchema } from "../../domain";
+import { string, z } from "zod";
 
 type Result<T> = { success: true; data: T } | { success: false; error: string };
 
+const addArticleSchema = z.object({
+  url: z.string().url(),
+  title: z.string(),
+  tags: z.preprocess((x) => (Array.isArray(x) ? x : [x]), z.array(z.string())),
+  otp: z.string().max(6),
+});
+
 export async function addArticle(formData: FormData): Promise<Result<void>> {
   try {
-    const payload = AddArticleSchema.safeParse({
+    const payload = addArticleSchema.safeParse({
       url: formData.get("url"),
       title: formData.get("title"),
       tags: formData.getAll("tags"),
