@@ -1,4 +1,4 @@
-import { CreatableSelect } from "../../shared/components/creatable-select";
+import { CreatableSelect } from "@reading-list/modules/shared/ui";
 import { AddArticleDialog } from "./components/add-article-dialog";
 import { fetchTags } from "./services/fetch-tags";
 
