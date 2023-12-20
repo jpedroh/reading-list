@@ -1,18 +1,8 @@
-import { CreatableSelect } from "@reading-list/modules/shared/ui";
-import { AddArticleDialog } from "./add-article-dialog";
 import { fetchTags } from "../services/fetch-tags";
+import { AddArticleDialog } from "./add-article-dialog";
 
 export async function AddArticleEntrypoint() {
   const availableTags = await fetchTags();
 
-  return (
-    <AddArticleDialog>
-      <CreatableSelect
-        name="tags"
-        required
-        isMulti={true}
-        options={availableTags}
-      />
-    </AddArticleDialog>
-  );
+  return <AddArticleDialog availableTags={availableTags} />;
 }

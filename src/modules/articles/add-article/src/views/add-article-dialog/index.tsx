@@ -1,34 +1,99 @@
 "use client";
 
-import { Modal, useKeyboardInteraction } from "@reading-list/modules/shared/ui";
-import { ReactNode, useState } from "react";
-import { AddArticleForm } from "./add-article-form";
+import { CreatableSelect, Input, Modal } from "@reading-list/modules/shared/ui";
+import { useRouter } from "next/navigation";
+import { useRef, useState, useTransition } from "react";
+import { addArticle, getTitleFromUrl } from "../../services/add-article";
+import { fetchTags } from "../../services/fetch-tags";
+import styles from "./index.module.css";
 
-export function AddArticleDialog({ children }: { children: ReactNode }) {
-  const [isOpen, setIsOpen] = useState(false);
-  useKeyboardInteraction({ key: " ", interaction: openModal });
+type Props = {
+  availableTags: Awaited<ReturnType<typeof fetchTags>>;
+};
+
+export function AddArticleDialog({ availableTags }: Props) {
+  const router = useRouter();
+  const titleRef = useRef<HTMLInputElement>(null);
+  const [isMutating, startTransition] = useTransition();
+  const [errorMessage, setErrorMessage] = useState("");
 
   function closeModal() {
-    setIsOpen(false);
+    router.back();
   }
 
-  function openModal() {
-    setIsOpen(true);
+  async function handleSubmit(formData: FormData) {
+    startTransition(() => {
+      setErrorMessage("");
+      addArticle(formData).then((result) => {
+        if (result.success) {
+          router.push("/");
+        } else {
+          setErrorMessage(result.error);
+        }
+      });
+    });
+  }
+
+  async function handleUrlChange(url: string) {
+    if (!url) return;
+    const title = await getTitleFromUrl(url);
+    if (titleRef.current) {
+      titleRef.current.value = title;
+    }
   }
 
   return (
-    <>
-      <button
-        type="button"
-        onClick={openModal}
-        className="rounded-md bg-blue-800 bg-opacity-50 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-80 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
-      >
-        Add new article
-      </button>
+    <Modal isOpen={true} close={closeModal} title={"Add new article"}>
+      <form action={handleSubmit} className={styles.container}>
+        <label>
+          <span>URL</span>
+          <Input
+            name="url"
+            type={"text"}
+            required
+            onBlur={(evt) => handleUrlChange(evt.target.value)}
+            placeholder="https://example.com"
+          />
+        </label>
 
-      <Modal isOpen={isOpen} close={closeModal} title={"Add new article"}>
-        <AddArticleForm onCreated={closeModal}>{children}</AddArticleForm>
-      </Modal>
-    </>
+        <label>
+          <span>Title</span>
+          <Input
+            ref={titleRef}
+            name="title"
+            type={"text"}
+            required
+            placeholder="Example title"
+          />
+        </label>
+
+        <label>
+          <span>Tags</span>
+          <CreatableSelect
+            name="tags"
+            required
+            isMulti={true}
+            options={availableTags}
+          />
+        </label>
+
+        <label>
+          <span>OTP</span>
+          <Input name="otp" type={"text"} required placeholder="000000" />
+        </label>
+
+        {!isMutating && errorMessage && (
+          <p
+            role="alert"
+            className="bg-red-700 text-white border border-red-900 p-3 rounded"
+          >
+            {errorMessage}
+          </p>
+        )}
+        <button disabled={isMutating} type="submit">
+          {isMutating ? "Loading" : "Add"}
+        </button>
+      </form>
+    </Modal>
   );
 }

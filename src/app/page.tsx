@@ -4,6 +4,7 @@ import { SearchByTagsEntrypoint } from "../../modules/articles/feature-search-by
 import { SearchByTermEntrypoint } from "../../modules/articles/feature-search-by-term";
 import { ShortcutsGuideEntrypoint } from "../../modules/articles/feature-shortcuts-guide";
 import styles from "./index.module.css";
+import Link from "next/link";
 
 export const runtime = "edge";
 
@@ -18,7 +19,8 @@ export default function Home() {
     <>
       <header className={styles.header}>
         <h1>My Reading List</h1>
-        <AddArticleEntrypoint />
+        <Link href={"/add-article"}>New Article</Link>
+        {/* <AddArticleEntrypoint /> */}
       </header>
       <section className={styles.content}>
         <aside>
