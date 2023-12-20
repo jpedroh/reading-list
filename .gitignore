@@ -39,3 +39,6 @@ next-env.d.ts
 dev.db
 # Sentry Auth Token
 .sentryclirc
+
+
+.nx/cache

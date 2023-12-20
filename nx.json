@@ -11,5 +11,22 @@
       }
     }
   },
-  "defaultBase": "main"
+  "defaultBase": "main",
+  "targetDefaults": {
+    "build": {
+      "cache": true
+    },
+    "pack": {
+      "cache": true
+    },
+    "lint": {
+      "cache": true
+    },
+    "test:e2e": {
+      "cache": true
+    }
+  },
+  "affected": {
+    "defaultBase": "main"
+  }
 }
