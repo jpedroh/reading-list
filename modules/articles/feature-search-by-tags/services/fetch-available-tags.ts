@@ -1,5 +1,5 @@
 import { desc, sql } from "drizzle-orm";
-import { articleTags, db } from "../../../shared/database";
+import { articleTags, db } from "@reading-list/modules/shared/database";
 
 export async function fetchAvailableTags() {
   return db

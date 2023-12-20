@@ -1,4 +1,8 @@
-import { articleTags, articles, db } from "../../modules/shared/database";
+import {
+  articleTags,
+  articles,
+  db,
+} from "@reading-list/modules/shared/database";
 
 export default async function clearDatabase() {
   await db.delete(articles).execute();

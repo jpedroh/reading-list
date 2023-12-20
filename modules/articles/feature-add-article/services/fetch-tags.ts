@@ -1,4 +1,4 @@
-import { articleTags, db } from "../../../shared/database";
+import { articleTags, db } from "@reading-list/modules/shared/database";
 
 export async function fetchTags() {
   return db

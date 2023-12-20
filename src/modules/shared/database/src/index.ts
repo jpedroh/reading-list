@@ -10,7 +10,7 @@ import {
   varchar,
 } from "drizzle-orm/mysql-core";
 import { drizzle } from "drizzle-orm/planetscale-serverless";
-import { env } from "./env";
+import { env } from "@reading-list/modules/shared/env";
 
 export const articles = mysqlTable("Article", {
   id: varchar("id", { length: 36 }).primaryKey(),
@@ -62,7 +62,7 @@ const connection = connect({
   fetch: (url, init) => {
     delete (init as any)["cache"]; // Remove cache header
     return fetch(url, init);
-  }
+  },
 });
 
 export const db = drizzle(connection, {
