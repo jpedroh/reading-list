@@ -8,10 +8,9 @@ import {
 } from "@reading-list/modules/shared/database";
 import { env } from "@reading-list/modules/shared/env";
 import { revalidatePath } from "next/cache";
-import parse from "node-html-parser";
 import { generateKey, totp } from "otp-io";
 import { hmac } from "otp-io/crypto";
-import { string, z } from "zod";
+import { z } from "zod";
 
 type Result<T> = { success: true; data: T } | { success: false; error: string };
 
@@ -62,21 +61,6 @@ async function isOtpValid(token: string) {
   const key = generateKey(() => Buffer.from(env.OTP_SECRET));
   const issuedToken = await totp(hmac, { secret: { bytes: key.bytes } });
   return isDevBypass || issuedToken === token;
-}
-
-export async function getTitleFromUrl(url: string) {
-  if (string().url().safeParse(url).success === false) {
-    return "";
-  }
-
-  const pageHtml = await fetch(url).then((r) => r.text());
-  const titleElement = parse(pageHtml).querySelector("title");
-
-  if (!titleElement) {
-    return "";
-  }
-
-  return titleElement.innerText;
 }
 
 async function saveArticle(article: NewArticle, tags: string[]) {
