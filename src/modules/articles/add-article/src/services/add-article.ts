@@ -7,6 +7,7 @@ import {
   db,
 } from "@reading-list/modules/shared/database";
 import { env } from "@reading-list/modules/shared/env";
+import * as Sentry from "@sentry/nextjs";
 import { revalidatePath } from "next/cache";
 import { generateKey, totp } from "otp-io";
 import { hmac } from "otp-io/crypto";
@@ -51,7 +52,7 @@ export async function addArticle(formData: FormData): Promise<Result<void>> {
 
     return { success: true, data: undefined };
   } catch (error) {
-    console.error(error);
+    Sentry.captureException(error);
     return { success: false, error: "Internal server error" };
   }
 }
@@ -74,7 +75,6 @@ async function saveArticle(article: NewArticle, tags: string[]) {
       );
     });
   } catch (cause) {
-    console.error(cause);
     throw new Error("Internal server error", { cause });
   }
 }
