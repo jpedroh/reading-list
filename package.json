@@ -15,7 +15,7 @@
     "@headlessui/react": "^1.7.17",
     "@planetscale/database": "^1.13.0",
     "@radix-ui/react-slot": "^1.0.2",
-    "@sentry/nextjs": "^7.90.0",
+    "@sentry/nextjs": "^7.91.0",
     "@swc/helpers": "~0.5.3",
     "dotenv": "^16.3.1",
     "drizzle-orm": "^0.29.1",
