@@ -77,8 +77,8 @@ devDependencies:
     specifier: ^17.2.7
     version: 17.2.7(@swc-node/register@1.6.8)(@swc/core@1.3.101)(@types/node@20.10.5)(@typescript-eslint/parser@6.15.0)(eslint@8.56.0)(nx@17.2.7)(typescript@5.3.3)
   '@nx/js':
-    specifier: 17.2.6
-    version: 17.2.6(@swc-node/register@1.6.8)(@swc/core@1.3.101)(@types/node@20.10.5)(nx@17.2.7)(typescript@5.3.3)
+    specifier: 17.2.7
+    version: 17.2.7(@swc-node/register@1.6.8)(@swc/core@1.3.101)(@types/node@20.10.5)(nx@17.2.7)(typescript@5.3.3)
   '@nx/next':
     specifier: ^17.2.7
     version: 17.2.7(@babel/core@7.23.6)(@swc-node/register@1.6.8)(@swc/core@1.3.101)(@types/node@20.10.5)(eslint@8.56.0)(next@14.0.4)(nx@17.2.7)(typescript@5.3.3)(webpack@5.89.0)
@@ -3143,14 +3143,6 @@ packages:
       fastq: 1.15.0
     dev: true
 
-  /@nrwl/devkit@17.2.6(nx@17.2.6):
-    resolution: {integrity: sha512-uZVqc2qhi+WdSqLV9aIcE+5ck+IUSQ47Cc5bslWrssQjBncqGavHYDuU4ZLuKK5HxCuZqlQjvo7TsF7LeOjNiA==}
-    dependencies:
-      '@nx/devkit': 17.2.6(nx@17.2.6)
-    transitivePeerDependencies:
-      - nx
-    dev: true
-
   /@nrwl/devkit@17.2.6(nx@17.2.7):
     resolution: {integrity: sha512-uZVqc2qhi+WdSqLV9aIcE+5ck+IUSQ47Cc5bslWrssQjBncqGavHYDuU4ZLuKK5HxCuZqlQjvo7TsF7LeOjNiA==}
     dependencies:
@@ -3187,10 +3179,10 @@ packages:
       - verdaccio
     dev: true
 
-  /@nrwl/js@17.2.6(@swc-node/register@1.6.8)(@swc/core@1.3.101)(@types/node@20.10.5)(nx@17.2.7)(typescript@5.3.3):
+  /@nrwl/js@17.2.6(@swc-node/register@1.6.8)(@swc/core@1.3.101)(@types/node@20.10.5)(nx@17.2.7)(typescript@5.2.2):
     resolution: {integrity: sha512-oFnyaVOpVG3XrkIXQMs5TM6hrRRBe38jRX79d51S41yLuiOrHgpJlMmii1wafevM1Dpk9UlAvPh7v8OffgDZtg==}
     dependencies:
-      '@nx/js': 17.2.6(@swc-node/register@1.6.8)(@swc/core@1.3.101)(@types/node@20.10.5)(nx@17.2.7)(typescript@5.3.3)
+      '@nx/js': 17.2.6(@swc-node/register@1.6.8)(@swc/core@1.3.101)(@types/node@20.10.5)(nx@17.2.7)(typescript@5.2.2)
     transitivePeerDependencies:
       - '@babel/traverse'
       - '@swc-node/register'
@@ -3204,10 +3196,10 @@ packages:
       - verdaccio
     dev: true
 
-  /@nrwl/js@17.2.7(@swc-node/register@1.6.8)(@swc/core@1.3.101)(@types/node@20.10.5)(nx@17.2.7)(typescript@5.2.2):
-    resolution: {integrity: sha512-8AAUmqESQ89Cbark8DlkElINMmDpEJLivan6RPksUUEK6lrZQwVnHf4eWLQzN2/C4i5XkfdxavzluuDPCqHQSQ==}
+  /@nrwl/js@17.2.6(@swc-node/register@1.6.8)(@swc/core@1.3.101)(@types/node@20.10.5)(nx@17.2.7)(typescript@5.3.3):
+    resolution: {integrity: sha512-oFnyaVOpVG3XrkIXQMs5TM6hrRRBe38jRX79d51S41yLuiOrHgpJlMmii1wafevM1Dpk9UlAvPh7v8OffgDZtg==}
     dependencies:
-      '@nx/js': 17.2.7(@swc-node/register@1.6.8)(@swc/core@1.3.101)(@types/node@20.10.5)(nx@17.2.7)(typescript@5.2.2)
+      '@nx/js': 17.2.6(@swc-node/register@1.6.8)(@swc/core@1.3.101)(@types/node@20.10.5)(nx@17.2.7)(typescript@5.3.3)
     transitivePeerDependencies:
       - '@babel/traverse'
       - '@swc-node/register'
@@ -3405,7 +3397,7 @@ packages:
     peerDependencies:
       nx: '>= 16 <= 18'
     dependencies:
-      '@nrwl/devkit': 17.2.6(nx@17.2.6)
+      '@nrwl/devkit': 17.2.6(nx@17.2.7)
       ejs: 3.1.9
       enquirer: 2.3.6
       ignore: 5.2.4
@@ -3552,7 +3544,7 @@ packages:
       '@babel/preset-env': 7.23.6(@babel/core@7.23.6)
       '@babel/preset-typescript': 7.23.3(@babel/core@7.23.6)
       '@babel/runtime': 7.23.6
-      '@nrwl/js': 17.2.6(@swc-node/register@1.6.8)(@swc/core@1.3.101)(@types/node@20.10.5)(nx@17.2.7)(typescript@5.3.3)
+      '@nrwl/js': 17.2.6(@swc-node/register@1.6.8)(@swc/core@1.3.101)(@types/node@20.10.5)(nx@17.2.7)(typescript@5.2.2)
       '@nx/devkit': 17.2.6(nx@17.2.7)
       '@nx/workspace': 17.2.6(@swc-node/register@1.6.8)(@swc/core@1.3.101)
       '@phenomnomnominal/tsquery': 5.0.1(typescript@5.2.2)
@@ -3652,7 +3644,7 @@ packages:
       '@babel/preset-env': 7.23.6(@babel/core@7.23.6)
       '@babel/preset-typescript': 7.23.3(@babel/core@7.23.6)
       '@babel/runtime': 7.23.6
-      '@nrwl/js': 17.2.7(@swc-node/register@1.6.8)(@swc/core@1.3.101)(@types/node@20.10.5)(nx@17.2.7)(typescript@5.2.2)
+      '@nrwl/js': 17.2.7(@swc-node/register@1.6.8)(@swc/core@1.3.101)(@types/node@20.10.5)(nx@17.2.7)(typescript@5.3.3)
       '@nx/devkit': 17.2.7(nx@17.2.7)
       '@nx/workspace': 17.2.7(@swc-node/register@1.6.8)(@swc/core@1.3.101)
       '@phenomnomnominal/tsquery': 5.0.1(typescript@5.2.2)
