@@ -24,7 +24,7 @@
     "kysely": "^0.26.3",
     "mysql2": "^3.6.5",
     "next": "^14.0.4",
-    "node-html-parser": "^6.1.11",
+    "node-html-parser": "^6.1.12",
     "otp-io": "^1.2.6",
     "qrcode": "^1.5.3",
     "react": "18.2.0",
