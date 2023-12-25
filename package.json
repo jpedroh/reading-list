@@ -39,7 +39,7 @@
     "@nx/eslint-plugin": "^17.2.7",
     "@nx/js": "17.2.7",
     "@nx/next": "^17.2.7",
-    "@nx/react": "17.2.6",
+    "@nx/react": "17.2.7",
     "@playwright/test": "^1.40.1",
     "@swc-node/register": "~1.6.7",
     "@swc/cli": "~0.1.62",
