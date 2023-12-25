@@ -18,7 +18,7 @@
     "@sentry/nextjs": "^7.91.0",
     "@swc/helpers": "~0.5.3",
     "dotenv": "^16.3.1",
-    "drizzle-orm": "^0.29.1",
+    "drizzle-orm": "^0.29.2",
     "jotai": "^2.6.0",
     "jotai-location": "^0.5.2",
     "kysely": "^0.26.3",
