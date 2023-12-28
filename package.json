@@ -18,7 +18,7 @@
     "@swc/helpers": "~0.5.3",
     "dotenv": "^16.3.1",
     "drizzle-orm": "^0.29.2",
-    "jotai": "^2.6.0",
+    "jotai": "^2.6.1",
     "jotai-location": "^0.5.2",
     "kysely": "^0.26.3",
     "mysql2": "^3.6.5",
