@@ -1,7 +1,7 @@
+import { ArticlesDisplay } from "@reading-list/modules/articles/articles-display/server";
 import { Button } from "@reading-list/modules/shared/ui";
 import { Header } from "@reading-list/modules/shared/ui/server";
 import Link from "next/link";
-import { ArticlesListEntrypoint } from "../../modules/articles/feature-articles-list";
 import { SearchByTagsEntrypoint } from "../../modules/articles/feature-search-by-tags";
 import { SearchByTermEntrypoint } from "../../modules/articles/feature-search-by-term";
 import styles from "./index.module.css";
@@ -35,7 +35,7 @@ export default function Home() {
           </section>
         </aside>
         <main>
-          <ArticlesListEntrypoint />
+          <ArticlesDisplay />
         </main>
       </section>
     </>

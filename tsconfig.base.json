@@ -15,6 +15,12 @@
       "@reading-list/modules/articles/add-article/server": [
         "src/modules/articles/add-article/src/server.ts"
       ],
+      "@reading-list/modules/articles/articles-display": [
+        "src/modules/articles/articles-display/src/index.ts"
+      ],
+      "@reading-list/modules/articles/articles-display/server": [
+        "src/modules/articles/articles-display/src/server.ts"
+      ],
       "@reading-list/modules/shared/database": [
         "src/modules/shared/database/src/index.ts"
       ],
