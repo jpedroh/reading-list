@@ -3,7 +3,7 @@
 import { useMemo } from "react";
 import { Article } from "../../services/fetch-articles";
 import { ArticleRow } from "./article-row";
-import { useArticlesFilter } from "@/src/modules/shared/articles-filter-provider/src";
+import { useArticlesFilter } from "@reading-list/modules/shared/articles-filter-provider";
 
 type Props = { articles: Article[] };
 

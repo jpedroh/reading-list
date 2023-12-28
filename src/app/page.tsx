@@ -1,4 +1,5 @@
-import { ArticlesDisplay } from "@reading-list/modules/articles/articles-display/server";
+import { ArticlesFilter } from "@reading-list/modules/articles/articles-filter/server";
+import { ArticlesList } from "@reading-list/modules/articles/articles-list/server";
 import { Button } from "@reading-list/modules/shared/ui";
 import { Content, Header } from "@reading-list/modules/shared/ui/server";
 import Link from "next/link";
@@ -21,7 +22,12 @@ export default function Home() {
         </Button>
       </Header.Root>
       <Content.Root>
-        <ArticlesDisplay />
+        <Content.Aside>
+          <ArticlesFilter />
+        </Content.Aside>
+        <Content.Main>
+          <ArticlesList />
+        </Content.Main>
       </Content.Root>
     </>
   );

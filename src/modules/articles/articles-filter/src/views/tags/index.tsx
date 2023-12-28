@@ -2,10 +2,11 @@
 
 import { ChangeEvent } from "react";
 import * as S from "./styles";
-import { useArticlesFilter } from "@/src/modules/shared/articles-filter-provider/src";
+import { useArticlesFilter } from "@reading-list/modules/shared/articles-filter-provider";
+import { Tag } from "../../services/fetch-available-tags";
 
 type Props = {
-  availableTags: readonly { name: string; total: number }[];
+  availableTags: Tag[];
 };
 
 export function TagsFilter({ availableTags }: Props) {

@@ -1,1 +1,0 @@
-export { ArticlesDisplay } from "./views";
