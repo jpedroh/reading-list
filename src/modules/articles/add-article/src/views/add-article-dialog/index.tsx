@@ -42,7 +42,9 @@ export function AddArticleDialog({ availableTags }: Props) {
   }
 
   return (
-    <Modal isOpen={true} close={closeModal} title={"Add new article"}>
+    <Modal isOpen={true} isDismissable onOpenChange={closeModal}>
+      <Modal.Title>Add new article</Modal.Title>
+
       <form action={formAction} className={styles.container}>
         <label>
           <span>URL</span>
