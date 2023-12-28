@@ -1,13 +1,6 @@
-import { ReactNode } from "react";
+import { twc } from "react-twc";
 
-export function Header({ children }: { children: ReactNode }) {
-  return (
-    <header className={`flex items-center justify-between gap-4`}>
-      {children}
-    </header>
-  );
-}
-
-Header.Title = function HeaderTitle({ children }: { children: ReactNode }) {
-  return <h1 className={`text-2xl md:text-4xl font-bold`}>{children}</h1>;
+export const Header = {
+  Root: twc.header`flex items-center justify-between gap-4`,
+  Title: twc.h1`text-2xl md:text-4xl font-bold`,
 };

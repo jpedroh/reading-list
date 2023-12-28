@@ -18,12 +18,12 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <Header>
+      <Header.Root>
         <Header.Title>My Reading List</Header.Title>
         <Button asChild>
           <Link href={"/add-article"}>Add new article</Link>
         </Button>
-      </Header>
+      </Header.Root>
       <section className={styles.content}>
         <aside>
           <section>
