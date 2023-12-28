@@ -16,7 +16,8 @@
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "@reading-list/root:build",
-        "dev": true
+        "dev": true,
+        "port": 3000
       }
     },
     "pack": {
