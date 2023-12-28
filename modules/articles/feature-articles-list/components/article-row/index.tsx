@@ -1,25 +1,22 @@
 import { Article } from "../../../domain";
-import styles from "./index.module.css";
+import * as S from "./styles";
 
 const formatter = new Intl.DateTimeFormat("en-US");
 
 export function ArticleRow({ article }: { article: Article }) {
   return (
-    <a
-      href={article.url}
-      target="_blank"
-      rel="noreferrer"
-      className={styles.container}
-    >
-      <h1>{article.title}</h1>
-      <div>
-        <span>{formatter.format(new Date(article.addedAt))}</span>
-        <ul data-testid="tags">
+    <S.Container>
+      <S.Title href={article.url} target="_blank">
+        {article.title}
+      </S.Title>
+      <S.Info>
+        <S.DateAdded>{formatter.format(new Date(article.addedAt))}</S.DateAdded>
+        <S.TagsList data-testid="tags">
           {article.tags.map((tag) => (
-            <li key={tag}>{tag}</li>
+            <S.Tag key={tag}>{tag}</S.Tag>
           ))}
-        </ul>
-      </div>
-    </a>
+        </S.TagsList>
+      </S.Info>
+    </S.Container>
   );
 }

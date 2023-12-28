@@ -10,10 +10,10 @@ export function ArticlesList({ articles }: Props) {
   const visibleArticles = useFilterArticles(articles);
 
   return (
-    <>
+    <ul>
       {visibleArticles.map((article) => (
         <ArticleRow key={article.id} article={article} />
       ))}
-    </>
+    </ul>
   );
 }
