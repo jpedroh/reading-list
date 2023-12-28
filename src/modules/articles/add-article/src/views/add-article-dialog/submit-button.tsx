@@ -8,7 +8,7 @@ export function SubmitButton({ children }: { children: ReactNode }) {
   const { pending } = useFormStatus();
 
   return (
-    <Button disabled={pending} type="submit">
+    <Button isDisabled={pending} type="submit">
       {pending ? "Loading" : children}
     </Button>
   );

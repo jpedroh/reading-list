@@ -13,9 +13,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.17",
     "@planetscale/database": "^1.13.0",
-    "@radix-ui/react-slot": "^1.0.2",
     "@sentry/nextjs": "^7.91.0",
     "@swc/helpers": "~0.5.3",
     "dotenv": "^16.3.1",
@@ -29,9 +27,12 @@
     "otp-io": "^1.2.6",
     "qrcode": "^1.5.3",
     "react": "18.2.0",
+    "react-aria-components": "^1.0.0",
     "react-dom": "18.2.0",
     "react-select": "^5.8.0",
     "react-twc": "^1.2.2",
+    "tailwindcss-animate": "^1.0.7",
+    "tailwindcss-react-aria-components": "^1.0.0",
     "tslib": "^2.3.0",
     "zod": "^3.22.4"
   },
