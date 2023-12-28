@@ -3,9 +3,13 @@
 }
 
 .container > label {
-  @apply border border-zinc-700 bg-zinc-800 flex-shrink-0 hover:bg-opacity-100 transition-all duration-300 rounded-xl flex gap-2 cursor-pointer p-3;
+  @apply border border-zinc-700 bg-zinc-800 hover:bg-opacity-100 transition-all duration-300 rounded-xl flex gap-2 cursor-pointer p-3 ring-inset focus-within:ring-2 focus-within:ring-blue-600 outline-none;
 }
 
 .container > label[data-selected="false"] {
   @apply bg-opacity-30;
+}
+
+.container > label > input {
+  @apply outline-none;
 }
