@@ -19,10 +19,10 @@ dependencies:
     version: 16.3.1
   drizzle-orm:
     specifier: ^0.29.2
-    version: 0.29.2(@planetscale/database@1.13.0)(@types/react@18.2.45)(expo-sqlite@13.2.0)(kysely@0.26.3)(mysql2@3.6.5)(react@18.2.0)
+    version: 0.29.2(@planetscale/database@1.13.0)(@types/react@18.2.46)(expo-sqlite@13.2.0)(kysely@0.26.3)(mysql2@3.6.5)(react@18.2.0)
   jotai:
     specifier: ^2.6.1
-    version: 2.6.1(@types/react@18.2.45)(react@18.2.0)
+    version: 2.6.1(@types/react@18.2.46)(react@18.2.0)
   jotai-location:
     specifier: ^0.5.2
     version: 0.5.2(jotai@2.6.1)
@@ -55,10 +55,10 @@ dependencies:
     version: 18.2.0(react@18.2.0)
   react-select:
     specifier: ^5.8.0
-    version: 5.8.0(@babel/core@7.23.6)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
+    version: 5.8.0(@babel/core@7.23.6)(@types/react@18.2.46)(react-dom@18.2.0)(react@18.2.0)
   react-twc:
     specifier: ^1.2.2
-    version: 1.2.2(@types/react@18.2.45)(react@18.2.0)
+    version: 1.2.2(@types/react@18.2.46)(react@18.2.0)
   tailwindcss-animate:
     specifier: ^1.0.7
     version: 1.0.7(tailwindcss@3.4.0)
@@ -122,8 +122,8 @@ devDependencies:
     specifier: ^1.5.5
     version: 1.5.5
   '@types/react':
-    specifier: 18.2.45
-    version: 18.2.45
+    specifier: 18.2.46
+    version: 18.2.46
   '@types/react-dom':
     specifier: 18.2.18
     version: 18.2.18
@@ -2662,7 +2662,7 @@ packages:
     resolution: {integrity: sha512-G/YwXTkv7Den9mXDO7AhLWkE3q+I92B+VqAE+dYG4NGPaHZGvt3G8Q0p9vmE+sq7rTGphUbAvmQ9YpbfMQGGlA==}
     dev: false
 
-  /@emotion/react@11.10.5(@babel/core@7.23.6)(@types/react@18.2.45)(react@18.2.0):
+  /@emotion/react@11.10.5(@babel/core@7.23.6)(@types/react@18.2.46)(react@18.2.0):
     resolution: {integrity: sha512-TZs6235tCJ/7iF6/rvTaOH4oxQg2gMAcdHemjwLKIjKz4rRuYe1HJ2TQJKnAcRAfOUDdU8XoDadCe1rl72iv8A==}
     peerDependencies:
       '@babel/core': ^7.0.0
@@ -2682,7 +2682,7 @@ packages:
       '@emotion/use-insertion-effect-with-fallbacks': 1.0.0(react@18.2.0)
       '@emotion/utils': 1.2.0
       '@emotion/weak-memoize': 0.3.0
-      '@types/react': 18.2.45
+      '@types/react': 18.2.46
       hoist-non-react-statics: 3.3.2
       react: 18.2.0
     dev: false
@@ -4458,7 +4458,7 @@ packages:
       playwright: 1.40.1
     dev: true
 
-  /@radix-ui/react-compose-refs@1.0.1(@types/react@18.2.45)(react@18.2.0):
+  /@radix-ui/react-compose-refs@1.0.1(@types/react@18.2.46)(react@18.2.0):
     resolution: {integrity: sha512-fDSBgd44FKHa1FRMU59qBMPFcl2PZE+2nmqunj+BWFyYYjnhIDWL2ItDs3rrbJDQOtzt5nIebLCQc4QRfz6LJw==}
     peerDependencies:
       '@types/react': '*'
@@ -4468,11 +4468,11 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': 7.23.6
-      '@types/react': 18.2.45
+      '@types/react': 18.2.46
       react: 18.2.0
     dev: false
 
-  /@radix-ui/react-slot@1.0.2(@types/react@18.2.45)(react@18.2.0):
+  /@radix-ui/react-slot@1.0.2(@types/react@18.2.46)(react@18.2.0):
     resolution: {integrity: sha512-YeTpuq4deV+6DusvVUW4ivBgnkHwECUu0BiN43L5UCDFgdhsRUWAghhTF5MbvNTPzmiFOx90asDSUjWuCNapwg==}
     peerDependencies:
       '@types/react': '*'
@@ -4482,8 +4482,8 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': 7.23.6
-      '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.2.45)(react@18.2.0)
-      '@types/react': 18.2.45
+      '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.2.46)(react@18.2.0)
+      '@types/react': 18.2.46
       react: 18.2.0
     dev: false
 
@@ -7028,17 +7028,17 @@ packages:
   /@types/react-dom@18.2.18:
     resolution: {integrity: sha512-TJxDm6OfAX2KJWJdMEVTwWke5Sc/E/RlnPGvGfS0W7+6ocy2xhDVQVh/KvC2Uf7kACs+gDytdusDSdWfWkaNzw==}
     dependencies:
-      '@types/react': 18.2.45
+      '@types/react': 18.2.46
     dev: true
 
   /@types/react-transition-group@4.4.5:
     resolution: {integrity: sha512-juKD/eiSM3/xZYzjuzH6ZwpP+/lejltmiS3QEzV/vmb/Q8+HfDmxu+Baga8UEMGBqV88Nbg4l2hY/K2DkyaLLA==}
     dependencies:
-      '@types/react': 18.2.45
+      '@types/react': 18.2.46
     dev: false
 
-  /@types/react@18.2.45:
-    resolution: {integrity: sha512-TtAxCNrlrBp8GoeEp1npd5g+d/OejJHFxS3OWmrPBMFaVQMSN0OFySozJio5BHxTuTeug00AVXVAjfDSfk+lUg==}
+  /@types/react@18.2.46:
+    resolution: {integrity: sha512-nNCvVBcZlvX4NU1nRRNV/mFl1nNRuTuslAJglQsq+8ldXe5Xv0Wd2f7WTE3jOxhLH2BFfiZGC6GCp+kHQbgG+w==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
@@ -9308,7 +9308,7 @@ packages:
       - supports-color
     dev: true
 
-  /drizzle-orm@0.29.2(@planetscale/database@1.13.0)(@types/react@18.2.45)(expo-sqlite@13.2.0)(kysely@0.26.3)(mysql2@3.6.5)(react@18.2.0):
+  /drizzle-orm@0.29.2(@planetscale/database@1.13.0)(@types/react@18.2.46)(expo-sqlite@13.2.0)(kysely@0.26.3)(mysql2@3.6.5)(react@18.2.0):
     resolution: {integrity: sha512-BhwCwuSQqUoLVc7wtgIkuWexY127Z9+yDbuXU7QWZbMC2XE48jecvAThW9apQaDoaxQmwQ+ObyPfPb4zL4Bgsw==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
@@ -9374,7 +9374,7 @@ packages:
         optional: true
     dependencies:
       '@planetscale/database': 1.13.0
-      '@types/react': 18.2.45
+      '@types/react': 18.2.46
       expo-sqlite: 13.2.0(expo@49.0.21)
       kysely: 0.26.3
       mysql2: 3.6.5
@@ -11999,10 +11999,10 @@ packages:
     peerDependencies:
       jotai: '>=1.11.0'
     dependencies:
-      jotai: 2.6.1(@types/react@18.2.45)(react@18.2.0)
+      jotai: 2.6.1(@types/react@18.2.46)(react@18.2.0)
     dev: false
 
-  /jotai@2.6.1(@types/react@18.2.45)(react@18.2.0):
+  /jotai@2.6.1(@types/react@18.2.46)(react@18.2.0):
     resolution: {integrity: sha512-GLQtAnA9iEKRMXnyCjf1azIxfQi5JausX2EI5qSlb59j4i73ZEyV/EXPDEAQj4uQNZYEefi3degv/Pw3+L/Dtg==}
     engines: {node: '>=12.20.0'}
     peerDependencies:
@@ -12014,7 +12014,7 @@ packages:
       react:
         optional: true
     dependencies:
-      '@types/react': 18.2.45
+      '@types/react': 18.2.46
       react: 18.2.0
     dev: false
 
@@ -14087,7 +14087,7 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /react-select@5.8.0(@babel/core@7.23.6)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0):
+  /react-select@5.8.0(@babel/core@7.23.6)(@types/react@18.2.46)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-TfjLDo58XrhP6VG5M/Mi56Us0Yt8X7xD6cDybC7yoRMUNm7BGO7qk8J0TLQOua/prb8vUOtsfnXZwfm30HGsAA==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -14095,7 +14095,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.20.7
       '@emotion/cache': 11.10.5
-      '@emotion/react': 11.10.5(@babel/core@7.23.6)(@types/react@18.2.45)(react@18.2.0)
+      '@emotion/react': 11.10.5(@babel/core@7.23.6)(@types/react@18.2.46)(react@18.2.0)
       '@floating-ui/dom': 1.1.0
       '@types/react-transition-group': 4.4.5
       memoize-one: 6.0.0
@@ -14103,7 +14103,7 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       react-transition-group: 4.4.5(react-dom@18.2.0)(react@18.2.0)
-      use-isomorphic-layout-effect: 1.1.2(@types/react@18.2.45)(react@18.2.0)
+      use-isomorphic-layout-effect: 1.1.2(@types/react@18.2.46)(react@18.2.0)
     transitivePeerDependencies:
       - '@babel/core'
       - '@types/react'
@@ -14154,10 +14154,10 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /react-twc@1.2.2(@types/react@18.2.45)(react@18.2.0):
+  /react-twc@1.2.2(@types/react@18.2.46)(react@18.2.0):
     resolution: {integrity: sha512-G1tGwJnq2iZba2o/rS5+x5gb+AenvsyDkvmfdcl2fKBbnt2wFhtNdyPIxxiKb9dCa+vS3OQQyvDr5NFpO+Lqww==}
     dependencies:
-      '@radix-ui/react-slot': 1.0.2(@types/react@18.2.45)(react@18.2.0)
+      '@radix-ui/react-slot': 1.0.2(@types/react@18.2.46)(react@18.2.0)
       clsx: 2.0.0
     transitivePeerDependencies:
       - '@types/react'
@@ -15854,7 +15854,7 @@ packages:
       requires-port: 1.0.0
     dev: false
 
-  /use-isomorphic-layout-effect@1.1.2(@types/react@18.2.45)(react@18.2.0):
+  /use-isomorphic-layout-effect@1.1.2(@types/react@18.2.46)(react@18.2.0):
     resolution: {integrity: sha512-49L8yCO3iGT/ZF9QttjwLF/ZD9Iwto5LnH5LmEdk/6cFmXddqi2ulF0edxTwjj+7mqvpVVGQWvbXZdn32wRSHA==}
     peerDependencies:
       '@types/react': '*'
@@ -15863,7 +15863,7 @@ packages:
       '@types/react':
         optional: true
     dependencies:
-      '@types/react': 18.2.45
+      '@types/react': 18.2.46
       react: 18.2.0
     dev: false
 
