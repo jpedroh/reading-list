@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "nx exec -- next lint && tsc",
     "test:e2e": "nx exec -- playwright test",
-    "db:push": "drizzle-kit push:mysql --config ./drizzle.config.ts"
+    "db:push": "drizzle-kit push:mysql --config ./drizzle.config.ts",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
@@ -36,6 +37,8 @@
   },
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.8.2",
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
     "@nx-aws-plugin/nx-aws-cache": "^3.2.0",
     "@nx/eslint-plugin": "^17.2.7",
     "@nx/js": "17.2.7",
@@ -60,6 +63,8 @@
     "eslint-plugin-jsx-a11y": "6.8.0",
     "eslint-plugin-react": "7.33.2",
     "eslint-plugin-react-hooks": "4.6.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
     "nx": "17.2.7",
     "postcss": "^8.4.32",
     "prettier": "^3.1.1",
