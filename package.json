@@ -3,11 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "nx exec -- next build",
-    "pack": "nx exec -- next-on-pages",
-    "start": "next start",
-    "lint": "nx exec -- next lint && tsc",
+    "serve": "nx serve",
+    "build": "nx build",
+    "pack": "nx pack",
+    "lint": "nx affected -t=lint",
     "test:e2e": "nx exec -- playwright test",
     "db:push": "drizzle-kit push:mysql --config ./drizzle.config.ts",
     "prepare": "husky install"
@@ -77,16 +76,6 @@
   },
   "nx": {
     "targets": {
-      "build": {
-        "outputs": [
-          "{projectRoot}/.next"
-        ]
-      },
-      "pack": {
-        "outputs": [
-          "{projectRoot}/.vercel"
-        ]
-      },
       "test:e2e": {
         "dependsOn": [
           "build"
