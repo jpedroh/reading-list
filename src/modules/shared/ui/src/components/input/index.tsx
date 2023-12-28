@@ -1,12 +1,5 @@
 "use client";
 
-import { InputHTMLAttributes, forwardRef } from "react";
-import styles from "./index.module.css";
+import { twc } from "react-twc";
 
-type Props = Omit<InputHTMLAttributes<HTMLInputElement>, "className">;
-
-export const Input = forwardRef<HTMLInputElement, Props>(
-  function Input(props, ref) {
-    return <input ref={ref} className={styles.container} {...props} />;
-  },
-);
+export const Input = twc.input`border rounded-lg p-3 w-full border-zinc-700 bg-zinc-800 bg-opacity-30 hover:bg-opacity-100 focus:bg-opacity-100 transition-all duration-300 placeholder:text-zinc-400`;
