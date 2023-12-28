@@ -1,6 +1,5 @@
 "use client";
 
-import { useKeyboardInteraction } from "@reading-list/modules/shared/ui";
 import { useAtom } from "jotai";
 import { atomWithHash } from "jotai-location";
 import { useRef } from "react";
@@ -14,11 +13,6 @@ export function useSearchTerm() {
 }
 
 export function SearchByTermEntrypoint() {
-  useKeyboardInteraction({
-    key: "K",
-    interaction: () => searchRef.current?.focus(),
-  });
-
   const [searchTerm, setSearchTerm] = useAtom(searchTermAtom);
   const searchRef = useRef<HTMLInputElement>(null);
 
