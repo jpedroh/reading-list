@@ -2,7 +2,7 @@
 
 import { CreatableSelect, Input, Modal } from "@reading-list/modules/shared/ui";
 import { useRouter } from "next/navigation";
-import { useRef } from "react";
+import { useCallback, useRef } from "react";
 import { useFormState } from "react-dom";
 import { addArticle } from "../../services/add-article";
 import { fetchTags } from "../../services/fetch-tags";
@@ -49,6 +49,7 @@ export function AddArticleDialog({ availableTags }: Props) {
         <label>
           <span>URL</span>
           <Input
+            ref={useCallback((node: HTMLInputElement) => node?.focus(), [])}
             name="url"
             type={"text"}
             required

@@ -11,7 +11,7 @@ test.describe("AddArticle", () => {
     await page.goto("/");
     await page.getByRole("link", { name: "Add new article" }).click();
 
-    const dialog = page.getByRole("dialog", { name: "Add new article" });
+    const dialog = page.getByRole("alertdialog", { name: "Add new article" });
     await expect(dialog).toBeAttached();
 
     await expect(dialog.getByLabel(/url/i)).toBeFocused();
@@ -69,7 +69,7 @@ test.describe("AddArticle", () => {
     await page.getByLabel(/otp/i).fill("555555");
 
     await page
-      .getByRole("dialog", { name: "Add new article" })
+      .getByRole("alertdialog", { name: "Add new article" })
       .getByRole("button", { name: "Add" })
       .click();
 
