@@ -28,7 +28,7 @@ export function ArticlesList({ articles }: Props) {
   }, [articles, tags, searchTerm]);
 
   return (
-    <ul>
+    <ul className="flex flex-col gap-4">
       {visibleArticles.map((article) => (
         <ArticleRow key={article.id} article={article} />
       ))}
