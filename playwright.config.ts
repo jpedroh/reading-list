@@ -5,7 +5,7 @@ dotenv.config();
 
 export default defineConfig({
   use: {
-    baseURL: process.env.PLAYWRIGHT_TEST_BASE_URL ?? "http://localhost:3000"
+    baseURL: process.env.PLAYWRIGHT_TEST_BASE_URL ?? "http://localhost:3000",
   },
   globalSetup: require.resolve("./e2e/fixtures/clear-database"),
   globalTeardown: require.resolve("./e2e/fixtures/clear-database"),

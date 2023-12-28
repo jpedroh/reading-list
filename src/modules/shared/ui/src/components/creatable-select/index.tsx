@@ -3,7 +3,9 @@
 import { ComponentPropsWithoutRef } from "react";
 import ReactCreatableSelect from "react-select/creatable";
 
-export function CreatableSelect(props: ComponentPropsWithoutRef<typeof ReactCreatableSelect>) {
+export function CreatableSelect(
+  props: ComponentPropsWithoutRef<typeof ReactCreatableSelect>,
+) {
   return (
     <ReactCreatableSelect
       classNames={{
