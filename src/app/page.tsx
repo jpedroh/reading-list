@@ -1,10 +1,8 @@
+import { ArticlesFilter } from "@reading-list/modules/articles/articles-filter/server";
+import { ArticlesList } from "@reading-list/modules/articles/articles-list/server";
 import { Button } from "@reading-list/modules/shared/ui";
-import { Header } from "@reading-list/modules/shared/ui/server";
+import { Content, Header } from "@reading-list/modules/shared/ui/server";
 import Link from "next/link";
-import { ArticlesListEntrypoint } from "../../modules/articles/feature-articles-list";
-import { SearchByTagsEntrypoint } from "../../modules/articles/feature-search-by-tags";
-import { SearchByTermEntrypoint } from "../../modules/articles/feature-search-by-term";
-import styles from "./index.module.css";
 
 export const runtime = "edge";
 
@@ -23,21 +21,14 @@ export default function Home() {
           <Link href={"/add-article"}>Add new article</Link>
         </Button>
       </Header.Root>
-      <section className={styles.content}>
-        <aside>
-          <section>
-            <h3>Search by term</h3>
-            <SearchByTermEntrypoint />
-          </section>
-          <section>
-            <h3>Tags</h3>
-            <SearchByTagsEntrypoint />
-          </section>
-        </aside>
-        <main>
-          <ArticlesListEntrypoint />
-        </main>
-      </section>
+      <Content.Root>
+        <Content.Aside>
+          <ArticlesFilter />
+        </Content.Aside>
+        <Content.Main>
+          <ArticlesList />
+        </Content.Main>
+      </Content.Root>
     </>
   );
 }
