@@ -4,7 +4,6 @@ import Link from "next/link";
 import { ArticlesListEntrypoint } from "../../modules/articles/feature-articles-list";
 import { SearchByTagsEntrypoint } from "../../modules/articles/feature-search-by-tags";
 import { SearchByTermEntrypoint } from "../../modules/articles/feature-search-by-term";
-import { ShortcutsGuideEntrypoint } from "../../modules/articles/feature-shortcuts-guide";
 import styles from "./index.module.css";
 
 export const runtime = "edge";
@@ -33,10 +32,6 @@ export default function Home() {
           <section>
             <h3>Tags</h3>
             <SearchByTagsEntrypoint />
-          </section>
-          <section>
-            <h3>Keyboard Shortcuts</h3>
-            <ShortcutsGuideEntrypoint />
           </section>
         </aside>
         <main>
