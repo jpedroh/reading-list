@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "nx exec -- next build",
-    "pack": "nx exec -- next-on-pages",
+    "serve": "nx serve",
+    "build": "nx build",
+    "pack": "nx pack",
+    "lint": "nx affected -t=lint",
     "start": "next start",
-    "lint": "nx exec -- next lint && tsc",
-    "test:e2e": "nx exec -- playwright test",
+    "test:e2e": "nx test:e2e",
     "db:push": "drizzle-kit push:mysql --config ./drizzle.config.ts",
     "prepare": "husky install"
   },
@@ -44,6 +44,7 @@
     "@nx/eslint-plugin": "^17.2.7",
     "@nx/js": "17.2.7",
     "@nx/next": "^17.2.7",
+    "@nx/playwright": "^17.2.7",
     "@nx/react": "17.2.7",
     "@playwright/test": "^1.40.1",
     "@swc-node/register": "~1.6.7",
@@ -74,24 +75,5 @@
   },
   "engines": {
     "node": ">=18.0.0"
-  },
-  "nx": {
-    "targets": {
-      "build": {
-        "outputs": [
-          "{projectRoot}/.next"
-        ]
-      },
-      "pack": {
-        "outputs": [
-          "{projectRoot}/.vercel"
-        ]
-      },
-      "test:e2e": {
-        "dependsOn": [
-          "build"
-        ]
-      }
-    }
   }
 }

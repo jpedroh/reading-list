@@ -10,6 +10,7 @@ const nextConfig = {
 
 // Injected content via Sentry wizard below
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const { withSentryConfig } = require("@sentry/nextjs");
 
 module.exports = withSentryConfig(
