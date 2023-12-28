@@ -30,6 +30,12 @@
       "@reading-list/modules/shared/ui": ["src/modules/shared/ui/src/index.ts"],
       "@reading-list/modules/shared/ui/server": [
         "src/modules/shared/ui/src/server.ts"
+      ],
+      "@reading-list/src/modules/shared/articles-filter-provider": [
+        "src/modules/shared/articles-filter-provider/src/index.ts"
+      ],
+      "@reading-list/src/modules/shared/articles-filter-provider/server": [
+        "src/modules/shared/articles-filter-provider/src/server.ts"
       ]
     }
   },

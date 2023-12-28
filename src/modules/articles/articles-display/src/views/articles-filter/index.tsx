@@ -1,9 +1,9 @@
 "use client";
 
 import { useId } from "react";
-import { useArticlesFilter } from "../../hooks/use-articles-filter";
 import { TagsFilter } from "./tags";
 import { Title } from "./styles";
+import { useArticlesFilter } from "@/src/modules/shared/articles-filter-provider/src";
 
 type Props = {
   availableTags: readonly { name: string; total: number }[];

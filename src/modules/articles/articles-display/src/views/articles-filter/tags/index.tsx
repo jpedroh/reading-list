@@ -1,8 +1,8 @@
 "use client";
 
 import { ChangeEvent } from "react";
-import { useArticlesFilter } from "../../../hooks/use-articles-filter";
 import * as S from "./styles";
+import { useArticlesFilter } from "@/src/modules/shared/articles-filter-provider/src";
 
 type Props = {
   availableTags: readonly { name: string; total: number }[];

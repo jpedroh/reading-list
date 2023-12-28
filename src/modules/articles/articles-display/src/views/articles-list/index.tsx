@@ -1,9 +1,9 @@
 "use client";
 
 import { useMemo } from "react";
-import { useArticlesFilter } from "../../hooks/use-articles-filter";
 import { Article } from "../../services/fetch-articles";
 import { ArticleRow } from "./article-row";
+import { useArticlesFilter } from "@/src/modules/shared/articles-filter-provider/src";
 
 type Props = { articles: Article[] };
 

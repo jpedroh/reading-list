@@ -1,5 +1,5 @@
 {
-  "name": "reading-list",
+  "name": "@reading-list/root",
   "version": "0.1.0",
   "private": true,
   "scripts": {
