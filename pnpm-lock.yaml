@@ -5,15 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  '@headlessui/react':
-    specifier: ^1.7.17
-    version: 1.7.17(react-dom@18.2.0)(react@18.2.0)
   '@planetscale/database':
     specifier: ^1.13.0
     version: 1.13.0
-  '@radix-ui/react-slot':
-    specifier: ^1.0.2
-    version: 1.0.2(@types/react@18.2.45)(react@18.2.0)
   '@sentry/nextjs':
     specifier: ^7.91.0
     version: 7.91.0(next@14.0.4)(react@18.2.0)(webpack@5.89.0)
@@ -3580,18 +3574,6 @@ packages:
       graphql: 15.8.0
     dev: false
 
-  /@headlessui/react@1.7.17(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-4am+tzvkqDSSgiwrsEpGWqgGo9dz8qU5M3znCkC4PgkpY4HcCZzEDEvozltGGGHIKl9jbXbZPSH5TWn4sWJdow==}
-    engines: {node: '>=10'}
-    peerDependencies:
-      react: ^16 || ^17 || ^18
-      react-dom: ^16 || ^17 || ^18
-    dependencies:
-      client-only: 0.0.1
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-    dev: false
-
   /@humanwhocodes/config-array@0.11.13:
     resolution: {integrity: sha512-JSBDMiDKSzQVngfRjOdFXgFfklaXI4K9nLF49Auh21lmBWRLIK3+xTErTWD4KU54pb6coM6ESE7Awz/FNU3zgQ==}
     engines: {node: '>=10.10.0'}
@@ -3871,23 +3853,6 @@ packages:
       - verdaccio
     dev: true
 
-  /@nrwl/js@17.2.7(@swc-node/register@1.6.8)(@swc/core@1.3.101)(@types/node@20.10.5)(nx@17.2.7)(typescript@5.2.2):
-    resolution: {integrity: sha512-8AAUmqESQ89Cbark8DlkElINMmDpEJLivan6RPksUUEK6lrZQwVnHf4eWLQzN2/C4i5XkfdxavzluuDPCqHQSQ==}
-    dependencies:
-      '@nx/js': 17.2.7(@swc-node/register@1.6.8)(@swc/core@1.3.101)(@types/node@20.10.5)(nx@17.2.7)(typescript@5.2.2)
-    transitivePeerDependencies:
-      - '@babel/traverse'
-      - '@swc-node/register'
-      - '@swc/core'
-      - '@swc/wasm'
-      - '@types/node'
-      - debug
-      - nx
-      - supports-color
-      - typescript
-      - verdaccio
-    dev: true
-
   /@nrwl/js@17.2.7(@swc-node/register@1.6.8)(@swc/core@1.3.101)(@types/node@20.10.5)(nx@17.2.7)(typescript@5.3.3):
     resolution: {integrity: sha512-8AAUmqESQ89Cbark8DlkElINMmDpEJLivan6RPksUUEK6lrZQwVnHf4eWLQzN2/C4i5XkfdxavzluuDPCqHQSQ==}
     dependencies:
@@ -4101,7 +4066,7 @@ packages:
       '@babel/preset-env': 7.23.6(@babel/core@7.23.6)
       '@babel/preset-typescript': 7.23.3(@babel/core@7.23.6)
       '@babel/runtime': 7.23.6
-      '@nrwl/js': 17.2.7(@swc-node/register@1.6.8)(@swc/core@1.3.101)(@types/node@20.10.5)(nx@17.2.7)(typescript@5.2.2)
+      '@nrwl/js': 17.2.7(@swc-node/register@1.6.8)(@swc/core@1.3.101)(@types/node@20.10.5)(nx@17.2.7)(typescript@5.3.3)
       '@nx/devkit': 17.2.7(nx@17.2.7)
       '@nx/workspace': 17.2.7(@swc-node/register@1.6.8)(@swc/core@1.3.101)
       '@phenomnomnominal/tsquery': 5.0.1(typescript@5.2.2)
