@@ -1,43 +1,44 @@
 "use client";
 
-import { useAtom } from "jotai";
 import { ChangeEvent } from "react";
-import { tagsAtom } from "../../hooks/use-search-tags";
-import styles from "./index.module.css";
+import { useArticlesFilter } from "../../../hooks/use-articles-filter";
+import * as S from "./styles";
 
 type Props = {
   availableTags: readonly { name: string; total: number }[];
 };
 
 export function TagsFilter({ availableTags }: Props) {
-  const [value, setValue] = useAtom(tagsAtom);
+  const { tags, setTags } = useArticlesFilter();
 
   function toggleTag(evt: ChangeEvent<HTMLInputElement>) {
     const tag = evt.target.name;
-    if (value.includes(tag)) {
-      setValue(value.filter((v) => v !== tag));
+    if (tags.includes(tag)) {
+      setTags(tags.filter((v) => v !== tag));
     } else {
-      setValue([...value, tag]);
+      setTags([...tags, tag]);
     }
   }
 
   return (
-    <div className={styles.container}>
+    <S.Container>
       {availableTags.map((tag) => {
+        const checked = tags.includes(tag.name);
         return (
-          <label key={tag.name} data-selected={value.includes(tag.name)}>
+          <S.TagItem checked={checked} key={tag.name}>
             <input
+              className="outline-none"
               type="checkbox"
-              checked={value.includes(tag.name)}
+              checked={checked}
               onChange={toggleTag}
               name={tag.name}
             />
             <span>
               {tag.name} ({tag.total})
             </span>
-          </label>
+          </S.TagItem>
         );
       })}
-    </div>
+    </S.Container>
   );
 }

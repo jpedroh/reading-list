@@ -1,4 +1,4 @@
-import { Article } from "../../../domain";
+import { Article } from "../../../services/fetch-articles";
 import * as S from "./styles";
 
 const formatter = new Intl.DateTimeFormat("en-US");

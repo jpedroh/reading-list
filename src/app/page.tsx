@@ -2,9 +2,7 @@ import { ArticlesDisplay } from "@reading-list/modules/articles/articles-display
 import { Button } from "@reading-list/modules/shared/ui";
 import { Header } from "@reading-list/modules/shared/ui/server";
 import Link from "next/link";
-import { SearchByTagsEntrypoint } from "../../modules/articles/feature-search-by-tags";
-import { SearchByTermEntrypoint } from "../../modules/articles/feature-search-by-term";
-import styles from "./index.module.css";
+import { twc } from "react-twc";
 
 export const runtime = "edge";
 
@@ -13,6 +11,8 @@ export const dynamic = "force-dynamic";
 export const metadata = {
   title: "Reading List",
 };
+
+const Content = twc.div`flex flex-col gap-8 w-full md:grid md:grid-cols-[300px_1fr]`;
 
 export default function Home() {
   return (
@@ -23,21 +23,9 @@ export default function Home() {
           <Link href={"/add-article"}>Add new article</Link>
         </Button>
       </Header.Root>
-      <section className={styles.content}>
-        <aside>
-          <section>
-            <h3>Search by term</h3>
-            <SearchByTermEntrypoint />
-          </section>
-          <section>
-            <h3>Tags</h3>
-            <SearchByTagsEntrypoint />
-          </section>
-        </aside>
-        <main>
-          <ArticlesDisplay />
-        </main>
-      </section>
+      <Content>
+        <ArticlesDisplay />
+      </Content>
     </>
   );
 }
