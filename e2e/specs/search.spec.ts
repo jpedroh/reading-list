@@ -34,7 +34,7 @@ test.describe("Search", () => {
     await expect(articleOne).toBeAttached();
     await expect(articleTwo).toBeAttached();
 
-    await page.getByPlaceholder(/search/i).fill("example title");
+    await page.getByPlaceholder(/search/i).fill(randomTitle);
 
     await expect(articleOne).toBeAttached();
     await expect(articleTwo).not.toBeAttached();

@@ -7,11 +7,15 @@ import { randomBytes } from "crypto";
 test.describe("AddArticle", () => {
   test("adds an article", async ({ page }) => {
     const randomTitle = randomBytes(64).toString("base64");
+    const randomTags = [
+      randomBytes(10).toString("base64"),
+      randomBytes(10).toString("base64"),
+    ];
 
     await page.goto("/");
     await page.getByRole("link", { name: "Add new article" }).click();
 
-    const dialog = page.getByRole("alertdialog", { name: "Add new article" });
+    const dialog = page.getByRole("dialog", { name: "Add new article" });
     await expect(dialog).toBeAttached();
 
     await expect(dialog.getByLabel(/url/i)).toBeFocused();
@@ -24,9 +28,9 @@ test.describe("AddArticle", () => {
     await page.press("body", "Tab");
 
     await expect(dialog.getByLabel(/tags/i)).toBeFocused();
-    await dialog.getByLabel(/tags/i).fill("Nextjs");
+    await dialog.getByLabel(/tags/i).fill(randomTags[0]);
     await page.press("body", "Enter");
-    await dialog.getByLabel(/tags/i).fill("Frontend");
+    await dialog.getByLabel(/tags/i).fill(randomTags[1]);
     await page.press("body", "Enter");
     await page.press("body", "Tab");
 
@@ -45,8 +49,8 @@ test.describe("AddArticle", () => {
     const articleTags = page.getByTestId("tags");
 
     await expect(article).toBeAttached();
-    await expect(articleTags.getByText(/nextjs/i)).toBeAttached();
-    await expect(articleTags.getByText(/frontend/i)).toBeAttached();
+    await expect(articleTags.getByText(randomTags[0])).toBeAttached();
+    await expect(articleTags.getByText(randomTags[1])).toBeAttached();
   });
 
   test("it shows the page title when I fill the URL", async ({ page }) => {
@@ -69,7 +73,7 @@ test.describe("AddArticle", () => {
     await page.getByLabel(/otp/i).fill("555555");
 
     await page
-      .getByRole("alertdialog", { name: "Add new article" })
+      .getByRole("dialog", { name: "Add new article" })
       .getByRole("button", { name: "Add" })
       .click();
 
