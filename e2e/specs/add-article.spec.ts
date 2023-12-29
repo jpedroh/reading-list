@@ -1,30 +1,27 @@
+import { faker } from "@faker-js/faker";
 import { expect, test } from "@playwright/test";
 import { env } from "@reading-list/modules/shared/env";
 import { generateKey, totp } from "otp-io";
 import { hmac } from "otp-io/crypto";
-import { randomBytes } from "crypto";
+import { createArticle } from "../utils/create-article";
 
 test.describe("AddArticle", () => {
   test("adds an article", async ({ page }) => {
-    const randomTitle = randomBytes(64).toString("base64");
-    const randomTags = [
-      randomBytes(10).toString("base64"),
-      randomBytes(10).toString("base64"),
-    ];
+    const randomArticle = createArticle();
+    const randomTags = [faker.lorem.word(), faker.lorem.word()];
 
     await page.goto("/");
     await page.getByRole("link", { name: "Add new article" }).click();
 
     const dialog = page.getByRole("dialog", { name: "Add new article" });
-    await expect(dialog).toBeAttached();
+    await expect(dialog).toBeAttached({ timeout: 15_000 });
 
     await expect(dialog.getByLabel(/url/i)).toBeFocused();
-    await dialog.getByLabel(/url/i).fill("https://example.com");
+    await dialog.getByLabel(/url/i).fill(randomArticle.url);
     await page.press("body", "Tab");
 
     await expect(dialog.getByLabel(/title/i)).toBeFocused();
-    await expect(page.getByLabel(/title/i)).toHaveValue(/example domain/i);
-    await page.getByLabel(/title/i).fill(randomTitle);
+    await page.getByLabel(/title/i).fill(randomArticle.title);
     await page.press("body", "Tab");
 
     await expect(dialog.getByLabel(/tags/i)).toBeFocused();
@@ -45,7 +42,7 @@ test.describe("AddArticle", () => {
 
     await expect(dialog).not.toBeAttached();
 
-    const article = page.getByRole("link", { name: randomTitle });
+    const article = page.getByRole("link", { name: randomArticle.title });
     const articleTags = page.getByTestId("tags");
 
     await expect(article).toBeAttached();

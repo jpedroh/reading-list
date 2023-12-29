@@ -1,42 +1,29 @@
 import { expect, test } from "@playwright/test";
-import { db, articles } from "@reading-list/modules/shared/database";
-import { randomBytes } from "crypto";
+import { articles, db } from "@reading-list/modules/shared/database";
+import { createArticle } from "../utils/create-article";
 
 test.describe("Search", () => {
   test("if there's an article with a title that contains the search string, it appears on the results", async ({
     page,
   }) => {
-    const randomTitle = randomBytes(64).toString("base64");
-    const anotherRandomTitle = randomBytes(64).toString("base64");
-
-    await db.insert(articles).values([
-      {
-        id: crypto.randomUUID(),
-        title: randomTitle,
-        url: "https://example.com",
-        addedAt: new Date(),
-      },
-      {
-        id: crypto.randomUUID(),
-        title: anotherRandomTitle,
-        url: "https://example.com",
-        addedAt: new Date(),
-      },
-    ]);
+    const [articleOne, articleTwo] = [createArticle(), createArticle()];
+    await db.insert(articles).values([articleOne, articleTwo]);
 
     await page.goto("/");
 
-    const articleOne = page.getByRole("link", { name: randomTitle });
-    const articleTwo = page.getByRole("link", {
-      name: anotherRandomTitle,
+    const articleOneElement = page.getByRole("link", {
+      name: articleOne.title,
+    });
+    const articleTwoElement = page.getByRole("link", {
+      name: articleTwo.title,
     });
 
-    await expect(articleOne).toBeAttached();
-    await expect(articleTwo).toBeAttached();
+    await expect(articleOneElement).toBeAttached();
+    await expect(articleTwoElement).toBeAttached();
 
-    await page.getByPlaceholder(/search/i).fill(randomTitle);
+    await page.getByPlaceholder(/search/i).fill(articleOne.title);
 
-    await expect(articleOne).toBeAttached();
-    await expect(articleTwo).not.toBeAttached();
+    await expect(articleOneElement).toBeAttached();
+    await expect(articleTwoElement).not.toBeAttached();
   });
 });
