@@ -40,4 +40,4 @@ jobs:
           node-version-file: .nvmrc
           cache: "pnpm"
       - run: pnpm install
-      - run: pnpm run test:e2e --skipInstall
+      - run: HOME=/root pnpm run test:e2e --skipInstall
