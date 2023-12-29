@@ -7,7 +7,6 @@
     "build": "nx build",
     "pack": "nx pack",
     "lint": "nx affected -t=lint",
-    "start": "next start",
     "test:e2e": "nx test:e2e",
     "db:push": "drizzle-kit push:mysql --config ./drizzle.config.ts",
     "prepare": "husky install"
