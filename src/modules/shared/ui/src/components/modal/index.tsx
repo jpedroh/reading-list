@@ -31,7 +31,7 @@ export function Modal({ children, ...rest }: Props) {
     >
       <ModalContainer>
         <RACDialog
-          role="alertdialog"
+          role="dialog"
           className="outline-none relative flex flex-col gap-4"
         >
           {children}
