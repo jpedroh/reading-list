@@ -41,7 +41,7 @@
     "@commitlint/config-conventional": "^18.4.3",
     "@nx-aws-plugin/nx-aws-cache": "^3.2.0",
     "@nx/eslint-plugin": "^17.2.7",
-    "@nx/js": "17.2.7",
+    "@nx/js": "17.2.8",
     "@nx/next": "^17.2.7",
     "@nx/playwright": "^17.2.7",
     "@nx/react": "17.2.7",
