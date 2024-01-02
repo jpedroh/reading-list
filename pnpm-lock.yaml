@@ -22,7 +22,7 @@ dependencies:
     version: 16.3.1
   drizzle-orm:
     specifier: ^0.29.3
-    version: 0.29.3(@planetscale/database@1.13.0)(@types/react@18.2.46)(kysely@0.26.3)(mysql2@3.6.5)(react@18.2.0)
+    version: 0.29.3(@planetscale/database@1.13.0)(@types/react@18.2.46)(kysely@0.27.1)(mysql2@3.6.5)(react@18.2.0)
   jotai:
     specifier: ^2.6.1
     version: 2.6.1(@types/react@18.2.46)(react@18.2.0)
@@ -30,8 +30,8 @@ dependencies:
     specifier: ^0.5.2
     version: 0.5.2(jotai@2.6.1)
   kysely:
-    specifier: ^0.26.3
-    version: 0.26.3
+    specifier: ^0.27.1
+    version: 0.27.1
   mysql2:
     specifier: ^3.6.5
     version: 3.6.5
@@ -8763,7 +8763,7 @@ packages:
       - supports-color
     dev: true
 
-  /drizzle-orm@0.29.3(@planetscale/database@1.13.0)(@types/react@18.2.46)(kysely@0.26.3)(mysql2@3.6.5)(react@18.2.0):
+  /drizzle-orm@0.29.3(@planetscale/database@1.13.0)(@types/react@18.2.46)(kysely@0.27.1)(mysql2@3.6.5)(react@18.2.0):
     resolution: {integrity: sha512-uSE027csliGSGYD0pqtM+SAQATMREb3eSM/U8s6r+Y0RFwTKwftnwwSkqx3oS65UBgqDOM0gMTl5UGNpt6lW0A==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
@@ -8836,7 +8836,7 @@ packages:
     dependencies:
       '@planetscale/database': 1.13.0
       '@types/react': 18.2.46
-      kysely: 0.26.3
+      kysely: 0.27.1
       mysql2: 3.6.5
       react: 18.2.0
     dev: false
@@ -11209,8 +11209,8 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /kysely@0.26.3:
-    resolution: {integrity: sha512-yWSgGi9bY13b/W06DD2OCDDHQmq1kwTGYlQ4wpZkMOJqMGCstVCFIvxCCVG4KfY1/3G0MhDAcZsip/Lw8/vJWw==}
+  /kysely@0.27.1:
+    resolution: {integrity: sha512-X8IRdOYstCH0JmZVq9yk48QtmM5HULWQ3O6zy+G6olEUniV26voSGiZ+L4sJvNGQPiy/I9svSHEeaJcUyZamxw==}
     engines: {node: '>=14.0.0'}
     dev: false
 
