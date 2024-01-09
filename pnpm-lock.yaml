@@ -22,7 +22,7 @@ dependencies:
     version: 16.3.1
   drizzle-orm:
     specifier: ^0.29.3
-    version: 0.29.3(@planetscale/database@1.13.0)(@types/react@18.2.47)(mysql2@3.6.5)(react@18.2.0)
+    version: 0.29.3(@planetscale/database@1.13.0)(@types/react@18.2.47)(mysql2@3.7.0)(react@18.2.0)
   jotai:
     specifier: ^2.6.1
     version: 2.6.1(@types/react@18.2.47)(react@18.2.0)
@@ -30,8 +30,8 @@ dependencies:
     specifier: ^0.5.2
     version: 0.5.2(jotai@2.6.1)
   mysql2:
-    specifier: ^3.6.5
-    version: 3.6.5
+    specifier: ^3.7.0
+    version: 3.7.0
   next:
     specifier: ^14.0.4
     version: 14.0.4(@babel/core@7.23.6)(react-dom@18.2.0)(react@18.2.0)
@@ -6519,16 +6519,10 @@ packages:
     resolution: {integrity: sha512-qelS/Ra6sacc4loe/3MSjXNL1dNQ/GjxNHVzuChwMfmk7HuycRLVQN2qNY3XahK+fZc5E2szqQSKUyAF0E+2bg==}
     dev: true
 
-  /@types/node@20.10.6:
-    resolution: {integrity: sha512-Vac8H+NlRNNlAmDfGUP7b5h/KA+AtWIzuXy0E6OyP8f1tCLYAtPvKRRDJjAPqhpCb0t6U2j7/xqAuLEebW2kiw==}
-    dependencies:
-      undici-types: 5.26.5
-
   /@types/node@20.10.8:
     resolution: {integrity: sha512-f8nQs3cLxbAFc00vEU59yf9UyGUftkPaLGfvbVOIDdx2i1b8epBqj2aNGyP19fiyXWvlmZ7qC1XLjAzw/OKIeA==}
     dependencies:
       undici-types: 5.26.5
-    dev: true
 
   /@types/normalize-package-data@2.4.4:
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -8518,7 +8512,7 @@ packages:
       - supports-color
     dev: true
 
-  /drizzle-orm@0.29.3(@planetscale/database@1.13.0)(@types/react@18.2.47)(mysql2@3.6.5)(react@18.2.0):
+  /drizzle-orm@0.29.3(@planetscale/database@1.13.0)(@types/react@18.2.47)(mysql2@3.7.0)(react@18.2.0):
     resolution: {integrity: sha512-uSE027csliGSGYD0pqtM+SAQATMREb3eSM/U8s6r+Y0RFwTKwftnwwSkqx3oS65UBgqDOM0gMTl5UGNpt6lW0A==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
@@ -8591,7 +8585,7 @@ packages:
     dependencies:
       '@planetscale/database': 1.13.0
       '@types/react': 18.2.47
-      mysql2: 3.6.5
+      mysql2: 3.7.0
       react: 18.2.0
     dev: false
 
@@ -10796,7 +10790,7 @@ packages:
     resolution: {integrity: sha512-7vuh85V5cdDofPyxn58nrPjBktZo0u9x1g8WtjQol+jZDaE+fhN+cIvTj11GndBnMnyfrUOG1sZQxCdjKh+DKg==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 20.10.6
+      '@types/node': 20.10.8
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -11490,8 +11484,8 @@ packages:
     hasBin: true
     dev: true
 
-  /mysql2@3.6.5:
-    resolution: {integrity: sha512-pS/KqIb0xlXmtmqEuTvBXTmLoQ5LmAz5NW/r8UyQ1ldvnprNEj3P9GbmuQQ2J0A4LO+ynotGi6TbscPa8OUb+w==}
+  /mysql2@3.7.0:
+    resolution: {integrity: sha512-c45jA3Jc1X8yJKzrWu1GpplBKGwv/wIV6ITZTlCSY7npF2YfJR+6nMP5e+NTQhUeJPSyOQAbGDCGEHbAl8HN9w==}
     engines: {node: '>= 8.0'}
     dependencies:
       denque: 2.1.0
