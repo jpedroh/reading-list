@@ -16,7 +16,7 @@
     "@planetscale/database": "^1.14.0",
     "@sentry/nextjs": "^7.93.0",
     "@swc/helpers": "~0.5.3",
-    "dotenv": "^16.4.0",
+    "dotenv": "^16.4.1",
     "drizzle-orm": "^0.29.3",
     "jotai": "^2.6.2",
     "jotai-location": "^0.5.2",
