@@ -9,7 +9,7 @@
     "lint": "nx affected -t=lint",
     "test:e2e": "nx test:e2e",
     "db:push": "drizzle-kit push:mysql --config ./drizzle.config.ts",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "@faker-js/faker": "^8.3.1",
