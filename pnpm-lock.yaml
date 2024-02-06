@@ -9,8 +9,8 @@ dependencies:
     specifier: ^8.4.0
     version: 8.4.0
   '@planetscale/database':
-    specifier: ^1.14.0
-    version: 1.14.0
+    specifier: ^1.15.0
+    version: 1.15.0
   '@sentry/nextjs':
     specifier: ^7.98.0
     version: 7.98.0(next@14.0.4)(react@18.2.0)(webpack@5.90.1)
@@ -22,7 +22,7 @@ dependencies:
     version: 16.4.1
   drizzle-orm:
     specifier: ^0.29.3
-    version: 0.29.3(@planetscale/database@1.14.0)(@types/react@18.2.48)(mysql2@3.9.1)(react@18.2.0)
+    version: 0.29.3(@planetscale/database@1.15.0)(@types/react@18.2.48)(mysql2@3.9.1)(react@18.2.0)
   jotai:
     specifier: ^2.6.4
     version: 2.6.4(@types/react@18.2.48)(react@18.2.0)
@@ -4235,8 +4235,8 @@ packages:
       tslib: 2.6.2
     dev: true
 
-  /@planetscale/database@1.14.0:
-    resolution: {integrity: sha512-7BB+iH6EH4YJuDeVeEbxpo60BFz3wIXJNXCmBGl40eC4HStRMGZ1COxKfiuPcINWwwrJhAhI9AEI97AOZYT7JQ==}
+  /@planetscale/database@1.15.0:
+    resolution: {integrity: sha512-X4GmGGKE3o6tj/FM+ElDdyVb9BI8Y2OSSeOtyW/gCmVS0XLs4tTppg0cVLL89CS+awEhIIYXFDwqT3a7pbYROg==}
     engines: {node: '>=16'}
     dev: false
 
@@ -8856,7 +8856,7 @@ packages:
       - supports-color
     dev: true
 
-  /drizzle-orm@0.29.3(@planetscale/database@1.14.0)(@types/react@18.2.48)(mysql2@3.9.1)(react@18.2.0):
+  /drizzle-orm@0.29.3(@planetscale/database@1.15.0)(@types/react@18.2.48)(mysql2@3.9.1)(react@18.2.0):
     resolution: {integrity: sha512-uSE027csliGSGYD0pqtM+SAQATMREb3eSM/U8s6r+Y0RFwTKwftnwwSkqx3oS65UBgqDOM0gMTl5UGNpt6lW0A==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
@@ -8927,7 +8927,7 @@ packages:
       sqlite3:
         optional: true
     dependencies:
-      '@planetscale/database': 1.14.0
+      '@planetscale/database': 1.15.0
       '@types/react': 18.2.48
       mysql2: 3.9.1
       react: 18.2.0
