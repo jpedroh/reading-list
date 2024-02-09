@@ -49,7 +49,7 @@
     "@swc-node/register": "~1.8.0",
     "@swc/cli": "~0.3.5",
     "@swc/core": "~1.4.0",
-    "@testing-library/react": "14.2.0",
+    "@testing-library/react": "14.2.1",
     "@types/node": "20.11.10",
     "@types/qrcode": "^1.5.5",
     "@types/react": "18.2.55",
