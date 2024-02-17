@@ -1,3 +1,5 @@
+"use client";
+
 import { Heading } from "react-aria-components";
 import { twc } from "react-twc";
 
