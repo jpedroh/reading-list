@@ -27,8 +27,8 @@ dependencies:
     specifier: ^2.6.5
     version: 2.6.5(@types/react@18.2.58)(react@18.2.0)
   jotai-location:
-    specifier: ^0.5.3
-    version: 0.5.3(jotai@2.6.5)
+    specifier: ^0.5.4
+    version: 0.5.4(jotai@2.6.5)
   mysql2:
     specifier: ^3.9.2
     version: 3.9.2
@@ -11969,8 +11969,8 @@ packages:
     hasBin: true
     dev: true
 
-  /jotai-location@0.5.3(jotai@2.6.5):
-    resolution: {integrity: sha512-re7rBf0AYX7f8BNkYIkffuHWg7McZ7wJDf8UugEgV1HjsPWmSAkzN/9ZF/Mk3pClBeAZu/JzWUzA+E+0nA7MLQ==}
+  /jotai-location@0.5.4(jotai@2.6.5):
+    resolution: {integrity: sha512-IqpyYLAF6HgoDoJVlX66IGvgrugCA1LJybT01NqenpdwypPtUB6u0cnJZMbN6axU+Yl2FTI6l+4x9IWh4WGFRA==}
     peerDependencies:
       jotai: '>=1.11.0'
     dependencies:
