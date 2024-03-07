@@ -1,13 +1,13 @@
-import type { Config } from "drizzle-kit";
-import z from "zod";
+import "dotenv/config";
 
-const DATABASE_URL = z.string().parse(process.env.DATABASE_URL);
+import type { Config } from "drizzle-kit";
 
 export default {
-  schema: "./modules/shared/database.ts",
+  schema: "./src/modules/shared/database/src/schema.ts",
   out: "./drizzle/generated",
+  driver: "turso",
   dbCredentials: {
-    uri: DATABASE_URL,
+    url: process.env.TURSO_CONNECTION_URL!,
+    authToken: process.env.TURSO_AUTH_TOKEN!,
   },
-  driver: "mysql2",
 } satisfies Config;

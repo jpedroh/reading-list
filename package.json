@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@faker-js/faker": "^8.4.1",
+    "@libsql/client": "^0.5.3",
     "@planetscale/database": "^1.16.0",
     "@sentry/nextjs": "^7.103.0",
     "@swc/helpers": "~0.5.6",
