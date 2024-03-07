@@ -40,8 +40,6 @@ jobs:
           OTP_SECRET: ${{ secrets.otp_secret }}
           OTP_USER: ${{ secrets.otp_user }}
           OTP_SERVICE: ${{ secrets.otp_service }}
-          DATABASE_URL: ${{ secrets.database_url }}
-          DATABASE_HOST: ${{ secrets.database_host }}
-          DATABASE_USERNAME: ${{ secrets.database_username }}
-          DATABASE_PASSWORD: ${{ secrets.database_password }}
+          TURSO_CONNECTION_URL: ${{ secrets.turso_connection_url }}
+          TURSO_AUTH_TOKEN: ${{ secrets.turso_auth_token }}
       - run: npx nx affected --target=lint --parallel=3
