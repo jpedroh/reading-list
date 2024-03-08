@@ -45,3 +45,5 @@ dev.db
 
 # Next.js
 .next
+
+db.local
