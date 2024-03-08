@@ -11,9 +11,6 @@ dependencies:
   '@libsql/client':
     specifier: ^0.5.3
     version: 0.5.3
-  '@planetscale/database':
-    specifier: ^1.16.0
-    version: 1.16.0
   '@sentry/nextjs':
     specifier: ^7.103.0
     version: 7.103.0(next@14.1.3)(react@18.2.0)(webpack@5.90.3)
@@ -25,7 +22,7 @@ dependencies:
     version: 16.4.5
   drizzle-orm:
     specifier: ^0.29.4
-    version: 0.29.4(@libsql/client@0.5.3)(@planetscale/database@1.16.0)(@types/react@18.2.63)(mysql2@3.9.2)(react@18.2.0)
+    version: 0.29.4(@libsql/client@0.5.3)(@types/react@18.2.63)(mysql2@3.9.2)(react@18.2.0)
   jotai:
     specifier: ^2.7.0
     version: 2.7.0(@types/react@18.2.63)(react@18.2.0)
@@ -4383,11 +4380,6 @@ packages:
       tiny-glob: 0.2.9
       tslib: 2.6.2
     dev: true
-
-  /@planetscale/database@1.16.0:
-    resolution: {integrity: sha512-HNUrTqrd8aTRZYMDcsoZ62s36sIWkMMmKZBOehoCWR2WrfNPKq+Q1yQef5okl3pSVlldFnu2h/dbHjOsDTHXug==}
-    engines: {node: '>=16'}
-    dev: false
 
   /@playwright/test@1.41.2:
     resolution: {integrity: sha512-qQB9h7KbibJzrDpkXkYvsmiDJK14FULCCZgEcoe2AvFAS64oCirWTwzTlAYEbKaRxWs5TFesE1Na6izMv3HfGg==}
@@ -9469,7 +9461,7 @@ packages:
       - supports-color
     dev: true
 
-  /drizzle-orm@0.29.4(@libsql/client@0.5.3)(@planetscale/database@1.16.0)(@types/react@18.2.63)(mysql2@3.9.2)(react@18.2.0):
+  /drizzle-orm@0.29.4(@libsql/client@0.5.3)(@types/react@18.2.63)(mysql2@3.9.2)(react@18.2.0):
     resolution: {integrity: sha512-ZnSM8TAxFhzH7p1s3+w3pRE/eKaOeNkH9SKitm717pubDVVcV2I0BCDBPGKV+pe02+wMfw37ntlTcCyo2rA3IA==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
@@ -9541,7 +9533,6 @@ packages:
         optional: true
     dependencies:
       '@libsql/client': 0.5.3
-      '@planetscale/database': 1.16.0
       '@types/react': 18.2.63
       mysql2: 3.9.2
       react: 18.2.0
