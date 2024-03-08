@@ -11,7 +11,6 @@ export const env = {
     .optional()
     .parse(process.env.VERCEL_ENV),
 
-  DATABASE_HOST: z.string().parse(process.env.DATABASE_HOST),
-  DATABASE_USERNAME: z.string().parse(process.env.DATABASE_USERNAME),
-  DATABASE_PASSWORD: z.string().parse(process.env.DATABASE_PASSWORD),
+  TURSO_CONNECTION_URL: z.string().parse(process.env.TURSO_CONNECTION_URL),
+  TURSO_AUTH_TOKEN: z.string().parse(process.env.TURSO_AUTH_TOKEN),
 };
