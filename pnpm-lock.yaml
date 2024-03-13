@@ -21,8 +21,8 @@ dependencies:
     specifier: ^16.4.5
     version: 16.4.5
   drizzle-orm:
-    specifier: ^0.29.4
-    version: 0.29.4(@libsql/client@0.5.3)(@types/react@18.2.65)(mysql2@3.9.2)(react@18.2.0)
+    specifier: ^0.30.1
+    version: 0.30.1(@libsql/client@0.5.3)(@types/react@18.2.65)(mysql2@3.9.2)(react@18.2.0)
   jotai:
     specifier: ^2.7.0
     version: 2.7.0(@types/react@18.2.65)(react@18.2.0)
@@ -9520,13 +9520,14 @@ packages:
       - supports-color
     dev: true
 
-  /drizzle-orm@0.29.4(@libsql/client@0.5.3)(@types/react@18.2.65)(mysql2@3.9.2)(react@18.2.0):
-    resolution: {integrity: sha512-ZnSM8TAxFhzH7p1s3+w3pRE/eKaOeNkH9SKitm717pubDVVcV2I0BCDBPGKV+pe02+wMfw37ntlTcCyo2rA3IA==}
+  /drizzle-orm@0.30.1(@libsql/client@0.5.3)(@types/react@18.2.65)(mysql2@3.9.2)(react@18.2.0):
+    resolution: {integrity: sha512-5P6CXl4XyWtDDiYOX/jYOJp1HTUmBlXRAwaq+muUOgaSykMEy5sJesCxceMT0oCGvxeWkKfSXo5owLnfKwCIdw==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
       '@cloudflare/workers-types': '>=3'
       '@libsql/client': '*'
       '@neondatabase/serverless': '>=0.1'
+      '@op-engineering/op-sqlite': '>=2'
       '@opentelemetry/api': ^1.4.1
       '@planetscale/database': '>=1'
       '@types/better-sqlite3': '*'
@@ -9553,6 +9554,8 @@ packages:
       '@libsql/client':
         optional: true
       '@neondatabase/serverless':
+        optional: true
+      '@op-engineering/op-sqlite':
         optional: true
       '@opentelemetry/api':
         optional: true
