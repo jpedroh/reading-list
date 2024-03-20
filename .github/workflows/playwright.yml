@@ -10,9 +10,8 @@ jobs:
   test_e2e:
     services:
       libsql:
-        image: mjmammoth/libsql-server
+        image: ghcr.io/tursodatabase/libsql-server:ef44612
         ports:
-          - 5001:5001
           - 8080:8080
     name: Playwright tests
     timeout-minutes: 20
