@@ -9,7 +9,7 @@ on:
 jobs:
   test_e2e:
     services:
-      database:
+      libsql:
         image: mjmammoth/libsql-server
         ports:
           - 5001:5001
@@ -21,7 +21,7 @@ jobs:
       image: mcr.microsoft.com/playwright:v1.42.1-jammy
     env:
       PLAYWRIGHT_TEST_BASE_URL: "http://localhost:3000"
-      TURSO_CONNECTION_URL: "libsql://localhost:5001"
+      TURSO_CONNECTION_URL: "libsql://libsql:8080"
       NXCACHE_AWS_ACCESS_KEY_ID: ${{secrets.nxcache_aws_access_key_id}}
       NXCACHE_AWS_SECRET_ACCESS_KEY: ${{secrets.nxcache_aws_secret_access_key}}
       NXCACHE_AWS_ENDPOINT: ${{secrets.nxcache_aws_endpoint}}
