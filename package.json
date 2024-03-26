@@ -20,7 +20,7 @@
     "drizzle-orm": "^0.30.4",
     "jotai": "^2.7.1",
     "jotai-location": "^0.5.4",
-    "mysql2": "^3.9.2",
+    "mysql2": "^3.9.3",
     "next": "^14.1.4",
     "node-html-parser": "^6.1.12",
     "otp-io": "^1.2.6",
