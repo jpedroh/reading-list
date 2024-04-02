@@ -22,10 +22,10 @@ dependencies:
     version: 16.4.5
   drizzle-orm:
     specifier: ^0.30.6
-    version: 0.30.6(@libsql/client@0.6.0)(@types/react@18.2.73)(mysql2@3.9.3)(react@18.2.0)
+    version: 0.30.6(@libsql/client@0.6.0)(@types/react@18.2.74)(mysql2@3.9.3)(react@18.2.0)
   jotai:
     specifier: ^2.7.2
-    version: 2.7.2(@types/react@18.2.73)(react@18.2.0)
+    version: 2.7.2(@types/react@18.2.74)(react@18.2.0)
   jotai-location:
     specifier: ^0.5.4
     version: 0.5.4(jotai@2.7.2)
@@ -55,10 +55,10 @@ dependencies:
     version: 18.2.0(react@18.2.0)
   react-select:
     specifier: ^5.8.0
-    version: 5.8.0(@babel/core@7.24.3)(@types/react@18.2.73)(react-dom@18.2.0)(react@18.2.0)
+    version: 5.8.0(@babel/core@7.24.3)(@types/react@18.2.74)(react-dom@18.2.0)(react@18.2.0)
   react-twc:
     specifier: ^1.4.1
-    version: 1.4.1(@types/react@18.2.73)(react@18.2.0)
+    version: 1.4.1(@types/react@18.2.74)(react@18.2.0)
   tailwindcss-animate:
     specifier: ^1.0.7
     version: 1.0.7(tailwindcss@3.4.3)
@@ -122,8 +122,8 @@ devDependencies:
     specifier: ^1.5.5
     version: 1.5.5
   '@types/react':
-    specifier: 18.2.73
-    version: 18.2.73
+    specifier: 18.2.74
+    version: 18.2.74
   '@types/react-dom':
     specifier: 18.2.23
     version: 18.2.23
@@ -2603,7 +2603,7 @@ packages:
     resolution: {integrity: sha512-G/YwXTkv7Den9mXDO7AhLWkE3q+I92B+VqAE+dYG4NGPaHZGvt3G8Q0p9vmE+sq7rTGphUbAvmQ9YpbfMQGGlA==}
     dev: false
 
-  /@emotion/react@11.10.5(@babel/core@7.24.3)(@types/react@18.2.73)(react@18.2.0):
+  /@emotion/react@11.10.5(@babel/core@7.24.3)(@types/react@18.2.74)(react@18.2.0):
     resolution: {integrity: sha512-TZs6235tCJ/7iF6/rvTaOH4oxQg2gMAcdHemjwLKIjKz4rRuYe1HJ2TQJKnAcRAfOUDdU8XoDadCe1rl72iv8A==}
     peerDependencies:
       '@babel/core': ^7.0.0
@@ -2623,7 +2623,7 @@ packages:
       '@emotion/use-insertion-effect-with-fallbacks': 1.0.0(react@18.2.0)
       '@emotion/utils': 1.2.0
       '@emotion/weak-memoize': 0.3.0
-      '@types/react': 18.2.73
+      '@types/react': 18.2.74
       hoist-non-react-statics: 3.3.2
       react: 18.2.0
     dev: false
@@ -4214,7 +4214,7 @@ packages:
       playwright: 1.42.1
     dev: true
 
-  /@radix-ui/react-compose-refs@1.0.1(@types/react@18.2.73)(react@18.2.0):
+  /@radix-ui/react-compose-refs@1.0.1(@types/react@18.2.74)(react@18.2.0):
     resolution: {integrity: sha512-fDSBgd44FKHa1FRMU59qBMPFcl2PZE+2nmqunj+BWFyYYjnhIDWL2ItDs3rrbJDQOtzt5nIebLCQc4QRfz6LJw==}
     peerDependencies:
       '@types/react': '*'
@@ -4224,11 +4224,11 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': 7.24.1
-      '@types/react': 18.2.73
+      '@types/react': 18.2.74
       react: 18.2.0
     dev: false
 
-  /@radix-ui/react-slot@1.0.2(@types/react@18.2.73)(react@18.2.0):
+  /@radix-ui/react-slot@1.0.2(@types/react@18.2.74)(react@18.2.0):
     resolution: {integrity: sha512-YeTpuq4deV+6DusvVUW4ivBgnkHwECUu0BiN43L5UCDFgdhsRUWAghhTF5MbvNTPzmiFOx90asDSUjWuCNapwg==}
     peerDependencies:
       '@types/react': '*'
@@ -4238,8 +4238,8 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': 7.24.1
-      '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.2.73)(react@18.2.0)
-      '@types/react': 18.2.73
+      '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.2.74)(react@18.2.0)
+      '@types/react': 18.2.74
       react: 18.2.0
     dev: false
 
@@ -6870,17 +6870,17 @@ packages:
   /@types/react-dom@18.2.23:
     resolution: {integrity: sha512-ZQ71wgGOTmDYpnav2knkjr3qXdAFu0vsk8Ci5w3pGAIdj7/kKAyn+VsQDhXsmzzzepAiI9leWMmubXz690AI/A==}
     dependencies:
-      '@types/react': 18.2.73
+      '@types/react': 18.2.74
     dev: true
 
   /@types/react-transition-group@4.4.5:
     resolution: {integrity: sha512-juKD/eiSM3/xZYzjuzH6ZwpP+/lejltmiS3QEzV/vmb/Q8+HfDmxu+Baga8UEMGBqV88Nbg4l2hY/K2DkyaLLA==}
     dependencies:
-      '@types/react': 18.2.73
+      '@types/react': 18.2.74
     dev: false
 
-  /@types/react@18.2.73:
-    resolution: {integrity: sha512-XcGdod0Jjv84HOC7N5ziY3x+qL0AfmubvKOZ9hJjJ2yd5EE+KYjWhdOjt387e9HPheHkdggF9atTifMRtyAaRA==}
+  /@types/react@18.2.74:
+    resolution: {integrity: sha512-9AEqNZZyBx8OdZpxzQlaFEVCSFUM2YXJH46yPOiOpm078k6ZLOCcuAzGum/zK8YBwY+dbahVNbHrbgrAwIRlqw==}
     dependencies:
       '@types/prop-types': 15.7.5
       csstype: 3.1.1
@@ -9258,7 +9258,7 @@ packages:
       - supports-color
     dev: true
 
-  /drizzle-orm@0.30.6(@libsql/client@0.6.0)(@types/react@18.2.73)(mysql2@3.9.3)(react@18.2.0):
+  /drizzle-orm@0.30.6(@libsql/client@0.6.0)(@types/react@18.2.74)(mysql2@3.9.3)(react@18.2.0):
     resolution: {integrity: sha512-8RgNUmY7J03GRuRgBV5SaJNbYgLVPjdSWNS/bRkIMIHt2TFCA439lJsNpqYX8asyKMqkw8ceBiamUnCIXZIt9w==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
@@ -9339,7 +9339,7 @@ packages:
         optional: true
     dependencies:
       '@libsql/client': 0.6.0
-      '@types/react': 18.2.73
+      '@types/react': 18.2.74
       mysql2: 3.9.3
       react: 18.2.0
     dev: false
@@ -12059,10 +12059,10 @@ packages:
     peerDependencies:
       jotai: '>=1.11.0'
     dependencies:
-      jotai: 2.7.2(@types/react@18.2.73)(react@18.2.0)
+      jotai: 2.7.2(@types/react@18.2.74)(react@18.2.0)
     dev: false
 
-  /jotai@2.7.2(@types/react@18.2.73)(react@18.2.0):
+  /jotai@2.7.2(@types/react@18.2.74)(react@18.2.0):
     resolution: {integrity: sha512-6Ft5kpNu8p93Ssf1Faoza3hYQZRIYp7rioK8MwTTFnbQKwUyZElwquPwl1h6U0uo9hC0jr+ghO3gcSjc6P35/Q==}
     engines: {node: '>=12.20.0'}
     peerDependencies:
@@ -12074,7 +12074,7 @@ packages:
       react:
         optional: true
     dependencies:
-      '@types/react': 18.2.73
+      '@types/react': 18.2.74
       react: 18.2.0
     dev: false
 
@@ -14315,7 +14315,7 @@ packages:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
     dev: true
 
-  /react-select@5.8.0(@babel/core@7.24.3)(@types/react@18.2.73)(react-dom@18.2.0)(react@18.2.0):
+  /react-select@5.8.0(@babel/core@7.24.3)(@types/react@18.2.74)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-TfjLDo58XrhP6VG5M/Mi56Us0Yt8X7xD6cDybC7yoRMUNm7BGO7qk8J0TLQOua/prb8vUOtsfnXZwfm30HGsAA==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -14323,7 +14323,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.20.7
       '@emotion/cache': 11.10.5
-      '@emotion/react': 11.10.5(@babel/core@7.24.3)(@types/react@18.2.73)(react@18.2.0)
+      '@emotion/react': 11.10.5(@babel/core@7.24.3)(@types/react@18.2.74)(react@18.2.0)
       '@floating-ui/dom': 1.1.0
       '@types/react-transition-group': 4.4.5
       memoize-one: 6.0.0
@@ -14331,7 +14331,7 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       react-transition-group: 4.4.5(react-dom@18.2.0)(react@18.2.0)
-      use-isomorphic-layout-effect: 1.1.2(@types/react@18.2.73)(react@18.2.0)
+      use-isomorphic-layout-effect: 1.1.2(@types/react@18.2.74)(react@18.2.0)
     transitivePeerDependencies:
       - '@babel/core'
       - '@types/react'
@@ -14382,10 +14382,10 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /react-twc@1.4.1(@types/react@18.2.73)(react@18.2.0):
+  /react-twc@1.4.1(@types/react@18.2.74)(react@18.2.0):
     resolution: {integrity: sha512-G8Z4a20zM5bFMUPUrVlMiOIRiIbrNgj4CbvqNH6A1KcbEaEsXrKnDAtN6h7JptSaREbl/Mz66Rg+bEpiHnZDig==}
     dependencies:
-      '@radix-ui/react-slot': 1.0.2(@types/react@18.2.73)(react@18.2.0)
+      '@radix-ui/react-slot': 1.0.2(@types/react@18.2.74)(react@18.2.0)
       clsx: 2.1.0
     transitivePeerDependencies:
       - '@types/react'
@@ -16035,7 +16035,7 @@ packages:
       webpack: 5.91.0(@swc/core@1.4.11)(esbuild@0.19.8)
     dev: true
 
-  /use-isomorphic-layout-effect@1.1.2(@types/react@18.2.73)(react@18.2.0):
+  /use-isomorphic-layout-effect@1.1.2(@types/react@18.2.74)(react@18.2.0):
     resolution: {integrity: sha512-49L8yCO3iGT/ZF9QttjwLF/ZD9Iwto5LnH5LmEdk/6cFmXddqi2ulF0edxTwjj+7mqvpVVGQWvbXZdn32wRSHA==}
     peerDependencies:
       '@types/react': '*'
@@ -16044,7 +16044,7 @@ packages:
       '@types/react':
         optional: true
     dependencies:
-      '@types/react': 18.2.73
+      '@types/react': 18.2.74
       react: 18.2.0
     dev: false
 
