@@ -32,14 +32,13 @@ Reading List is a decentralized application that allows users to save tech relat
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Drizzle](https://www.trufflesuite.com/drizzle)
 - [Headless UI](https://headlessui.dev/)
-- [PlanetScale](https://planetscale.com/)
+- [Turso](https://turso.tech/)
 - [Zod](https://zod.dev/)
 - [Jotai](https://jotai.org/)
 - [OTP](https://github.com/yeojz/otplib)
 - [Nx](https://nx.dev/)
 - [Playwright](https://playwright.dev/)
 - [QRCode](https://github.com/soldair/node-qrcode)
-- [Kysely](https://github.com/kysely-org/kysely)
 
 ## Getting Started
 
