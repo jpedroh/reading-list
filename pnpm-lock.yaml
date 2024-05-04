@@ -27,8 +27,8 @@ dependencies:
     specifier: ^2.8.0
     version: 2.8.0(@types/react@18.3.1)(react@18.3.1)
   jotai-location:
-    specifier: ^0.5.4
-    version: 0.5.4(jotai@2.8.0)
+    specifier: ^0.5.5
+    version: 0.5.5(jotai@2.8.0)
   next:
     specifier: ^14.1.4
     version: 14.1.4(@babel/core@7.24.5)(react-dom@18.2.0)(react@18.3.1)
@@ -12265,8 +12265,8 @@ packages:
     resolution: {integrity: sha512-gFqAIbuKyyso/3G2qhiO2OM6shY6EPP/R0+mkDbyspxKazh8BXDC5FiFsUjlczgdNz/vfra0da2y+aHrusLG/Q==}
     hasBin: true
 
-  /jotai-location@0.5.4(jotai@2.8.0):
-    resolution: {integrity: sha512-IqpyYLAF6HgoDoJVlX66IGvgrugCA1LJybT01NqenpdwypPtUB6u0cnJZMbN6axU+Yl2FTI6l+4x9IWh4WGFRA==}
+  /jotai-location@0.5.5(jotai@2.8.0):
+    resolution: {integrity: sha512-6QW/7W9IJHjhbn7gRgAw4sC30k0/G6JiC4uPlKi8ZPZGYk7R7r9PyMD2eVhL4XSxxag89JxS1iSyr6BIXsB4Sw==}
     peerDependencies:
       jotai: '>=1.11.0'
     dependencies:
