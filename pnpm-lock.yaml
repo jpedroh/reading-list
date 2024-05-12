@@ -31,7 +31,7 @@ dependencies:
     version: 0.5.5(jotai@2.8.0)
   next:
     specifier: ^14.1.4
-    version: 14.1.4(@babel/core@7.24.5)(react-dom@18.2.0)(react@18.3.1)
+    version: 14.1.4(@babel/core@7.24.5)(react-dom@18.3.1)(react@18.3.1)
   node-html-parser:
     specifier: ^6.1.13
     version: 6.1.13
@@ -46,13 +46,13 @@ dependencies:
     version: 18.3.1
   react-aria-components:
     specifier: ^1.2.0
-    version: 1.2.0(react-dom@18.2.0)(react@18.3.1)
+    version: 1.2.0(react-dom@18.3.1)(react@18.3.1)
   react-dom:
-    specifier: 18.2.0
-    version: 18.2.0(react@18.3.1)
+    specifier: 18.3.1
+    version: 18.3.1(react@18.3.1)
   react-select:
     specifier: ^5.8.0
-    version: 5.8.0(@babel/core@7.24.5)(@types/react@18.3.1)(react-dom@18.2.0)(react@18.3.1)
+    version: 5.8.0(@babel/core@7.24.5)(@types/react@18.3.1)(react-dom@18.3.1)(react@18.3.1)
   react-twc:
     specifier: ^1.4.1
     version: 1.4.1(@types/react@18.3.1)(react@18.3.1)
@@ -111,7 +111,7 @@ devDependencies:
     version: 1.5.3(@swc/helpers@0.5.11)
   '@testing-library/react':
     specifier: 15.0.5
-    version: 15.0.5(react-dom@18.2.0)(react@18.3.1)
+    version: 15.0.5(react-dom@18.3.1)(react@18.3.1)
   '@types/node':
     specifier: 20.12.7
     version: 20.12.7
@@ -122,8 +122,8 @@ devDependencies:
     specifier: 18.3.1
     version: 18.3.1
   '@types/react-dom':
-    specifier: 18.2.25
-    version: 18.2.25
+    specifier: 18.3.0
+    version: 18.3.0
   '@typescript-eslint/eslint-plugin':
     specifier: ^7.8.0
     version: 7.8.0(@typescript-eslint/parser@7.8.0)(eslint@8.57.0)(typescript@5.4.5)
@@ -3857,7 +3857,7 @@ packages:
       file-loader: 6.2.0(webpack@5.91.0)
       fs-extra: 11.2.0
       ignore: 5.3.1
-      next: 14.1.4(@babel/core@7.24.5)(react-dom@18.2.0)(react@18.3.1)
+      next: 14.1.4(@babel/core@7.24.5)(react-dom@18.3.1)(react@18.3.1)
       semver: 7.6.2
       tslib: 2.6.2
       webpack-merge: 5.10.0
@@ -4243,7 +4243,7 @@ packages:
       react: 18.3.1
     dev: false
 
-  /@react-aria/calendar@3.5.7(react-dom@18.2.0)(react@18.3.1):
+  /@react-aria/calendar@3.5.7(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-HbOxoslIpak1/RKHQ/p4A5roI+RpM6geK68s72D+9n3NMPDw/X95yesc6JD1Sti2KsGl9GHI6Myf9xcNjuAMnw==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
@@ -4260,7 +4260,7 @@ packages:
       '@react-types/shared': 3.23.0(react@18.3.1)
       '@swc/helpers': 0.5.11
       react: 18.3.1
-      react-dom: 18.2.0(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
     dev: false
 
   /@react-aria/checkbox@3.14.2(react@18.3.1):
@@ -4282,7 +4282,7 @@ packages:
       react: 18.3.1
     dev: false
 
-  /@react-aria/color@3.0.0-beta.32(react-dom@18.2.0)(react@18.3.1):
+  /@react-aria/color@3.0.0-beta.32(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-FKy5jb+31SIaLrjQR7oMq23CCBgoPdlYN06mwb16EdN024D1ZkQ2ULUvI84vBJxCul8cMOmoIK1DBOnhDslbrQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
@@ -4290,9 +4290,9 @@ packages:
     dependencies:
       '@react-aria/i18n': 3.11.0(react@18.3.1)
       '@react-aria/interactions': 3.21.2(react@18.3.1)
-      '@react-aria/numberfield': 3.11.2(react-dom@18.2.0)(react@18.3.1)
+      '@react-aria/numberfield': 3.11.2(react-dom@18.3.1)(react@18.3.1)
       '@react-aria/slider': 3.7.7(react@18.3.1)
-      '@react-aria/spinbutton': 3.6.4(react-dom@18.2.0)(react@18.3.1)
+      '@react-aria/spinbutton': 3.6.4(react-dom@18.3.1)(react@18.3.1)
       '@react-aria/textfield': 3.14.4(react@18.3.1)
       '@react-aria/utils': 3.24.0(react@18.3.1)
       '@react-aria/visually-hidden': 3.8.11(react@18.3.1)
@@ -4302,21 +4302,21 @@ packages:
       '@react-types/shared': 3.23.0(react@18.3.1)
       '@swc/helpers': 0.5.11
       react: 18.3.1
-      react-dom: 18.2.0(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
     dev: false
 
-  /@react-aria/combobox@3.9.0(react-dom@18.2.0)(react@18.3.1):
+  /@react-aria/combobox@3.9.0(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-JRiCoARx95Lu1hENmf4ndHzpJrMeP/2bV96jZbMn4StFUzhACKnUw0rNFpFdONfeoD/MkWO7tsvhxaPGLhpgtQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
       react-dom: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
     dependencies:
       '@react-aria/i18n': 3.11.0(react@18.3.1)
-      '@react-aria/listbox': 3.12.0(react-dom@18.2.0)(react@18.3.1)
+      '@react-aria/listbox': 3.12.0(react-dom@18.3.1)(react@18.3.1)
       '@react-aria/live-announcer': 3.3.3
-      '@react-aria/menu': 3.14.0(react-dom@18.2.0)(react@18.3.1)
-      '@react-aria/overlays': 3.22.0(react-dom@18.2.0)(react@18.3.1)
-      '@react-aria/selection': 3.18.0(react-dom@18.2.0)(react@18.3.1)
+      '@react-aria/menu': 3.14.0(react-dom@18.3.1)(react@18.3.1)
+      '@react-aria/overlays': 3.22.0(react-dom@18.3.1)(react@18.3.1)
+      '@react-aria/selection': 3.18.0(react-dom@18.3.1)(react@18.3.1)
       '@react-aria/textfield': 3.14.4(react@18.3.1)
       '@react-aria/utils': 3.24.0(react@18.3.1)
       '@react-stately/collections': 3.10.6(react@18.3.1)
@@ -4327,10 +4327,10 @@ packages:
       '@react-types/shared': 3.23.0(react@18.3.1)
       '@swc/helpers': 0.5.11
       react: 18.3.1
-      react-dom: 18.2.0(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
     dev: false
 
-  /@react-aria/datepicker@3.10.0(react-dom@18.2.0)(react@18.3.1):
+  /@react-aria/datepicker@3.10.0(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-YiIxY+mRxc2rPN8j9ypdiGspRHSIrsK6TShBgKEk5UoG5EBKEJfNe/FfoXDR2d5xcpWLAHVuRjERi9WkiJNDBw==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
@@ -4344,7 +4344,7 @@ packages:
       '@react-aria/i18n': 3.11.0(react@18.3.1)
       '@react-aria/interactions': 3.21.2(react@18.3.1)
       '@react-aria/label': 3.7.7(react@18.3.1)
-      '@react-aria/spinbutton': 3.6.4(react-dom@18.2.0)(react@18.3.1)
+      '@react-aria/spinbutton': 3.6.4(react-dom@18.3.1)(react@18.3.1)
       '@react-aria/utils': 3.24.0(react@18.3.1)
       '@react-stately/datepicker': 3.9.3(react@18.3.1)
       '@react-stately/form': 3.0.2(react@18.3.1)
@@ -4355,26 +4355,26 @@ packages:
       '@react-types/shared': 3.23.0(react@18.3.1)
       '@swc/helpers': 0.5.11
       react: 18.3.1
-      react-dom: 18.2.0(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
     dev: false
 
-  /@react-aria/dialog@3.5.13(react-dom@18.2.0)(react@18.3.1):
+  /@react-aria/dialog@3.5.13(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-GUwY7sQtPMtO6LFHyoIGFMEv8tEBrNCrSNwEKilFLxvNUCo/1sY3N+7L2TcoeyDkcRWBJ9Uz9iR0iJ6EsCBWng==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
       react-dom: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
     dependencies:
       '@react-aria/focus': 3.17.0(react@18.3.1)
-      '@react-aria/overlays': 3.22.0(react-dom@18.2.0)(react@18.3.1)
+      '@react-aria/overlays': 3.22.0(react-dom@18.3.1)(react@18.3.1)
       '@react-aria/utils': 3.24.0(react@18.3.1)
       '@react-types/dialog': 3.5.9(react@18.3.1)
       '@react-types/shared': 3.23.0(react@18.3.1)
       '@swc/helpers': 0.5.11
       react: 18.3.1
-      react-dom: 18.2.0(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
     dev: false
 
-  /@react-aria/dnd@3.6.0(react-dom@18.2.0)(react@18.3.1):
+  /@react-aria/dnd@3.6.0(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-uIM54sUr4NpSdvxWozNKGqSNSTe9ir/sO+QFGtGAF5dbjMX7FN/7sVVrtmB8UHKC+fwfs+Ml3kjJgHbm10/Qmg==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
@@ -4384,14 +4384,14 @@ packages:
       '@react-aria/i18n': 3.11.0(react@18.3.1)
       '@react-aria/interactions': 3.21.2(react@18.3.1)
       '@react-aria/live-announcer': 3.3.3
-      '@react-aria/overlays': 3.22.0(react-dom@18.2.0)(react@18.3.1)
+      '@react-aria/overlays': 3.22.0(react-dom@18.3.1)(react@18.3.1)
       '@react-aria/utils': 3.24.0(react@18.3.1)
       '@react-stately/dnd': 3.3.0(react@18.3.1)
       '@react-types/button': 3.9.3(react@18.3.1)
       '@react-types/shared': 3.23.0(react@18.3.1)
       '@swc/helpers': 0.5.11
       react: 18.3.1
-      react-dom: 18.2.0(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
     dev: false
 
   /@react-aria/focus@3.17.0(react@18.3.1):
@@ -4420,7 +4420,7 @@ packages:
       react: 18.3.1
     dev: false
 
-  /@react-aria/grid@3.9.0(react-dom@18.2.0)(react@18.3.1):
+  /@react-aria/grid@3.9.0(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-jNg7haMptmeTKR7/ZomIjWZMLB6jWalBkl5in2JdU9Hc4pY5EKqD/7PSprr9SjOzCr5O+4MSiRDvw+Tu7xHevQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
@@ -4430,7 +4430,7 @@ packages:
       '@react-aria/i18n': 3.11.0(react@18.3.1)
       '@react-aria/interactions': 3.21.2(react@18.3.1)
       '@react-aria/live-announcer': 3.3.3
-      '@react-aria/selection': 3.18.0(react-dom@18.2.0)(react@18.3.1)
+      '@react-aria/selection': 3.18.0(react-dom@18.3.1)(react@18.3.1)
       '@react-aria/utils': 3.24.0(react@18.3.1)
       '@react-stately/collections': 3.10.6(react@18.3.1)
       '@react-stately/grid': 3.8.6(react@18.3.1)
@@ -4441,20 +4441,20 @@ packages:
       '@react-types/shared': 3.23.0(react@18.3.1)
       '@swc/helpers': 0.5.11
       react: 18.3.1
-      react-dom: 18.2.0(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
     dev: false
 
-  /@react-aria/gridlist@3.8.0(react-dom@18.2.0)(react@18.3.1):
+  /@react-aria/gridlist@3.8.0(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-2iPBtpYZdTVij6XcqFsRsjzItjgg7FhFRPUEgD62mCyYd6NJIDkCxLuL97hkZ5BbXNxsr2jgVEns5Z4UzW//IQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
       react-dom: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
     dependencies:
       '@react-aria/focus': 3.17.0(react@18.3.1)
-      '@react-aria/grid': 3.9.0(react-dom@18.2.0)(react@18.3.1)
+      '@react-aria/grid': 3.9.0(react-dom@18.3.1)(react@18.3.1)
       '@react-aria/i18n': 3.11.0(react@18.3.1)
       '@react-aria/interactions': 3.21.2(react@18.3.1)
-      '@react-aria/selection': 3.18.0(react-dom@18.2.0)(react@18.3.1)
+      '@react-aria/selection': 3.18.0(react-dom@18.3.1)(react@18.3.1)
       '@react-aria/utils': 3.24.0(react@18.3.1)
       '@react-stately/collections': 3.10.6(react@18.3.1)
       '@react-stately/list': 3.10.4(react@18.3.1)
@@ -4462,7 +4462,7 @@ packages:
       '@react-types/shared': 3.23.0(react@18.3.1)
       '@swc/helpers': 0.5.11
       react: 18.3.1
-      react-dom: 18.2.0(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
     dev: false
 
   /@react-aria/i18n@3.11.0(react@18.3.1):
@@ -4518,7 +4518,7 @@ packages:
       react: 18.3.1
     dev: false
 
-  /@react-aria/listbox@3.12.0(react-dom@18.2.0)(react@18.3.1):
+  /@react-aria/listbox@3.12.0(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-Cy+UcfXU4MrOBMBnaB+kqG8bajeS3T1ZN8L7PXSTpmFS9jShFMhYkNz5gXpI+0SS4dgbHtkq/YDFJvu+bxFvdg==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
@@ -4526,7 +4526,7 @@ packages:
     dependencies:
       '@react-aria/interactions': 3.21.2(react@18.3.1)
       '@react-aria/label': 3.7.7(react@18.3.1)
-      '@react-aria/selection': 3.18.0(react-dom@18.2.0)(react@18.3.1)
+      '@react-aria/selection': 3.18.0(react-dom@18.3.1)(react@18.3.1)
       '@react-aria/utils': 3.24.0(react@18.3.1)
       '@react-stately/collections': 3.10.6(react@18.3.1)
       '@react-stately/list': 3.10.4(react@18.3.1)
@@ -4534,7 +4534,7 @@ packages:
       '@react-types/shared': 3.23.0(react@18.3.1)
       '@swc/helpers': 0.5.11
       react: 18.3.1
-      react-dom: 18.2.0(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
     dev: false
 
   /@react-aria/live-announcer@3.3.3:
@@ -4543,7 +4543,7 @@ packages:
       '@swc/helpers': 0.5.11
     dev: false
 
-  /@react-aria/menu@3.14.0(react-dom@18.2.0)(react@18.3.1):
+  /@react-aria/menu@3.14.0(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-veZIpwKPKDIX1xpUzvGnxSVTmMfpRjPQUi1v+hMgqgdjBKedKI2LkprLABo9grggjqV9c2xT4XUXDk6xH3r8eA==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
@@ -4552,8 +4552,8 @@ packages:
       '@react-aria/focus': 3.17.0(react@18.3.1)
       '@react-aria/i18n': 3.11.0(react@18.3.1)
       '@react-aria/interactions': 3.21.2(react@18.3.1)
-      '@react-aria/overlays': 3.22.0(react-dom@18.2.0)(react@18.3.1)
-      '@react-aria/selection': 3.18.0(react-dom@18.2.0)(react@18.3.1)
+      '@react-aria/overlays': 3.22.0(react-dom@18.3.1)(react@18.3.1)
+      '@react-aria/selection': 3.18.0(react-dom@18.3.1)(react@18.3.1)
       '@react-aria/utils': 3.24.0(react@18.3.1)
       '@react-stately/collections': 3.10.6(react@18.3.1)
       '@react-stately/menu': 3.7.0(react@18.3.1)
@@ -4563,7 +4563,7 @@ packages:
       '@react-types/shared': 3.23.0(react@18.3.1)
       '@swc/helpers': 0.5.11
       react: 18.3.1
-      react-dom: 18.2.0(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
     dev: false
 
   /@react-aria/meter@3.4.12(react@18.3.1):
@@ -4578,7 +4578,7 @@ packages:
       react: 18.3.1
     dev: false
 
-  /@react-aria/numberfield@3.11.2(react-dom@18.2.0)(react@18.3.1):
+  /@react-aria/numberfield@3.11.2(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-PPCRLhAnCz3/mbv/EXoG3mY8lUvaOnZdGZf0ufb1VS4K/wKtb8z3sCTDiu1hi7nFo1YYqynb8mKue4Es5jUwSw==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
@@ -4586,7 +4586,7 @@ packages:
     dependencies:
       '@react-aria/i18n': 3.11.0(react@18.3.1)
       '@react-aria/interactions': 3.21.2(react@18.3.1)
-      '@react-aria/spinbutton': 3.6.4(react-dom@18.2.0)(react@18.3.1)
+      '@react-aria/spinbutton': 3.6.4(react-dom@18.3.1)(react@18.3.1)
       '@react-aria/textfield': 3.14.4(react@18.3.1)
       '@react-aria/utils': 3.24.0(react@18.3.1)
       '@react-stately/form': 3.0.2(react@18.3.1)
@@ -4596,10 +4596,10 @@ packages:
       '@react-types/shared': 3.23.0(react@18.3.1)
       '@swc/helpers': 0.5.11
       react: 18.3.1
-      react-dom: 18.2.0(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
     dev: false
 
-  /@react-aria/overlays@3.22.0(react-dom@18.2.0)(react@18.3.1):
+  /@react-aria/overlays@3.22.0(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-M3Iayc2Hf9vJ4JJ8K/zh+Ct6aymDLmBbo686ChV3AtGOc254RyyzqnVSNuMs3j5QVBsDUKihHZQfl4E9RCwd+w==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
@@ -4617,7 +4617,7 @@ packages:
       '@react-types/shared': 3.23.0(react@18.3.1)
       '@swc/helpers': 0.5.11
       react: 18.3.1
-      react-dom: 18.2.0(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
     dev: false
 
   /@react-aria/progress@3.4.12(react@18.3.1):
@@ -4668,7 +4668,7 @@ packages:
       react: 18.3.1
     dev: false
 
-  /@react-aria/select@3.14.4(react-dom@18.2.0)(react@18.3.1):
+  /@react-aria/select@3.14.4(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-MeFN8pw9liXwejkJS+hg0fDqGa3oW/mIwZYx8CrZZLbPnEcjZ9NI4ZXSxJaMOHEIQj/RXQ3Fpu0Sunu9FVpYXQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
@@ -4678,9 +4678,9 @@ packages:
       '@react-aria/i18n': 3.11.0(react@18.3.1)
       '@react-aria/interactions': 3.21.2(react@18.3.1)
       '@react-aria/label': 3.7.7(react@18.3.1)
-      '@react-aria/listbox': 3.12.0(react-dom@18.2.0)(react@18.3.1)
-      '@react-aria/menu': 3.14.0(react-dom@18.2.0)(react@18.3.1)
-      '@react-aria/selection': 3.18.0(react-dom@18.2.0)(react@18.3.1)
+      '@react-aria/listbox': 3.12.0(react-dom@18.3.1)(react@18.3.1)
+      '@react-aria/menu': 3.14.0(react-dom@18.3.1)(react@18.3.1)
+      '@react-aria/selection': 3.18.0(react-dom@18.3.1)(react@18.3.1)
       '@react-aria/utils': 3.24.0(react@18.3.1)
       '@react-aria/visually-hidden': 3.8.11(react@18.3.1)
       '@react-stately/select': 3.6.3(react@18.3.1)
@@ -4689,10 +4689,10 @@ packages:
       '@react-types/shared': 3.23.0(react@18.3.1)
       '@swc/helpers': 0.5.11
       react: 18.3.1
-      react-dom: 18.2.0(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
     dev: false
 
-  /@react-aria/selection@3.18.0(react-dom@18.2.0)(react@18.3.1):
+  /@react-aria/selection@3.18.0(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-6ZvRuS9OHe56UVTb/qnsZ1TOxpZH9gRlX6eGG3Pt4LZK12wcvs13Uz2OvB2aYQHu0KPAua9ACnPh94xvXzQIlQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
@@ -4706,7 +4706,7 @@ packages:
       '@react-types/shared': 3.23.0(react@18.3.1)
       '@swc/helpers': 0.5.11
       react: 18.3.1
-      react-dom: 18.2.0(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
     dev: false
 
   /@react-aria/separator@3.3.12(react@18.3.1):
@@ -4737,7 +4737,7 @@ packages:
       react: 18.3.1
     dev: false
 
-  /@react-aria/spinbutton@3.6.4(react-dom@18.2.0)(react@18.3.1):
+  /@react-aria/spinbutton@3.6.4(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-KMnwm3bEM83g8MILGt6irbvAG7DNphkq6O0ePt7L1m6QZhWK3hbI2RNlxYMF1OKIDTAOhnEjR6IdMCWt9TuXvQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
@@ -4750,7 +4750,7 @@ packages:
       '@react-types/shared': 3.23.0(react@18.3.1)
       '@swc/helpers': 0.5.11
       react: 18.3.1
-      react-dom: 18.2.0(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
     dev: false
 
   /@react-aria/ssr@3.9.3(react@18.3.1):
@@ -4775,14 +4775,14 @@ packages:
       react: 18.3.1
     dev: false
 
-  /@react-aria/table@3.14.0(react-dom@18.2.0)(react@18.3.1):
+  /@react-aria/table@3.14.0(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-IwBmzeIxeZjWlOlmMXVj/L64FbYm3qUh7v3VRgU98BVOdvgUyEKBDIwi6SuOV4FwbXKrCPZbXPU/k+KQU4tUoQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
       react-dom: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
     dependencies:
       '@react-aria/focus': 3.17.0(react@18.3.1)
-      '@react-aria/grid': 3.9.0(react-dom@18.2.0)(react@18.3.1)
+      '@react-aria/grid': 3.9.0(react-dom@18.3.1)(react@18.3.1)
       '@react-aria/i18n': 3.11.0(react@18.3.1)
       '@react-aria/interactions': 3.21.2(react@18.3.1)
       '@react-aria/live-announcer': 3.3.3
@@ -4798,10 +4798,10 @@ packages:
       '@react-types/table': 3.9.4(react@18.3.1)
       '@swc/helpers': 0.5.11
       react: 18.3.1
-      react-dom: 18.2.0(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
     dev: false
 
-  /@react-aria/tabs@3.9.0(react-dom@18.2.0)(react@18.3.1):
+  /@react-aria/tabs@3.9.0(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-E4IHOO9ejEXNeSnpeThu79pDpNySHHYz3txr9ngtH6tp097k/I1auSqbGJPy/kwLj6MCPEt86dNJDXE2X0AcFw==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
@@ -4809,34 +4809,34 @@ packages:
     dependencies:
       '@react-aria/focus': 3.17.0(react@18.3.1)
       '@react-aria/i18n': 3.11.0(react@18.3.1)
-      '@react-aria/selection': 3.18.0(react-dom@18.2.0)(react@18.3.1)
+      '@react-aria/selection': 3.18.0(react-dom@18.3.1)(react@18.3.1)
       '@react-aria/utils': 3.24.0(react@18.3.1)
       '@react-stately/tabs': 3.6.5(react@18.3.1)
       '@react-types/shared': 3.23.0(react@18.3.1)
       '@react-types/tabs': 3.3.6(react@18.3.1)
       '@swc/helpers': 0.5.11
       react: 18.3.1
-      react-dom: 18.2.0(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
     dev: false
 
-  /@react-aria/tag@3.4.0(react-dom@18.2.0)(react@18.3.1):
+  /@react-aria/tag@3.4.0(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-kTrj0zEIyABgdASZMM7qxe0LAEePAxlg4OmfjZfkiAYYV32liY4EPER7ocE0OhOXo6TeOYYIvpEcr0z/4PjCpw==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
       react-dom: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
     dependencies:
-      '@react-aria/gridlist': 3.8.0(react-dom@18.2.0)(react@18.3.1)
+      '@react-aria/gridlist': 3.8.0(react-dom@18.3.1)(react@18.3.1)
       '@react-aria/i18n': 3.11.0(react@18.3.1)
       '@react-aria/interactions': 3.21.2(react@18.3.1)
       '@react-aria/label': 3.7.7(react@18.3.1)
-      '@react-aria/selection': 3.18.0(react-dom@18.2.0)(react@18.3.1)
+      '@react-aria/selection': 3.18.0(react-dom@18.3.1)(react@18.3.1)
       '@react-aria/utils': 3.24.0(react@18.3.1)
       '@react-stately/list': 3.10.4(react@18.3.1)
       '@react-types/button': 3.9.3(react@18.3.1)
       '@react-types/shared': 3.23.0(react@18.3.1)
       '@swc/helpers': 0.5.11
       react: 18.3.1
-      react-dom: 18.2.0(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
     dev: false
 
   /@react-aria/textfield@3.14.4(react@18.3.1):
@@ -4898,22 +4898,22 @@ packages:
       react: 18.3.1
     dev: false
 
-  /@react-aria/tree@3.0.0-alpha.0(react-dom@18.2.0)(react@18.3.1):
+  /@react-aria/tree@3.0.0-alpha.0(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-/5dqWjSHEMlrvoJTsQuGHrtKRoxYco5OKrdIf5UQq5wHB/quUD6ZexEfn9/NzflyoHVz2zPIm7RU8J9WuZugNw==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
       react-dom: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
     dependencies:
-      '@react-aria/gridlist': 3.8.0(react-dom@18.2.0)(react@18.3.1)
+      '@react-aria/gridlist': 3.8.0(react-dom@18.3.1)(react@18.3.1)
       '@react-aria/i18n': 3.11.0(react@18.3.1)
-      '@react-aria/selection': 3.18.0(react-dom@18.2.0)(react@18.3.1)
+      '@react-aria/selection': 3.18.0(react-dom@18.3.1)(react@18.3.1)
       '@react-aria/utils': 3.24.0(react@18.3.1)
       '@react-stately/tree': 3.8.0(react@18.3.1)
       '@react-types/button': 3.9.3(react@18.3.1)
       '@react-types/shared': 3.23.0(react@18.3.1)
       '@swc/helpers': 0.5.11
       react: 18.3.1
-      react-dom: 18.2.0(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
     dev: false
 
   /@react-aria/utils@3.24.0(react@18.3.1):
@@ -5669,7 +5669,7 @@ packages:
       '@sentry/vercel-edge': 7.112.2
       '@sentry/webpack-plugin': 1.21.0
       chalk: 3.0.0
-      next: 14.1.4(@babel/core@7.24.5)(react-dom@18.2.0)(react@18.3.1)
+      next: 14.1.4(@babel/core@7.24.5)(react-dom@18.3.1)(react@18.3.1)
       react: 18.3.1
       resolve: 1.22.8
       rollup: 2.78.0
@@ -6689,7 +6689,7 @@ packages:
       pretty-format: 27.5.1
     dev: true
 
-  /@testing-library/react@15.0.5(react-dom@18.2.0)(react@18.3.1):
+  /@testing-library/react@15.0.5(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-ttodVWYA2i2w4hRa6krKrmS1vKxAEkwDz34y+CwbcrbZUxFzUYN3a5xZyFKo+K6LBseCRCUkwcjATpaNn/UsIA==}
     engines: {node: '>=18'}
     peerDependencies:
@@ -6698,9 +6698,9 @@ packages:
     dependencies:
       '@babel/runtime': 7.24.4
       '@testing-library/dom': 10.0.0
-      '@types/react-dom': 18.2.25
+      '@types/react-dom': 18.3.0
       react: 18.3.1
-      react-dom: 18.2.0(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
     dev: true
 
   /@tokenizer/token@0.3.0:
@@ -6908,8 +6908,8 @@ packages:
     resolution: {integrity: sha512-hKormJbkJqzQGhziax5PItDUTMAM9uE2XXQmM37dyd4hVM+5aVl7oVxMVUiVQn2oCQFN/LKCZdvSM0pFRqbSmQ==}
     dev: true
 
-  /@types/react-dom@18.2.25:
-    resolution: {integrity: sha512-o/V48vf4MQh7juIKZU2QGDfli6p1+OOi5oXx36Hffpc9adsHeXjVp8rHuPkjd8VT8sOJ2Zp05HR7CdpGTIUFUA==}
+  /@types/react-dom@18.3.0:
+    resolution: {integrity: sha512-EhwApuTmMBmXuFOikhQLIBUn6uFg81SwLMOAUgodJF14SOBOCMdU04gDoYi0WOJJHD144TL32z4yDqCW3dnkQg==}
     dependencies:
       '@types/react': 18.3.1
     dev: true
@@ -12872,7 +12872,7 @@ packages:
     resolution: {integrity: sha512-CXdUiJembsNjuToQvxayPZF9Vqht7hewsvy2sOWafLvi2awflj9mOC6bHIg50orX8IJvWKY9wYQ/zB2kogPslQ==}
     dev: true
 
-  /next@14.1.4(@babel/core@7.24.5)(react-dom@18.2.0)(react@18.3.1):
+  /next@14.1.4(@babel/core@7.24.5)(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-1WTaXeSrUwlz/XcnhGTY7+8eiaFvdet5z9u3V2jb+Ek1vFo0VhHKSAIJvDWfQpttWjnyw14kBeq28TPq7bTeEQ==}
     engines: {node: '>=18.17.0'}
     hasBin: true
@@ -12894,7 +12894,7 @@ packages:
       graceful-fs: 4.2.11
       postcss: 8.4.31
       react: 18.3.1
-      react-dom: 18.2.0(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
       styled-jsx: 5.1.1(@babel/core@7.24.5)(react@18.3.1)
     optionalDependencies:
       '@next/swc-darwin-arm64': 14.1.4
@@ -14174,7 +14174,7 @@ packages:
       unpipe: 1.0.0
     dev: true
 
-  /react-aria-components@1.2.0(react-dom@18.2.0)(react@18.3.1):
+  /react-aria-components@1.2.0(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-Cqr1tewYe/SgNcVOptqYdm0PPAV0Xsvd2uzWX7EqJsPGHvKStl/mh2a3Ebe6dYuoOddLsqqj36DdiLC5Pb5okw==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
@@ -14182,12 +14182,12 @@ packages:
     dependencies:
       '@internationalized/date': 3.5.3
       '@internationalized/string': 3.2.2
-      '@react-aria/color': 3.0.0-beta.32(react-dom@18.2.0)(react@18.3.1)
+      '@react-aria/color': 3.0.0-beta.32(react-dom@18.3.1)(react@18.3.1)
       '@react-aria/focus': 3.17.0(react@18.3.1)
       '@react-aria/interactions': 3.21.2(react@18.3.1)
-      '@react-aria/menu': 3.14.0(react-dom@18.2.0)(react@18.3.1)
+      '@react-aria/menu': 3.14.0(react-dom@18.3.1)(react@18.3.1)
       '@react-aria/toolbar': 3.0.0-beta.4(react@18.3.1)
-      '@react-aria/tree': 3.0.0-alpha.0(react-dom@18.2.0)(react@18.3.1)
+      '@react-aria/tree': 3.0.0-alpha.0(react-dom@18.3.1)(react@18.3.1)
       '@react-aria/utils': 3.24.0(react@18.3.1)
       '@react-stately/color': 3.6.0(react@18.3.1)
       '@react-stately/menu': 3.7.0(react@18.3.1)
@@ -14201,13 +14201,13 @@ packages:
       '@swc/helpers': 0.5.11
       client-only: 0.0.1
       react: 18.3.1
-      react-aria: 3.33.0(react-dom@18.2.0)(react@18.3.1)
-      react-dom: 18.2.0(react@18.3.1)
+      react-aria: 3.33.0(react-dom@18.3.1)(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
       react-stately: 3.31.0(react@18.3.1)
       use-sync-external-store: 1.2.0(react@18.3.1)
     dev: false
 
-  /react-aria@3.33.0(react-dom@18.2.0)(react@18.3.1):
+  /react-aria@3.33.0(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-aKn9SQn5TMlmpUsIjfRMtse2v3okGcSo+gWLGrj9JVjxs4PL4FSU4mclj4Bg2JUXZTGgfLSq6PWUBzQ4gIP2zg==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
@@ -14216,52 +14216,52 @@ packages:
       '@internationalized/string': 3.2.2
       '@react-aria/breadcrumbs': 3.5.12(react@18.3.1)
       '@react-aria/button': 3.9.4(react@18.3.1)
-      '@react-aria/calendar': 3.5.7(react-dom@18.2.0)(react@18.3.1)
+      '@react-aria/calendar': 3.5.7(react-dom@18.3.1)(react@18.3.1)
       '@react-aria/checkbox': 3.14.2(react@18.3.1)
-      '@react-aria/combobox': 3.9.0(react-dom@18.2.0)(react@18.3.1)
-      '@react-aria/datepicker': 3.10.0(react-dom@18.2.0)(react@18.3.1)
-      '@react-aria/dialog': 3.5.13(react-dom@18.2.0)(react@18.3.1)
-      '@react-aria/dnd': 3.6.0(react-dom@18.2.0)(react@18.3.1)
+      '@react-aria/combobox': 3.9.0(react-dom@18.3.1)(react@18.3.1)
+      '@react-aria/datepicker': 3.10.0(react-dom@18.3.1)(react@18.3.1)
+      '@react-aria/dialog': 3.5.13(react-dom@18.3.1)(react@18.3.1)
+      '@react-aria/dnd': 3.6.0(react-dom@18.3.1)(react@18.3.1)
       '@react-aria/focus': 3.17.0(react@18.3.1)
-      '@react-aria/gridlist': 3.8.0(react-dom@18.2.0)(react@18.3.1)
+      '@react-aria/gridlist': 3.8.0(react-dom@18.3.1)(react@18.3.1)
       '@react-aria/i18n': 3.11.0(react@18.3.1)
       '@react-aria/interactions': 3.21.2(react@18.3.1)
       '@react-aria/label': 3.7.7(react@18.3.1)
       '@react-aria/link': 3.7.0(react@18.3.1)
-      '@react-aria/listbox': 3.12.0(react-dom@18.2.0)(react@18.3.1)
-      '@react-aria/menu': 3.14.0(react-dom@18.2.0)(react@18.3.1)
+      '@react-aria/listbox': 3.12.0(react-dom@18.3.1)(react@18.3.1)
+      '@react-aria/menu': 3.14.0(react-dom@18.3.1)(react@18.3.1)
       '@react-aria/meter': 3.4.12(react@18.3.1)
-      '@react-aria/numberfield': 3.11.2(react-dom@18.2.0)(react@18.3.1)
-      '@react-aria/overlays': 3.22.0(react-dom@18.2.0)(react@18.3.1)
+      '@react-aria/numberfield': 3.11.2(react-dom@18.3.1)(react@18.3.1)
+      '@react-aria/overlays': 3.22.0(react-dom@18.3.1)(react@18.3.1)
       '@react-aria/progress': 3.4.12(react@18.3.1)
       '@react-aria/radio': 3.10.3(react@18.3.1)
       '@react-aria/searchfield': 3.7.4(react@18.3.1)
-      '@react-aria/select': 3.14.4(react-dom@18.2.0)(react@18.3.1)
-      '@react-aria/selection': 3.18.0(react-dom@18.2.0)(react@18.3.1)
+      '@react-aria/select': 3.14.4(react-dom@18.3.1)(react@18.3.1)
+      '@react-aria/selection': 3.18.0(react-dom@18.3.1)(react@18.3.1)
       '@react-aria/separator': 3.3.12(react@18.3.1)
       '@react-aria/slider': 3.7.7(react@18.3.1)
       '@react-aria/ssr': 3.9.3(react@18.3.1)
       '@react-aria/switch': 3.6.3(react@18.3.1)
-      '@react-aria/table': 3.14.0(react-dom@18.2.0)(react@18.3.1)
-      '@react-aria/tabs': 3.9.0(react-dom@18.2.0)(react@18.3.1)
-      '@react-aria/tag': 3.4.0(react-dom@18.2.0)(react@18.3.1)
+      '@react-aria/table': 3.14.0(react-dom@18.3.1)(react@18.3.1)
+      '@react-aria/tabs': 3.9.0(react-dom@18.3.1)(react@18.3.1)
+      '@react-aria/tag': 3.4.0(react-dom@18.3.1)(react@18.3.1)
       '@react-aria/textfield': 3.14.4(react@18.3.1)
       '@react-aria/tooltip': 3.7.3(react@18.3.1)
       '@react-aria/utils': 3.24.0(react@18.3.1)
       '@react-aria/visually-hidden': 3.8.11(react@18.3.1)
       '@react-types/shared': 3.23.0(react@18.3.1)
       react: 18.3.1
-      react-dom: 18.2.0(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
     dev: false
 
-  /react-dom@18.2.0(react@18.3.1):
-    resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
+  /react-dom@18.3.1(react@18.3.1):
+    resolution: {integrity: sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==}
     peerDependencies:
-      react: ^18.2.0
+      react: ^18.3.1
     dependencies:
       loose-envify: 1.4.0
       react: 18.3.1
-      scheduler: 0.23.0
+      scheduler: 0.23.2
 
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
@@ -14274,7 +14274,7 @@ packages:
     resolution: {integrity: sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==}
     dev: true
 
-  /react-select@5.8.0(@babel/core@7.24.5)(@types/react@18.3.1)(react-dom@18.2.0)(react@18.3.1):
+  /react-select@5.8.0(@babel/core@7.24.5)(@types/react@18.3.1)(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-TfjLDo58XrhP6VG5M/Mi56Us0Yt8X7xD6cDybC7yoRMUNm7BGO7qk8J0TLQOua/prb8vUOtsfnXZwfm30HGsAA==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -14288,8 +14288,8 @@ packages:
       memoize-one: 6.0.0
       prop-types: 15.8.1
       react: 18.3.1
-      react-dom: 18.2.0(react@18.3.1)
-      react-transition-group: 4.4.5(react-dom@18.2.0)(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
+      react-transition-group: 4.4.5(react-dom@18.3.1)(react@18.3.1)
       use-isomorphic-layout-effect: 1.1.2(@types/react@18.3.1)(react@18.3.1)
     transitivePeerDependencies:
       - '@babel/core'
@@ -14327,7 +14327,7 @@ packages:
       react: 18.3.1
     dev: false
 
-  /react-transition-group@4.4.5(react-dom@18.2.0)(react@18.3.1):
+  /react-transition-group@4.4.5(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-pZcd1MCJoiKiBR2NRxeCRg13uCXbydPnmB4EOeRrY7480qNWO8IIgQG6zlDkm6uRMsURXPuKq0GWtiM59a5Q6g==}
     peerDependencies:
       react: '>=16.6.0'
@@ -14338,7 +14338,7 @@ packages:
       loose-envify: 1.4.0
       prop-types: 15.8.1
       react: 18.3.1
-      react-dom: 18.2.0(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
     dev: false
 
   /react-twc@1.4.1(@types/react@18.3.1)(react@18.3.1):
@@ -14685,8 +14685,8 @@ packages:
     dev: true
     optional: true
 
-  /scheduler@0.23.0:
-    resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
+  /scheduler@0.23.2:
+    resolution: {integrity: sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==}
     dependencies:
       loose-envify: 1.4.0
 
