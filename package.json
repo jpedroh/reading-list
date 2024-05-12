@@ -44,7 +44,7 @@
     "@nx/next": "^19.0.2",
     "@nx/playwright": "^19.0.2",
     "@nx/react": "19.0.2",
-    "@playwright/test": "^1.43.1",
+    "@playwright/test": "^1.44.0",
     "@swc-node/register": "~1.9.1",
     "@swc/cli": "~0.3.12",
     "@swc/core": "~1.5.3",
