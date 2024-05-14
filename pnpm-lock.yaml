@@ -71,8 +71,8 @@ dependencies:
 
 devDependencies:
   '@cloudflare/next-on-pages':
-    specifier: ^1.11.2
-    version: 1.11.2(vercel@34.1.9)(wrangler@3.53.1)
+    specifier: ^1.11.3
+    version: 1.11.3(vercel@34.1.9)(wrangler@3.53.1)
   '@commitlint/cli':
     specifier: ^19.3.0
     version: 19.3.0(@types/node@20.12.11)(typescript@5.4.5)
@@ -2247,8 +2247,8 @@ packages:
       mime: 3.0.0
     dev: true
 
-  /@cloudflare/next-on-pages@1.11.2(vercel@34.1.9)(wrangler@3.53.1):
-    resolution: {integrity: sha512-8xKi4CqOl4UwRUxUByFevf7jWcMNcEmAFmtodVMGJ5ZvX1z3tswxuefSZAaQ8lCB74TAbiY4lQkq9TDoeDcDgw==}
+  /@cloudflare/next-on-pages@1.11.3(vercel@34.1.9)(wrangler@3.53.1):
+    resolution: {integrity: sha512-da+EPGYFCeiYp54czyEUvAV35VG4nMrvzp+/MaxTrk45mSs16+O2r72N6sMwEhCXGUzuiaoDo/gZ69edyQxiyw==}
     hasBin: true
     peerDependencies:
       '@cloudflare/workers-types': ^4.20240208.0
@@ -2269,7 +2269,7 @@ packages:
       miniflare: 3.20240419.0
       package-manager-manager: 0.2.0
       pcre-to-regexp: 1.1.0
-      semver: 7.6.0
+      semver: 7.6.2
       vercel: 34.1.9(@swc/core@1.5.3)
       wrangler: 3.53.1
     transitivePeerDependencies:
@@ -8053,7 +8053,7 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       bin-version: 6.0.0
-      semver: 7.6.0
+      semver: 7.6.2
       semver-truncate: 3.0.0
     dev: true
 
@@ -14733,7 +14733,7 @@ packages:
     resolution: {integrity: sha512-LJWA9kSvMolR51oDE6PN3kALBNaUdkxzAGcexw8gjMA8xr5zUqK0JiR3CgARSqanYF3Z1YHvsErb1KDgh+v7Rg==}
     engines: {node: '>=12'}
     dependencies:
-      semver: 7.6.0
+      semver: 7.6.2
     dev: true
 
   /semver@5.7.2:
