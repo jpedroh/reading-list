@@ -134,8 +134,8 @@ devDependencies:
     specifier: ^10.4.19
     version: 10.4.19(postcss@8.4.38)
   drizzle-kit:
-    specifier: 0.22.1
-    version: 0.22.1
+    specifier: 0.22.3
+    version: 0.22.3
   eslint:
     specifier: 8.57.0
     version: 8.57.0
@@ -3622,7 +3622,7 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dependencies:
       ajv: 6.12.6
-      debug: 4.3.4
+      debug: 4.3.5
       espree: 9.6.1
       globals: 13.19.0
       ignore: 5.3.1
@@ -3698,7 +3698,7 @@ packages:
     engines: {node: '>=10.10.0'}
     dependencies:
       '@humanwhocodes/object-schema': 2.0.2
-      debug: 4.3.4
+      debug: 4.3.5
       minimatch: 3.1.2
     transitivePeerDependencies:
       - supports-color
@@ -10457,8 +10457,8 @@ packages:
     resolution: {integrity: sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==}
     engines: {node: '>=12'}
 
-  /drizzle-kit@0.22.1:
-    resolution: {integrity: sha512-2at6LeHSGdhkwGtZbghtJaMUxWmeuLfX9X1O7um/SxfVbtK580h2jd59Gd5Z7TnofSS2tgmFiyEtM4fBat3KeA==}
+  /drizzle-kit@0.22.3:
+    resolution: {integrity: sha512-SWxH9rTE5G6SjKh9ckiEWAvzZ2ZElntQT+Vn4K/jPgSOESKXPlwNby2bTIVutvtBQzo40S9XnyZ7iR6ObvpDHA==}
     hasBin: true
     dependencies:
       '@esbuild-kit/esm-loader': 2.5.5
