@@ -16,7 +16,7 @@ importers:
         version: 0.7.0
       '@sentry/nextjs':
         specifier: ^8.14.0
-        version: 8.14.0(@opentelemetry/api@1.9.0)(@opentelemetry/core@1.25.1(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.52.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.25.1(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.25.1)(next@14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(@playwright/test@1.45.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.5))(react@18.3.1)(webpack@5.92.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(esbuild@0.19.8))
+        version: 8.14.0(@opentelemetry/api@1.9.0)(@opentelemetry/core@1.25.1(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.52.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.25.1(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.25.1)(next@14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(@playwright/test@1.45.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.5))(react@18.3.1)(webpack@5.92.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(esbuild@0.19.8))
       '@swc/helpers':
         specifier: ~0.5.11
         version: 0.5.11
@@ -34,7 +34,7 @@ importers:
         version: 0.5.5(jotai@2.8.3(@types/react@18.3.3)(react@18.3.1))
       next:
         specifier: ^14.2.4
-        version: 14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(@playwright/test@1.45.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.5)
+        version: 14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(@playwright/test@1.45.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.5)
       node-html-parser:
         specifier: ^6.1.13
         version: 6.1.13
@@ -92,16 +92,16 @@ importers:
         version: 19.3.0(@babel/traverse@7.24.7)(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11))(@types/node@20.14.9)(nx@19.3.0(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11)))(typescript@5.5.2)
       '@nx/next':
         specifier: ^19.3.0
-        version: 19.3.0(@babel/core@7.24.7)(@babel/traverse@7.24.7)(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11))(@types/node@20.14.9)(@zkochan/js-yaml@0.0.7)(esbuild@0.19.8)(eslint@8.57.0)(next@14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(@playwright/test@1.45.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.5))(nx@19.3.0(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11)))(typescript@5.5.2)(webpack@5.92.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(esbuild@0.19.8))
+        version: 19.3.0(@babel/core@7.24.7)(@babel/traverse@7.24.7)(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11))(@types/node@20.14.9)(@zkochan/js-yaml@0.0.7)(esbuild@0.19.8)(eslint@8.57.0)(next@14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(@playwright/test@1.45.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.5))(nx@19.3.0(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11)))(typescript@5.5.2)(webpack@5.92.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(esbuild@0.19.8))
       '@nx/playwright':
         specifier: ^19.3.0
-        version: 19.3.0(@babel/traverse@7.24.7)(@playwright/test@1.45.0)(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11))(@types/node@20.14.9)(@zkochan/js-yaml@0.0.7)(eslint@8.57.0)(nx@19.3.0(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11)))(typescript@5.5.2)
+        version: 19.3.0(@babel/traverse@7.24.7)(@playwright/test@1.45.2)(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11))(@types/node@20.14.9)(@zkochan/js-yaml@0.0.7)(eslint@8.57.0)(nx@19.3.0(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11)))(typescript@5.5.2)
       '@nx/react':
         specifier: 19.3.0
         version: 19.3.0(@babel/traverse@7.24.7)(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11))(@types/node@20.14.9)(@zkochan/js-yaml@0.0.7)(eslint@8.57.0)(nx@19.3.0(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11)))(typescript@5.5.2)(webpack@5.92.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(esbuild@0.19.8))
       '@playwright/test':
-        specifier: ^1.45.0
-        version: 1.45.0
+        specifier: ^1.45.2
+        version: 1.45.2
       '@swc-node/register':
         specifier: ~1.10.0
         version: 1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2)
@@ -2306,8 +2306,8 @@ packages:
     resolution: {integrity: sha512-wfzX8kc1PMyUILA+1Z/EqoE4UCXGy0iRGMhPwdfae1+f0OXlLqCk+By+aMzgJBzR9AzS4CDizioG6Ss1gvAFJw==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
-  '@playwright/test@1.45.0':
-    resolution: {integrity: sha512-TVYsfMlGAaxeUllNkywbwek67Ncf8FRGn8ZlRdO291OL3NjG9oMbfVhyP82HQF0CZLMrYsvesqoUekxdWuF9Qw==}
+  '@playwright/test@1.45.2':
+    resolution: {integrity: sha512-JxG9eq92ET75EbVi3s+4sYbcG7q72ECeZNbdBlaMkGcNbiDQ4cAi8U2QP5oKkOx+1gpaiL1LDStmzCaEM1Z6fQ==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -7392,13 +7392,13 @@ packages:
     resolution: {integrity: sha512-Ie9z/WINcxxLp27BKOCHGde4ITq9UklYKDzVo1nhk5sqGEXU3FpkwP5GM2voTGJkGd9B3Otl+Q4uwSOeSUtOBA==}
     engines: {node: '>=14.16'}
 
-  playwright-core@1.45.0:
-    resolution: {integrity: sha512-lZmHlFQ0VYSpAs43dRq1/nJ9G/6SiTI7VPqidld9TDefL9tX87bTKExWZZUF5PeRyqtXqd8fQi2qmfIedkwsNQ==}
+  playwright-core@1.45.2:
+    resolution: {integrity: sha512-ha175tAWb0dTK0X4orvBIqi3jGEt701SMxMhyujxNrgd8K0Uy5wMSwwcQHtyB4om7INUkfndx02XnQ2p6dvLDw==}
     engines: {node: '>=18'}
     hasBin: true
 
-  playwright@1.45.0:
-    resolution: {integrity: sha512-4z3ac3plDfYzGB6r0Q3LF8POPR20Z8D0aXcxbJvmfMgSSq1hkcgvFRXJk9rUq5H/MJ0Ktal869hhOdI/zUTeLA==}
+  playwright@1.45.2:
+    resolution: {integrity: sha512-ReywF2t/0teRvNBpfIgh5e4wnrI/8Su8ssdo5XsQKpjxJj+jspm00jSoz9BTg91TT0c9HRjXO7LBNVrgYj9X0g==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -11704,9 +11704,9 @@ snapshots:
       - typescript
       - verdaccio
 
-  '@nrwl/next@19.3.0(@babel/core@7.24.7)(@babel/traverse@7.24.7)(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11))(@types/node@20.14.9)(@zkochan/js-yaml@0.0.7)(esbuild@0.19.8)(eslint@8.57.0)(next@14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(@playwright/test@1.45.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.5))(nx@19.3.0(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11)))(typescript@5.5.2)(webpack@5.92.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(esbuild@0.19.8))':
+  '@nrwl/next@19.3.0(@babel/core@7.24.7)(@babel/traverse@7.24.7)(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11))(@types/node@20.14.9)(@zkochan/js-yaml@0.0.7)(esbuild@0.19.8)(eslint@8.57.0)(next@14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(@playwright/test@1.45.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.5))(nx@19.3.0(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11)))(typescript@5.5.2)(webpack@5.92.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(esbuild@0.19.8))':
     dependencies:
-      '@nx/next': 19.3.0(@babel/core@7.24.7)(@babel/traverse@7.24.7)(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11))(@types/node@20.14.9)(@zkochan/js-yaml@0.0.7)(esbuild@0.19.8)(eslint@8.57.0)(next@14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(@playwright/test@1.45.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.5))(nx@19.3.0(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11)))(typescript@5.5.2)(webpack@5.92.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(esbuild@0.19.8))
+      '@nx/next': 19.3.0(@babel/core@7.24.7)(@babel/traverse@7.24.7)(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11))(@types/node@20.14.9)(@zkochan/js-yaml@0.0.7)(esbuild@0.19.8)(eslint@8.57.0)(next@14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(@playwright/test@1.45.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.5))(nx@19.3.0(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11)))(typescript@5.5.2)(webpack@5.92.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(esbuild@0.19.8))
     transitivePeerDependencies:
       - '@babel/core'
       - '@babel/traverse'
@@ -12041,10 +12041,10 @@ snapshots:
       - supports-color
       - verdaccio
 
-  '@nx/next@19.3.0(@babel/core@7.24.7)(@babel/traverse@7.24.7)(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11))(@types/node@20.14.9)(@zkochan/js-yaml@0.0.7)(esbuild@0.19.8)(eslint@8.57.0)(next@14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(@playwright/test@1.45.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.5))(nx@19.3.0(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11)))(typescript@5.5.2)(webpack@5.92.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(esbuild@0.19.8))':
+  '@nx/next@19.3.0(@babel/core@7.24.7)(@babel/traverse@7.24.7)(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11))(@types/node@20.14.9)(@zkochan/js-yaml@0.0.7)(esbuild@0.19.8)(eslint@8.57.0)(next@14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(@playwright/test@1.45.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.5))(nx@19.3.0(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11)))(typescript@5.5.2)(webpack@5.92.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(esbuild@0.19.8))':
     dependencies:
       '@babel/plugin-proposal-decorators': 7.24.7(@babel/core@7.24.7)
-      '@nrwl/next': 19.3.0(@babel/core@7.24.7)(@babel/traverse@7.24.7)(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11))(@types/node@20.14.9)(@zkochan/js-yaml@0.0.7)(esbuild@0.19.8)(eslint@8.57.0)(next@14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(@playwright/test@1.45.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.5))(nx@19.3.0(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11)))(typescript@5.5.2)(webpack@5.92.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(esbuild@0.19.8))
+      '@nrwl/next': 19.3.0(@babel/core@7.24.7)(@babel/traverse@7.24.7)(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11))(@types/node@20.14.9)(@zkochan/js-yaml@0.0.7)(esbuild@0.19.8)(eslint@8.57.0)(next@14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(@playwright/test@1.45.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.5))(nx@19.3.0(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11)))(typescript@5.5.2)(webpack@5.92.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(esbuild@0.19.8))
       '@nx/devkit': 19.3.0(nx@19.3.0(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11)))
       '@nx/eslint': 19.3.0(@babel/traverse@7.24.7)(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11))(@types/node@20.14.9)(@zkochan/js-yaml@0.0.7)(eslint@8.57.0)(nx@19.3.0(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11)))
       '@nx/js': 19.3.0(@babel/traverse@7.24.7)(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11))(@types/node@20.14.9)(nx@19.3.0(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11)))(typescript@5.5.2)
@@ -12058,7 +12058,7 @@ snapshots:
       file-loader: 6.2.0(webpack@5.92.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(esbuild@0.19.8))
       fs-extra: 11.2.0
       ignore: 5.3.1
-      next: 14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(@playwright/test@1.45.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.5)
+      next: 14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(@playwright/test@1.45.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.5)
       semver: 7.6.2
       tslib: 2.6.3
       webpack-merge: 5.10.0
@@ -12154,7 +12154,7 @@ snapshots:
   '@nx/nx-win32-x64-msvc@19.3.1':
     optional: true
 
-  '@nx/playwright@19.3.0(@babel/traverse@7.24.7)(@playwright/test@1.45.0)(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11))(@types/node@20.14.9)(@zkochan/js-yaml@0.0.7)(eslint@8.57.0)(nx@19.3.0(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11)))(typescript@5.5.2)':
+  '@nx/playwright@19.3.0(@babel/traverse@7.24.7)(@playwright/test@1.45.2)(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11))(@types/node@20.14.9)(@zkochan/js-yaml@0.0.7)(eslint@8.57.0)(nx@19.3.0(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11)))(typescript@5.5.2)':
     dependencies:
       '@nx/devkit': 19.3.0(nx@19.3.0(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11)))
       '@nx/eslint': 19.3.0(@babel/traverse@7.24.7)(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11))(@types/node@20.14.9)(@zkochan/js-yaml@0.0.7)(eslint@8.57.0)(nx@19.3.0(@swc-node/register@1.10.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(@swc/types@0.1.9)(typescript@5.5.2))(@swc/core@1.6.5(@swc/helpers@0.5.11)))
@@ -12163,7 +12163,7 @@ snapshots:
       minimatch: 9.0.3
       tslib: 2.6.3
     optionalDependencies:
-      '@playwright/test': 1.45.0
+      '@playwright/test': 1.45.2
     transitivePeerDependencies:
       - '@babel/traverse'
       - '@swc-node/register'
@@ -12558,9 +12558,9 @@ snapshots:
       tiny-glob: 0.2.9
       tslib: 2.6.3
 
-  '@playwright/test@1.45.0':
+  '@playwright/test@1.45.2':
     dependencies:
-      playwright: 1.45.0
+      playwright: 1.45.2
 
   '@prisma/instrumentation@5.16.1':
     dependencies:
@@ -13616,7 +13616,7 @@ snapshots:
       '@sentry/types': 8.14.0
       '@sentry/utils': 8.14.0
 
-  '@sentry/nextjs@8.14.0(@opentelemetry/api@1.9.0)(@opentelemetry/core@1.25.1(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.52.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.25.1(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.25.1)(next@14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(@playwright/test@1.45.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.5))(react@18.3.1)(webpack@5.92.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(esbuild@0.19.8))':
+  '@sentry/nextjs@8.14.0(@opentelemetry/api@1.9.0)(@opentelemetry/core@1.25.1(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.52.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.25.1(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.25.1)(next@14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(@playwright/test@1.45.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.5))(react@18.3.1)(webpack@5.92.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(esbuild@0.19.8))':
     dependencies:
       '@opentelemetry/instrumentation-http': 0.52.1(@opentelemetry/api@1.9.0)
       '@rollup/plugin-commonjs': 26.0.1(rollup@3.29.4)
@@ -13629,7 +13629,7 @@ snapshots:
       '@sentry/vercel-edge': 8.14.0
       '@sentry/webpack-plugin': 2.20.1(webpack@5.92.0(@swc/core@1.6.5(@swc/helpers@0.5.11))(esbuild@0.19.8))
       chalk: 3.0.0
-      next: 14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(@playwright/test@1.45.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.5)
+      next: 14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(@playwright/test@1.45.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.5)
       resolve: 1.22.8
       rollup: 3.29.4
       stacktrace-parser: 0.1.10
@@ -18306,7 +18306,7 @@ snapshots:
 
   neo-async@2.6.2: {}
 
-  next@14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(@playwright/test@1.45.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.5):
+  next@14.2.4(@babel/core@7.24.7)(@opentelemetry/api@1.9.0)(@playwright/test@1.45.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.5):
     dependencies:
       '@next/env': 14.2.4
       '@swc/helpers': 0.5.5
@@ -18328,7 +18328,7 @@ snapshots:
       '@next/swc-win32-ia32-msvc': 14.2.4
       '@next/swc-win32-x64-msvc': 14.2.4
       '@opentelemetry/api': 1.9.0
-      '@playwright/test': 1.45.0
+      '@playwright/test': 1.45.2
       sass: 1.77.5
     transitivePeerDependencies:
       - '@babel/core'
@@ -18806,11 +18806,11 @@ snapshots:
     dependencies:
       find-up: 6.3.0
 
-  playwright-core@1.45.0: {}
+  playwright-core@1.45.2: {}
 
-  playwright@1.45.0:
+  playwright@1.45.2:
     dependencies:
-      playwright-core: 1.45.0
+      playwright-core: 1.45.2
     optionalDependencies:
       fsevents: 2.3.2
 
