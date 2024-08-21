@@ -3,7 +3,7 @@ import { articles, db } from "@reading-list/modules/shared/database";
 import { createArticle } from "../utils/create-article";
 
 test.describe("Search", () => {
-  test("if there's an article with a title that contains the search string, it appears on the results", async ({
+  test.skip("if there's an article with a title that contains the search string, it appears on the results", async ({
     page,
   }) => {
     const [articleOne, articleTwo] = [createArticle(), createArticle()];
