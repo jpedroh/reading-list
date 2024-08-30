@@ -47,7 +47,7 @@
     "@playwright/test": "^1.46.1",
     "@swc-node/register": "~1.10.0",
     "@swc/cli": "~0.4.0",
-    "@swc/core": "~1.7.18",
+    "@swc/core": "~1.7.22",
     "@testing-library/react": "16.0.0",
     "@types/node": "22.5.1",
     "@types/qrcode": "^1.5.5",
