@@ -15,7 +15,7 @@
     "@faker-js/faker": "^8.4.1",
     "@libsql/client": "^0.9.0",
     "@sentry/nextjs": "^8.27.0",
-    "@swc/helpers": "~0.5.11",
+    "@swc/helpers": "~0.5.12",
     "dotenv": "^16.4.5",
     "drizzle-orm": "^0.33.0",
     "jotai": "^2.8.3",
