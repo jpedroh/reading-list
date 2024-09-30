@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@faker-js/faker": "^9.0.1",
-    "@libsql/client": "^0.13.0",
+    "@libsql/client": "^0.14.0",
     "@sentry/nextjs": "^8.30.0",
     "@swc/helpers": "~0.5.13",
     "dotenv": "^16.4.5",
