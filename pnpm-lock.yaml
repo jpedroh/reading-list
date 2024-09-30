@@ -12,8 +12,8 @@ importers:
         specifier: ^9.0.1
         version: 9.0.1
       '@libsql/client':
-        specifier: ^0.13.0
-        version: 0.13.0
+        specifier: ^0.14.0
+        version: 0.14.0
       '@sentry/nextjs':
         specifier: ^8.30.0
         version: 8.30.0(@opentelemetry/api@1.9.0)(@opentelemetry/core@1.26.0(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.53.0(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.26.0(@opentelemetry/api@1.9.0))(next@14.2.13(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(@playwright/test@1.47.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.2))(react@18.3.1)(webpack@5.94.0(@swc/core@1.7.26(@swc/helpers@0.5.13))(esbuild@0.19.8))
@@ -25,7 +25,7 @@ importers:
         version: 16.4.5
       drizzle-orm:
         specifier: ^0.33.0
-        version: 0.33.0(@libsql/client@0.13.0)(@opentelemetry/api@1.9.0)(@types/pg@8.6.1)(@types/react@18.3.7)(react@18.3.1)
+        version: 0.33.0(@libsql/client@0.14.0)(@opentelemetry/api@1.9.0)(@types/pg@8.6.1)(@types/react@18.3.7)(react@18.3.1)
       jotai:
         specifier: ^2.8.3
         version: 2.9.3(@types/react@18.3.7)(react@18.3.1)
@@ -1797,11 +1797,11 @@ packages:
   '@leichtgewicht/ip-codec@2.0.5':
     resolution: {integrity: sha512-Vo+PSpZG2/fmgmiNzYK9qWRh8h/CHrwD0mo1h1DzL4yzHNSfWYujGTYsWGreD000gcgmZ7K4Ys6Tx9TxtsKdDw==}
 
-  '@libsql/client@0.13.0':
-    resolution: {integrity: sha512-Gh01PdZC58TNDaw8kHHExfZ8afaveN3yb0uz1Dh28pXQ6wHDOgf9nHPnuPGTXX4IrN5d5kI80y/E0O9sC4c5yg==}
+  '@libsql/client@0.14.0':
+    resolution: {integrity: sha512-/9HEKfn6fwXB5aTEEoMeFh4CtG0ZzbncBb1e++OCdVpgKZ/xyMsIVYXm0w7Pv4RUel803vE6LwniB3PqD72R0Q==}
 
-  '@libsql/core@0.13.0':
-    resolution: {integrity: sha512-4BHLL6abxn/lq6MA/46YY7uZx7hn2nlfXzhmGGQLegPuBwD62Wj7tspZVhCLcU2XmLv08i5xN9hSeqgauQ1SRA==}
+  '@libsql/core@0.14.0':
+    resolution: {integrity: sha512-nhbuXf7GP3PSZgdCY2Ecj8vz187ptHlZQ0VRc751oB2C1W8jQUXKKklvt7t1LJiUTQBVJuadF628eUk+3cRi4Q==}
 
   '@libsql/darwin-arm64@0.4.5':
     resolution: {integrity: sha512-xLdnn0NrgSk6OMi716FFs/27Hs33jtSd2fkKi/72Ey/qBtPWcB1BMurDQekzi0yAcfQTjGqIz7tpOibyjiEPyQ==}
@@ -1813,8 +1813,12 @@ packages:
     cpu: [x64]
     os: [darwin]
 
-  '@libsql/hrana-client@0.8.0':
-    resolution: {integrity: sha512-dERMyhDV7O7nxX5qWKxOPb/tIHt+NlnKkVUHYsNSe79GCLQEIOFFRJJtopdLinE1kZosvB2jh02ylFnnZW5+RQ==}
+  '@libsql/hrana-client@0.7.0':
+    resolution: {integrity: sha512-OF8fFQSkbL7vJY9rfuegK1R7sPgQ6kFMkDamiEccNUvieQ+3urzfDFI616oPl8V7T9zRmnTkSjMOImYCAVRVuw==}
+
+  '@libsql/isomorphic-fetch@0.3.1':
+    resolution: {integrity: sha512-6kK3SUK5Uu56zPq/Las620n5aS9xJq+jMBcNSOmjhNf/MUvdyji4vrMTqD7ptY7/4/CAVEAYDeotUz60LNQHtw==}
+    engines: {node: '>=18.0.0'}
 
   '@libsql/isomorphic-ws@0.1.5':
     resolution: {integrity: sha512-DtLWIH29onUYR00i0GlQ3UdcTRC6EP4u9w/h9LxpUZJWRMARk6dQwZ6Jkd+QdwVpuAOrdxt18v0K2uIYR3fwFg==}
@@ -4822,9 +4826,6 @@ packages:
   cron-parser@4.9.0:
     resolution: {integrity: sha512-p0SaNjrHOnQeR8/VnfGbmg9te2kfyYSQ7Sc/j/6DtPL3JQvKxmjO9TSjNFpujqV3vEYYBvNNvXSxzyksBWAx1Q==}
     engines: {node: '>=12.0.0'}
-
-  cross-fetch@4.0.0:
-    resolution: {integrity: sha512-e4a5N8lVvuLgAWgnCrLr2PP0YyDOTHa9H/Rj54dirp61qXnNq46m82bRhNqIA5VccJtWBvPTFRV3TtvHUKPB1g==}
 
   cross-spawn@5.1.0:
     resolution: {integrity: sha512-pTgQJ5KC0d2hcY8eyL1IzlBPYjTkyH72XRZPnLyKus2mBfNjQs3klqbJU2VILqZryAZUt9JOb3h/mWMy23/f5A==}
@@ -11576,19 +11577,18 @@ snapshots:
 
   '@leichtgewicht/ip-codec@2.0.5': {}
 
-  '@libsql/client@0.13.0':
+  '@libsql/client@0.14.0':
     dependencies:
-      '@libsql/core': 0.13.0
-      '@libsql/hrana-client': 0.8.0
+      '@libsql/core': 0.14.0
+      '@libsql/hrana-client': 0.7.0
       js-base64: 3.7.7
       libsql: 0.4.5
       promise-limit: 2.7.0
     transitivePeerDependencies:
       - bufferutil
-      - encoding
       - utf-8-validate
 
-  '@libsql/core@0.13.0':
+  '@libsql/core@0.14.0':
     dependencies:
       js-base64: 3.7.7
 
@@ -11598,16 +11598,17 @@ snapshots:
   '@libsql/darwin-x64@0.4.5':
     optional: true
 
-  '@libsql/hrana-client@0.8.0':
+  '@libsql/hrana-client@0.7.0':
     dependencies:
+      '@libsql/isomorphic-fetch': 0.3.1
       '@libsql/isomorphic-ws': 0.1.5
-      cross-fetch: 4.0.0
       js-base64: 3.7.7
       node-fetch: 3.3.2
     transitivePeerDependencies:
       - bufferutil
-      - encoding
       - utf-8-validate
+
+  '@libsql/isomorphic-fetch@0.3.1': {}
 
   '@libsql/isomorphic-ws@0.1.5':
     dependencies:
@@ -16047,12 +16048,6 @@ snapshots:
     dependencies:
       luxon: 3.5.0
 
-  cross-fetch@4.0.0:
-    dependencies:
-      node-fetch: 2.7.0
-    transitivePeerDependencies:
-      - encoding
-
   cross-spawn@5.1.0:
     dependencies:
       lru-cache: 4.1.5
@@ -16378,9 +16373,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  drizzle-orm@0.33.0(@libsql/client@0.13.0)(@opentelemetry/api@1.9.0)(@types/pg@8.6.1)(@types/react@18.3.7)(react@18.3.1):
+  drizzle-orm@0.33.0(@libsql/client@0.14.0)(@opentelemetry/api@1.9.0)(@types/pg@8.6.1)(@types/react@18.3.7)(react@18.3.1):
     optionalDependencies:
-      '@libsql/client': 0.13.0
+      '@libsql/client': 0.14.0
       '@opentelemetry/api': 1.9.0
       '@types/pg': 8.6.1
       '@types/react': 18.3.7
