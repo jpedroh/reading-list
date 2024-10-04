@@ -12,7 +12,7 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@faker-js/faker": "^9.0.1",
+    "@faker-js/faker": "^9.0.3",
     "@libsql/client": "^0.14.0",
     "@sentry/nextjs": "^8.30.0",
     "@swc/helpers": "~0.5.13",
