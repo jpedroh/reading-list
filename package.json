@@ -35,7 +35,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.13.2",
+    "@cloudflare/next-on-pages": "^1.13.5",
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
     "@nx-aws-plugin/nx-aws-cache": "^3.2.1",
