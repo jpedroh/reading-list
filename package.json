@@ -18,7 +18,7 @@
     "@swc/helpers": "~0.5.13",
     "dotenv": "^16.4.5",
     "drizzle-orm": "^0.36.3",
-    "jotai": "^2.10.1",
+    "jotai": "^2.10.2",
     "jotai-location": "^0.5.5",
     "next": "^15.0.1",
     "node-html-parser": "^6.1.13",
