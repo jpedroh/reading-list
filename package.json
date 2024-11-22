@@ -36,8 +36,8 @@
   },
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.13.5",
-    "@commitlint/cli": "^19.5.0",
-    "@commitlint/config-conventional": "^19.5.0",
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
     "@nx-aws-plugin/nx-aws-cache": "^3.2.1",
     "@nx/eslint-plugin": "^20.1.2",
     "@nx/js": "20.1.2",
