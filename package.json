@@ -16,7 +16,7 @@
     "@libsql/client": "^0.14.0",
     "@sentry/nextjs": "^8.35.0",
     "@swc/helpers": "~0.5.13",
-    "dotenv": "^16.4.5",
+    "dotenv": "^16.4.7",
     "drizzle-orm": "^0.38.2",
     "jotai": "^2.10.2",
     "jotai-location": "^0.5.5",
