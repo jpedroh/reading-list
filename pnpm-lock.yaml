@@ -73,8 +73,8 @@ importers:
         version: 3.23.8
     devDependencies:
       '@cloudflare/next-on-pages':
-        specifier: ^1.13.5
-        version: 1.13.5(vercel@34.1.9(@swc/core@1.10.1(@swc/helpers@0.5.13))(encoding@0.1.13))(wrangler@3.53.1)
+        specifier: ^1.13.7
+        version: 1.13.7(vercel@34.1.9(@swc/core@1.10.1(@swc/helpers@0.5.13))(encoding@0.1.13))(wrangler@3.53.1)
       '@commitlint/cli':
         specifier: ^19.6.1
         version: 19.6.1(@types/node@22.9.0)(typescript@5.6.3)
@@ -955,8 +955,8 @@ packages:
     resolution: {integrity: sha512-EeEjMobfuJrwoctj7FA1y1KEbM0+Q1xSjobIEyie9k4haVEBB7vkDvsasw1pM3rO39mL2akxIAzLMUAtrMHZhA==}
     engines: {node: '>=16.13'}
 
-  '@cloudflare/next-on-pages@1.13.5':
-    resolution: {integrity: sha512-eKRrI14kCk6kuBIAO6WwMNSvH8fFzkMQj1G95/wLVW2xpUaU0EDxRcQJ0U9aB1tOm/sPWW76Udb92rxyrVJpBw==}
+  '@cloudflare/next-on-pages@1.13.7':
+    resolution: {integrity: sha512-TSMVy+1fmxzeyykOC9guMEj7G2FgENw1T8V1sIFnah6piaJNBmybdyikPdQSdikP5w6v9eQhBt/TrXDPMDw0dw==}
     hasBin: true
     peerDependencies:
       '@cloudflare/workers-types': ^4.20240208.0
@@ -4415,18 +4415,9 @@ packages:
     peerDependencies:
       acorn: ^6.0.0 || ^7.0.0 || ^8.0.0
 
-  acorn-walk@8.3.2:
-    resolution: {integrity: sha512-cjkyv4OtNCIeqhHrfS81QWXoCBPExR/J62oyEqepVw8WaQeSqpW2uhuLPh1m9eWhDuOo/jUXVTlifvesOWp/4A==}
-    engines: {node: '>=0.4.0'}
-
   acorn-walk@8.3.4:
     resolution: {integrity: sha512-ueEepnujpqee2o5aIYnvHU6C0A42MNdsIDeqy5BydrkuC5R1ZuUFnm27EeFJGoEHJQgn3uleRvmTXaJgfXbt4g==}
     engines: {node: '>=0.4.0'}
-
-  acorn@8.11.3:
-    resolution: {integrity: sha512-Y9rRfJG5jcKOE0CLisYbojUjIrIEE7AGMzA/Sm4BslANhbS+cDMpgBdcPT91oJ7OuJ9hYJBx59RjbhxVnrF8Xg==}
-    engines: {node: '>=0.4.0'}
-    hasBin: true
 
   acorn@8.14.0:
     resolution: {integrity: sha512-cl669nCJTZBsL97OF4kUQm5g5hC2uihk0NxY3WENAC0TYdILVkAyHymAntgxGkl7K+t0cXIrH5siy5S4XkFycA==}
@@ -9845,18 +9836,6 @@ packages:
   wrappy@1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
 
-  ws@8.17.1:
-    resolution: {integrity: sha512-6XQFvXTkbfUOZOKKILFG1PDK2NDQs4azKQl26T0YS5CxqWLgXajbPZ+h4gZekJyRqFU8pvnbAbbs/3TgRPy+GQ==}
-    engines: {node: '>=10.0.0'}
-    peerDependencies:
-      bufferutil: ^4.0.1
-      utf-8-validate: '>=5.0.2'
-    peerDependenciesMeta:
-      bufferutil:
-        optional: true
-      utf-8-validate:
-        optional: true
-
   ws@8.18.0:
     resolution: {integrity: sha512-8VbfWfHLbbwu3+N6OKsOMpBdT4kXPDDB9cJk2bJ6mh9ucxdlnNvH1e+roYkKmN9Nxw2yjz7VzeO9oOz2zJ04Pw==}
     engines: {node: '>=10.0.0'}
@@ -11317,11 +11296,11 @@ snapshots:
     dependencies:
       mime: 3.0.0
 
-  '@cloudflare/next-on-pages@1.13.5(vercel@34.1.9(@swc/core@1.10.1(@swc/helpers@0.5.13))(encoding@0.1.13))(wrangler@3.53.1)':
+  '@cloudflare/next-on-pages@1.13.7(vercel@34.1.9(@swc/core@1.10.1(@swc/helpers@0.5.13))(encoding@0.1.13))(wrangler@3.53.1)':
     dependencies:
-      acorn: 8.11.3
+      acorn: 8.14.0
       ast-types: 0.14.2
-      chalk: 5.3.0
+      chalk: 5.4.0
       chokidar: 3.6.0
       commander: 11.1.0
       cookie: 0.5.0
@@ -11330,7 +11309,7 @@ snapshots:
       miniflare: 3.20240419.0
       package-manager-manager: 0.2.0
       pcre-to-regexp: 1.1.0
-      semver: 7.6.2
+      semver: 7.6.3
       vercel: 34.1.9(@swc/core@1.10.1(@swc/helpers@0.5.13))(encoding@0.1.13)
       wrangler: 3.53.1
     transitivePeerDependencies:
@@ -12138,7 +12117,7 @@ snapshots:
   '@libsql/isomorphic-ws@0.1.5':
     dependencies:
       '@types/ws': 8.5.10
-      ws: 8.17.1
+      ws: 8.18.0
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
@@ -15753,17 +15732,13 @@ snapshots:
     dependencies:
       acorn: 8.14.0
 
-  acorn-jsx@5.3.2(acorn@8.11.3):
+  acorn-jsx@5.3.2(acorn@8.14.0):
     dependencies:
-      acorn: 8.11.3
-
-  acorn-walk@8.3.2: {}
+      acorn: 8.14.0
 
   acorn-walk@8.3.4:
     dependencies:
       acorn: 8.14.0
-
-  acorn@8.11.3: {}
 
   acorn@8.14.0: {}
 
@@ -16073,7 +16048,7 @@ snapshots:
   bin-version-check@5.1.0:
     dependencies:
       bin-version: 6.0.0
-      semver: 7.6.2
+      semver: 7.6.3
       semver-truncate: 3.0.0
 
   bin-version@6.0.0:
@@ -17572,8 +17547,8 @@ snapshots:
 
   espree@9.6.1:
     dependencies:
-      acorn: 8.11.3
-      acorn-jsx: 5.3.2(acorn@8.11.3)
+      acorn: 8.14.0
+      acorn-jsx: 5.3.2(acorn@8.14.0)
       eslint-visitor-keys: 3.4.3
 
   esprima@4.0.1: {}
@@ -19074,15 +19049,15 @@ snapshots:
   miniflare@3.20240419.0:
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
-      acorn: 8.11.3
-      acorn-walk: 8.3.2
+      acorn: 8.14.0
+      acorn-walk: 8.3.4
       capnp-ts: 0.7.0
       exit-hook: 2.2.1
       glob-to-regexp: 0.4.1
       stoppable: 1.1.0
       undici: 5.28.4
       workerd: 1.20240419.0
-      ws: 8.17.1
+      ws: 8.18.0
       youch: 3.3.3
       zod: 3.23.8
     transitivePeerDependencies:
@@ -20483,7 +20458,7 @@ snapshots:
 
   semver-truncate@3.0.0:
     dependencies:
-      semver: 7.6.2
+      semver: 7.6.3
 
   semver@5.7.2:
     optional: true
@@ -21741,8 +21716,6 @@ snapshots:
       strip-ansi: 7.1.0
 
   wrappy@1.0.2: {}
-
-  ws@8.17.1: {}
 
   ws@8.18.0: {}
 
