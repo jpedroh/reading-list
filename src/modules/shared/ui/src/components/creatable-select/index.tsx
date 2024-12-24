@@ -9,7 +9,7 @@ export function CreatableSelect(
   return (
     <ReactCreatableSelect
       classNames={{
-        menu: (_) => "!bg-zinc-800",
+        menu: () => "!bg-zinc-800",
         option: (state) =>
           state.isFocused ? "!bg-blue-800 !bg-opacity-50" : "",
         control: (state) => {
@@ -19,11 +19,11 @@ export function CreatableSelect(
             state.isFocused ? "!border-white" : "!border-zinc-700"
           }`;
         },
-        multiValue: (_) => "!bg-blue-800 !bg-opacity-70 !rounded-md",
-        multiValueLabel: (_) => "!text-white !px-2",
-        multiValueRemove: (_) =>
+        multiValue: () => "!bg-blue-800 !bg-opacity-70 !rounded-md",
+        multiValueLabel: () => "!text-white !px-2",
+        multiValueRemove: () =>
           "!bg-blue-800 !bg-opacity-80 hover:!bg-red-800 hover:!bg-opacity-70 !rounded-r-md",
-        input: (_) => "!text-white placeholder:!text-zinc-400 ",
+        input: () => "!text-white placeholder:!text-zinc-400 ",
       }}
       {...props}
     />
