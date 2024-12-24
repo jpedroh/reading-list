@@ -52,5 +52,14 @@ module.exports = tseslint.config(
       ],
     },
   },
-  { ignores: ["*.js", "*.ts", ".next/**/*", ".nx/**/*", ".vercel/**/*", "src/modules/**/*"] },
+  {
+    ignores: [
+      "eslint.config.js",
+      "postcss.config.js",
+      ".next/**/*",
+      ".nx/**/*",
+      ".vercel/**/*",
+      "src/modules/**/*",
+    ],
+  },
 );
