@@ -20,7 +20,7 @@
     "drizzle-orm": "^0.38.3",
     "jotai": "^2.10.2",
     "jotai-location": "^0.5.5",
-    "next": "^15.1.1",
+    "next": "^15.1.2",
     "node-html-parser": "^6.1.13",
     "otp-io": "^1.2.6",
     "qrcode": "^1.5.4",
