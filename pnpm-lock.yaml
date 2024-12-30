@@ -27,11 +27,11 @@ importers:
         specifier: ^0.38.3
         version: 0.38.3(@libsql/client@0.14.0)(@opentelemetry/api@1.9.0)(@types/pg@8.6.1)(@types/react@18.3.12)(react@18.3.1)
       jotai:
-        specifier: ^2.10.2
-        version: 2.10.2(@types/react@18.3.12)(react@18.3.1)
+        specifier: ^2.11.0
+        version: 2.11.0(@types/react@18.3.12)(react@18.3.1)
       jotai-location:
         specifier: ^0.5.5
-        version: 0.5.5(jotai@2.10.2(@types/react@18.3.12)(react@18.3.1))
+        version: 0.5.5(jotai@2.11.0(@types/react@18.3.12)(react@18.3.1))
       next:
         specifier: ^15.1.2
         version: 15.1.2(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(@playwright/test@1.48.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.83.0)
@@ -7232,8 +7232,8 @@ packages:
     peerDependencies:
       jotai: '>=1.11.0'
 
-  jotai@2.10.2:
-    resolution: {integrity: sha512-DqsBTlRglIBviuJLfK6JxZzpd6vKfbuJ4IqRCz70RFEDeZf46Fcteb/FXxNr1UnoxR5oUy3oq7IE8BrEq0G5DQ==}
+  jotai@2.11.0:
+    resolution: {integrity: sha512-zKfoBBD1uDw3rljwHkt0fWuja1B76R7CjznuBO+mSX6jpsO1EBeWNRKpeaQho9yPI/pvCv4recGfgOXGxwPZvQ==}
     engines: {node: '>=12.20.0'}
     peerDependencies:
       '@types/react': '>=17.0.0'
@@ -18729,11 +18729,11 @@ snapshots:
 
   jiti@2.4.2: {}
 
-  jotai-location@0.5.5(jotai@2.10.2(@types/react@18.3.12)(react@18.3.1)):
+  jotai-location@0.5.5(jotai@2.11.0(@types/react@18.3.12)(react@18.3.1)):
     dependencies:
-      jotai: 2.10.2(@types/react@18.3.12)(react@18.3.1)
+      jotai: 2.11.0(@types/react@18.3.12)(react@18.3.1)
 
-  jotai@2.10.2(@types/react@18.3.12)(react@18.3.1):
+  jotai@2.11.0(@types/react@18.3.12)(react@18.3.1):
     optionalDependencies:
       '@types/react': 18.3.12
       react: 18.3.1
