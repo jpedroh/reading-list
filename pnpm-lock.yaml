@@ -39,8 +39,8 @@ importers:
         specifier: ^7.0.1
         version: 7.0.1
       otp-io:
-        specifier: ^1.2.6
-        version: 1.2.6
+        specifier: ^1.2.7
+        version: 1.2.7
       qrcode:
         specifier: ^1.5.4
         version: 1.5.4
@@ -7992,8 +7992,8 @@ packages:
     resolution: {integrity: sha512-wrAwOeXp1RRMFfQY8Sy7VaGVmPocaLwSFOYCGKSyo8qmJ+/yaafCl5BCA1IQZWqFSRBrKDYFeR9d/VyQzfH/jg==}
     engines: {node: '>= 6.0'}
 
-  otp-io@1.2.6:
-    resolution: {integrity: sha512-+xzN/hv2cZ+pxU8aCRKdKOqHigq3s3Tn5Ab0Ls03a9W7h3d/S2M9N/551KKamZy298mRSPsuk+wJbQl2Te5lEw==}
+  otp-io@1.2.7:
+    resolution: {integrity: sha512-UhIZfOtlMBSWGSN/v1i1eY5qsW07V/ZgaSq8bZXK0nfZEcoEitRKmn1dY8Sed8rafai3Ju8BwuxttuC2DJm6sA==}
     engines: {node: '>=14'}
 
   oxc-resolver@1.10.2:
@@ -19581,7 +19581,7 @@ snapshots:
 
   os-paths@4.4.0: {}
 
-  otp-io@1.2.6: {}
+  otp-io@1.2.7: {}
 
   oxc-resolver@1.10.2:
     optionalDependencies:
