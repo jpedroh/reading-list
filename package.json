@@ -46,7 +46,7 @@
     "@nx/react": "20.4.2",
     "@playwright/test": "^1.49.1",
     "@swc-node/register": "~1.10.0",
-    "@swc/cli": "~0.5.2",
+    "@swc/cli": "~0.6.0",
     "@swc/core": "~1.10.6",
     "@testing-library/react": "16.1.0",
     "@types/node": "22.10.5",
