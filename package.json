@@ -58,7 +58,7 @@
     "autoprefixer": "^10.4.20",
     "drizzle-kit": "0.30.4",
     "eslint": "8.57.1",
-    "eslint-config-next": "14.2.15",
+    "eslint-config-next": "15.2.3",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-jsx-a11y": "6.10.2",
     "eslint-plugin-next-on-pages": "^1.13.7",
