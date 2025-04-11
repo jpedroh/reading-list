@@ -3,7 +3,7 @@ import Image from "next/image";
 import { generateKey, getKeyUri } from "otp-io";
 import qrcode from "qrcode";
 
-export const runtime = "edge";
+// export const runtime = "edge";
 
 function generateOtpQrCode() {
   const otpUri = getKeyUri({

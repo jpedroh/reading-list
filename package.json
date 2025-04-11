@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "nx serve",
     "build": "nx build",
-    "pack": "nx pack",
+    "build:worker": "pnpm opennextjs-cloudflare build",
     "lint": "nx affected -t=lint",
     "test:e2e": "nx test:e2e",
     "db:push": "drizzle-kit push:mysql --config ./drizzle.config.ts",
@@ -35,7 +35,6 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.13.7",
     "@commitlint/cli": "^19.7.1",
     "@commitlint/config-conventional": "^19.7.1",
     "@nx-aws-plugin/nx-aws-cache": "^3.2.1",
@@ -62,7 +61,6 @@
     "eslint-config-next": "14.2.15",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-jsx-a11y": "6.10.2",
-    "eslint-plugin-next-on-pages": "^1.13.7",
     "eslint-plugin-react": "7.37.4",
     "eslint-plugin-react-hooks": "4.6.2",
     "husky": "^9.1.7",

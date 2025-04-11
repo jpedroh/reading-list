@@ -8,7 +8,7 @@ import {
 import { Content } from "@reading-list/modules/shared/ui/server";
 import Link from "next/link";
 
-export const runtime = "edge";
+// export const runtime = "edge";
 
 export const dynamic = "force-dynamic";
 

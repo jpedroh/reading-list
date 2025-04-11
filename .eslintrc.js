@@ -4,12 +4,8 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  plugins: ["@nx", "next-on-pages"],
-  extends: [
-    "next/core-web-vitals",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:next-on-pages/recommended",
-  ],
+  plugins: ["@nx"],
+  extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   overrides: [
     {
       files: ["*.ts", "*.tsx", "*.js", "*.jsx"],
