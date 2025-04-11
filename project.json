@@ -11,6 +11,9 @@
         "outputPath": "{projectRoot}/.next"
       }
     },
+    "build:worker": {
+      "outputs": [".open-next"]
+    },
     "serve": {
       "executor": "@nx/next:server",
       "defaultConfiguration": "development",
