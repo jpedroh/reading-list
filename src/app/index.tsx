@@ -13,12 +13,15 @@ import {
 } from "@reading-list/modules/shared/ui";
 import { Content } from "@reading-list/modules/shared/ui/server";
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { createServerOnlyFn } from "@tanstack/react-start";
 
 export const Route = createFileRoute("/")({
-  loader: async () => ({
+  loader: createServerOnlyFn(async () => ({
     articles: await fetchArticles(),
     availableTags: await fetchAvailableTags(),
-  }),
+    // articles: [],
+    // availableTags: [],
+  })),
   component: Home,
 });
 
@@ -38,7 +41,7 @@ function Home() {
           <ArticlesFilter availableTags={availableTags} />
         </Content.Aside>
         <Content.Main>
-          {/* <ArticlesList articles={articles} /> */}
+          <ArticlesList articles={articles} />
         </Content.Main>
       </Content.Root>
     </>
