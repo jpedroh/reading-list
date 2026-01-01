@@ -8,13 +8,10 @@
   "scripts": {
     "serve": "nx serve @reading-list/web",
     "build": "nx build @reading-list/web",
-    "start": "node .output/server/index.mjs",
     "lint": "nx affected -t=lint",
     "test:e2e": "nx test:e2e",
     "db:push": "drizzle-kit push:mysql --config ./drizzle.config.ts",
     "prepare": "husky",
-    "deploy": "npm run build && wrangler deploy",
-    "cf-typegen": "wrangler types",
     "postinstall": "nx cf-typegen @reading-list/web"
   },
   "dependencies": {
