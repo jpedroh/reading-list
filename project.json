@@ -3,32 +3,6 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "targets": {
-    "build": {
-      "executor": "@nx/next:build",
-      "outputs": ["{options.outputPath}"],
-      "defaultConfiguration": "production",
-      "options": {
-        "outputPath": "{projectRoot}/.next"
-      }
-    },
-    "serve": {
-      "executor": "@nx/next:server",
-      "defaultConfiguration": "development",
-      "options": {
-        "buildTarget": "@reading-list/root:build",
-        "dev": true,
-        "port": 3000
-      }
-    },
-    "pack": {
-      "executor": "nx:run-commands",
-      "outputs": ["{projectRoot}/.vercel"],
-      "dependsOn": ["^build"],
-      "options": {
-        "commands": ["npx next-on-pages"],
-        "parallel": false
-      }
-    },
     "lint": {
       "executor": "@nx/eslint:lint"
     },

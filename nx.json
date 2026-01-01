@@ -1,12 +1,4 @@
 {
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "@nx-aws-plugin/nx-aws-cache",
-      "options": {
-        "cacheableOperations": ["pack", "build", "lint"]
-      }
-    }
-  },
   "defaultBase": "main",
   "targetDefaults": {
     "build": {

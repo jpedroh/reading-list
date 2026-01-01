@@ -1,11 +1,13 @@
-import { fetchAvailableTags } from "../services/fetch-available-tags";
+import type { Tag } from "../services/fetch-available-tags";
 import { SearchTermFilter } from "./search-term";
 import * as S from "./styles";
 import { TagsFilter } from "./tags";
 
-export async function ArticlesFilter() {
-  const availableTags = await fetchAvailableTags();
+type Props = {
+  availableTags: Tag[];
+};
 
+export function ArticlesFilter({ availableTags }: Props) {
   return (
     <>
       <section>
