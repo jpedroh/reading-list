@@ -10,8 +10,8 @@ import {
   Button,
   HeaderRoot,
   HeaderTitle,
-} from "@reading-list/modules/shared/ui";
-import { Content } from "@reading-list/modules/shared/ui/server";
+  Content,
+} from "@reading-list/shared-ui";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { createServerOnlyFn } from "@tanstack/react-start";
 

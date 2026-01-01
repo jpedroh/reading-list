@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@reading-list/modules/shared/ui";
+import { Button } from "@reading-list/shared-ui";
 import { ReactNode } from "react";
 import { useFormStatus } from "react-dom";
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { CreatableSelect, Input, Modal } from "@reading-list/modules/shared/ui";
+import { CreatableSelect, Input, Modal } from "@reading-list/shared-ui";
 import { useRouter } from "next/navigation";
 import { useCallback, useRef } from "react";
 import { useFormState } from "react-dom";

@@ -1,4 +1,4 @@
-import { Input } from "@reading-list/modules/shared/ui";
+import { Input } from "@reading-list/shared-ui";
 import { useArticlesFilter } from "@reading-list/modules/shared/articles-filter-provider";
 import { useId } from "react";
 

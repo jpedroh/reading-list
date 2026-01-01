@@ -1,7 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "target": "ES2015",
     "module": "esnext",
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -32,10 +32,6 @@
       ],
       "@reading-list/modules/shared/env": [
         "src/modules/shared/env/src/index.ts"
-      ],
-      "@reading-list/modules/shared/ui": ["src/modules/shared/ui/src/index.ts"],
-      "@reading-list/modules/shared/ui/server": [
-        "src/modules/shared/ui/src/server.ts"
       ]
     }
   },
