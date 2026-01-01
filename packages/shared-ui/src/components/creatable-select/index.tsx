@@ -1,6 +1,4 @@
-"use client";
-
-import { ComponentPropsWithoutRef } from "react";
+import type { ComponentPropsWithoutRef } from "react";
 import ReactCreatableSelect from "react-select/creatable";
 
 export function CreatableSelect(

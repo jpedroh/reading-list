@@ -1,6 +1,4 @@
-"use client";
-
-import { ComponentPropsWithoutRef, ReactNode } from "react";
+import type { ComponentPropsWithoutRef, ReactNode } from "react";
 import {
   Dialog as RACDialog,
   Heading as RACHeading,

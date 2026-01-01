@@ -1,5 +1,3 @@
-"use client";
-
 import { Input as RACInput } from "react-aria-components";
 import { twc } from "react-twc";
 

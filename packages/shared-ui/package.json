@@ -16,5 +16,8 @@
     "tags": [
       "type:shared"
     ]
+  },
+  "dependencies": {
+    "react-twc": "^1.4.2"
   }
 }
