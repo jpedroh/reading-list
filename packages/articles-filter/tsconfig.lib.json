@@ -11,6 +11,9 @@
     },
     {
       "path": "../shared-ui/tsconfig.lib.json"
+    },
+    {
+      "path": "../shared-database/tsconfig.lib.json"
     }
   ]
 }

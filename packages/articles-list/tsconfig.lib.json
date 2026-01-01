@@ -8,6 +8,9 @@
   "references": [
     {
       "path": "../shared-articles-filter-provider/tsconfig.lib.json"
+    },
+    {
+      "path": "../shared-database/tsconfig.lib.json"
     }
   ]
 }

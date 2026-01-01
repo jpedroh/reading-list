@@ -51,3 +51,4 @@ db.local
 
 .wrangler/
 dist/
+out-tsc/
