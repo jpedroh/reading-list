@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "type": "module",
   "private": true,
+  "sideEffects": false,
   "scripts": {
     "serve": "vite dev",
     "build": "vite build",
@@ -10,7 +11,10 @@
     "lint": "nx affected -t=lint",
     "test:e2e": "nx test:e2e",
     "db:push": "drizzle-kit push:mysql --config ./drizzle.config.ts",
-    "prepare": "husky"
+    "prepare": "husky",
+    "deploy": "npm run build && wrangler deploy",
+    "cf-typegen": "wrangler types",
+    "postinstall": "npm run cf-typegen"
   },
   "dependencies": {
     "@faker-js/faker": "^9.5.0",
@@ -36,6 +40,7 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.17.1",
     "@commitlint/cli": "^19.7.1",
     "@commitlint/config-conventional": "^19.7.1",
     "@nx/eslint-plugin": "^20.4.6",
@@ -65,7 +70,8 @@
     "prettier": "^3.5.3",
     "typescript": "5.7.2",
     "vite": "^7.3.0",
-    "vite-tsconfig-paths": "^6.0.3"
+    "vite-tsconfig-paths": "^6.0.3",
+    "wrangler": "^4.54.0"
   },
   "engines": {
     "node": "^24.11.0"
