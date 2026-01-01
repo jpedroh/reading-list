@@ -1,1 +1,0 @@
-export { ArticlesFilter } from "./views";

@@ -18,14 +18,8 @@
       "@reading-list/modules/articles/articles-filter": [
         "src/modules/articles/articles-filter/src/index.ts"
       ],
-      "@reading-list/modules/articles/articles-filter/server": [
-        "src/modules/articles/articles-filter/src/server.ts"
-      ],
       "@reading-list/modules/articles/articles-list": [
         "src/modules/articles/articles-list/src/index.ts"
-      ],
-      "@reading-list/modules/articles/articles-list/server": [
-        "src/modules/articles/articles-list/src/server.ts"
       ],
       "@reading-list/modules/shared/articles-filter-provider": [
         "src/modules/shared/articles-filter-provider/src/index.ts"
