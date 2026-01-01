@@ -5,7 +5,7 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 
-import appCss from "./globals.css?url";
+import appCss from "./tailwind.css?url";
 
 export const Route = createRootRoute({
   head: () => ({
