@@ -23,4 +23,9 @@ export default defineConfig({
     viteReact(),
     cloudflare({ viteEnvironment: { name: "ssr" } }),
   ],
+  build: {
+    rollupOptions: {
+      external: ["cloudflare:workers"],
+    },
+  },
 });
