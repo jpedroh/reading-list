@@ -1,39 +1,18 @@
 {
-  "compileOnSave": false,
   "compilerOptions": {
-    "moduleResolution": "bundler",
-    "target": "ES2015",
-    "module": "esnext",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "composite": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "target": "es6",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./*"],
-      "@reading-list/modules/articles/add-article": [
-        "src/modules/articles/add-article/src/index.ts"
-      ],
-      "@reading-list/modules/articles/add-article/server": [
-        "src/modules/articles/add-article/src/server.ts"
-      ],
-      "@reading-list/modules/articles/articles-filter": [
-        "src/modules/articles/articles-filter/src/index.ts"
-      ],
-      "@reading-list/modules/articles/articles-list": [
-        "src/modules/articles/articles-list/src/index.ts"
-      ],
-      "@reading-list/modules/shared/articles-filter-provider": [
-        "src/modules/shared/articles-filter-provider/src/index.ts"
-      ],
-      "@reading-list/modules/shared/articles-filter-provider/server": [
-        "src/modules/shared/articles-filter-provider/src/server.ts"
-      ],
-      "@reading-list/modules/shared/database": [
-        "src/modules/shared/database/src/index.ts"
-      ],
-      "@reading-list/modules/shared/env": [
-        "src/modules/shared/env/src/index.ts"
-      ]
-    }
-  },
-  "exclude": ["node_modules"]
+    "jsx": "preserve",
+    "verbatimModuleSyntax": true
+  }
 }

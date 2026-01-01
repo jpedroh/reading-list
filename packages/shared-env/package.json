@@ -1,5 +1,5 @@
 {
-  "name": "@reading-list/shared-ui",
+  "name": "@reading-list/shared-env",
   "type": "module",
   "exports": {
     "./package/json": "./package.json",

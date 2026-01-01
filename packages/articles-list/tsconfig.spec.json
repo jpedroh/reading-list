@@ -1,6 +1,9 @@
 {
   "extends": "../../tsconfig.base.json",
-  "files": [],
+  "compilerOptions": {
+    "outDir": "./out-tsc/spec"
+  },
+  "include": [],
   "references": [
     {
       "path": "./tsconfig.lib.json"

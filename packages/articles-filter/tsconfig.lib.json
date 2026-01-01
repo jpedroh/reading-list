@@ -5,5 +5,12 @@
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "exclude": ["src/**/*.test.ts"],
-  "references": []
+  "references": [
+    {
+      "path": "../shared-articles-filter-provider/tsconfig.lib.json"
+    },
+    {
+      "path": "../shared-ui/tsconfig.lib.json"
+    }
+  ]
 }

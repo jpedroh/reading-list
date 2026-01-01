@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { articles, db } from "@reading-list/modules/shared/database";
+import { articles, db } from "@reading-list/shared-database";
 import { createArticle } from "../utils/create-article";
 
 test.describe("Search", () => {

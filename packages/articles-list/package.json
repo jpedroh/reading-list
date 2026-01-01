@@ -1,5 +1,5 @@
 {
-  "name": "@reading-list/shared-ui",
+  "name": "@reading-list/articles-list",
   "type": "module",
   "exports": {
     "./package/json": "./package.json",
@@ -14,7 +14,7 @@
   },
   "nx": {
     "tags": [
-      "type:shared"
+      "type:feature"
     ]
   }
 }
