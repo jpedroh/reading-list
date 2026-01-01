@@ -7,7 +7,7 @@
   "packageManager": "pnpm@10.27.0",
   "scripts": {
     "serve": "nx serve @reading-list/web",
-    "build": "vite build",
+    "build": "nx build @reading-list/web",
     "start": "node .output/server/index.mjs",
     "lint": "nx affected -t=lint",
     "test:e2e": "nx test:e2e",
