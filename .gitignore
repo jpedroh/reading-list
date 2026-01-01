@@ -48,3 +48,6 @@ dev.db
 
 db.local
 .nx
+
+.wrangler/
+dist/
