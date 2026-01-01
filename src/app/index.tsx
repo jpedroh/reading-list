@@ -32,9 +32,9 @@ function Home() {
     <>
       <HeaderRoot>
         <HeaderTitle>My Reading List</HeaderTitle>
-        <Button asChild>
+        {/* <Button asChild>
           <Link href={"/add-article"}>Add new article</Link>
-        </Button>
+        </Button> */}
       </HeaderRoot>
       <Content.Root>
         <Content.Aside>
