@@ -1,10 +1,15 @@
 {
   "name": "@reading-list/web",
+  "type": "module",
   "scripts": {
     "serve": "vite dev",
     "build": "vite build",
     "start": "node .output/server/index.mjs",
     "cf-typegen": "wrangler types",
     "postinstall": "npm run cf-typegen"
+  },
+  "dependencies": {
+    "@reading-list/articles-filter": "workspace:*",
+    "@reading-list/articles-list": "workspace:*"
   }
 }

@@ -12,6 +12,9 @@
     "lint": "eslint .",
     "test": "vitest --watch=false ."
   },
+  "dependencies": {
+    "@reading-list/shared-database": "workspace:*"
+  },
   "nx": {
     "tags": [
       "type:feature"

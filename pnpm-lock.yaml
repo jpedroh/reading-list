@@ -178,13 +178,28 @@ importers:
         specifier: ^4.54.0
         version: 4.54.0(@cloudflare/workers-types@4.20260101.0)
 
-  apps/web: {}
+  apps/web:
+    dependencies:
+      '@reading-list/articles-filter':
+        specifier: workspace:*
+        version: link:../../packages/articles-filter
+      '@reading-list/articles-list':
+        specifier: workspace:*
+        version: link:../../packages/articles-list
 
   packages/add-article: {}
 
-  packages/articles-filter: {}
+  packages/articles-filter:
+    dependencies:
+      '@reading-list/shared-database':
+        specifier: workspace:*
+        version: link:../shared-database
 
-  packages/articles-list: {}
+  packages/articles-list:
+    dependencies:
+      '@reading-list/shared-database':
+        specifier: workspace:*
+        version: link:../shared-database
 
   packages/shared-articles-filter-provider: {}
 

@@ -1,7 +1,5 @@
-"use client";
-
 import { useMemo } from "react";
-import { Article } from "../../services/fetch-articles";
+import { Article } from "../services/fetch-articles";
 import { ArticleRow } from "./article-row";
 import { useArticlesFilter } from "@reading-list/shared-articles-filter-provider";
 
