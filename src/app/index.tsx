@@ -15,15 +15,15 @@ import { Content } from "@reading-list/modules/shared/ui/server";
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
-  loader: async () => ({
-    articles: await fetchArticles(),
-    availableTags: await fetchAvailableTags(),
-  }),
+  // loader: async () => ({
+  //   articles: await fetchArticles(),
+  //   availableTags: await fetchAvailableTags(),
+  // }),
   component: Home,
 });
 
 function Home() {
-  const { articles, availableTags } = Route.useLoaderData();
+  // const { articles, availableTags } = Route.useLoaderData();
 
   return (
     <>
@@ -35,10 +35,10 @@ function Home() {
       </HeaderRoot>
       <Content.Root>
         <Content.Aside>
-          <ArticlesFilter availableTags={availableTags} />
+          {/* <ArticlesFilter availableTags={availableTags} /> */}
         </Content.Aside>
         <Content.Main>
-          <ArticlesList articles={articles} />
+          {/* <ArticlesList articles={articles} /> */}
         </Content.Main>
       </Content.Root>
     </>
