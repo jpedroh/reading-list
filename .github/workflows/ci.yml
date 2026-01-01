@@ -8,38 +8,22 @@ on:
 jobs:
   main:
     runs-on: ubuntu-latest
-    env:
-      NXCACHE_AWS_ACCESS_KEY_ID: ${{secrets.nxcache_aws_access_key_id}}
-      NXCACHE_AWS_SECRET_ACCESS_KEY: ${{secrets.nxcache_aws_secret_access_key}}
-      NXCACHE_AWS_ENDPOINT: ${{secrets.nxcache_aws_endpoint}}
-      NXCACHE_AWS_REGION: ${{secrets.nxcache_aws_region}}
-      NXCACHE_AWS_BUCKET: ${{secrets.nxcache_aws_bucket}}
-      NXCACHE_AWS_FORCE_PATH_STYLE: ${{secrets.nxcache_aws_force_path_style}}
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - uses: pnpm/action-setup@v4.1.0
-        with:
-          version: 7
       - uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
           cache: "pnpm"
-      - uses: actions/cache@v4
-        with:
-          path: |
-            ${{ github.workspace }}/.next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/*.[jt]s', '**/*.[jt]sx') }}
-          restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-
       - uses: nrwl/nx-set-shas@v4
       - run: pnpm install
-      - run: npx nx affected --target=pack --parallel=3
+      - run: pnpm nx affected --target=pack --parallel=3
         env:
           OTP_SECRET: ${{ secrets.otp_secret }}
           OTP_USER: ${{ secrets.otp_user }}
           OTP_SERVICE: ${{ secrets.otp_service }}
           TURSO_CONNECTION_URL: ${{ secrets.turso_connection_url }}
           TURSO_AUTH_TOKEN: ${{ secrets.turso_auth_token }}
-      - run: npx nx affected --target=lint --parallel=3
+      - run: pnpm nx affected --target=lint --parallel=3
