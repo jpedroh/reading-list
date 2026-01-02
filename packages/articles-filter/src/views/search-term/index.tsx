@@ -8,11 +8,11 @@ export function SearchTermFilter() {
 
   return (
     <>
-      <label className="sr-only" id={searchTermTitleId}>
+      <label className="sr-only" htmlFor={searchTermTitleId}>
         Search by term
       </label>
       <Input
-        aria-labelledby={searchTermTitleId}
+        id={searchTermTitleId}
         placeholder="Search"
         value={searchTerm}
         onChange={(evt) => setSearchTerm(evt.target.value)}

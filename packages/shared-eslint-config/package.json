@@ -1,0 +1,23 @@
+{
+  "name": "@reading-list/shared-eslint-config",
+  "type": "module",
+  "main": "eslint.config.js",
+  "exports": {
+    ".": {
+      "import": "./eslint.config.js",
+      "default": "./eslint.config.js"
+    }
+  },
+  "devDependencies": {
+    "@eslint/js": "~9.39.2",
+    "@nx/eslint-plugin": "^22.3.3",
+    "eslint": "^9.39.1",
+    "eslint-plugin-import": "2.32.0",
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "eslint-plugin-playwright": "^2.4.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "7.0.1",
+    "eslint-plugin-testing-library": "^7.15.0",
+    "typescript-eslint": "^8.48.0"
+  }
+}
