@@ -22,6 +22,9 @@
     },
     {
       "path": "./packages/shared-ui"
+    },
+    {
+      "path": "./apps/web"
     }
   ]
 }

@@ -5,5 +5,24 @@
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "./worker-configuration.d.ts"],
   "exclude": ["src/**/*.test.ts"],
-  "references": []
+  "references": [
+    {
+      "path": "../../packages/shared-env/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/shared-ui/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/add-article/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/shared-database/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/articles-list/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/articles-filter/tsconfig.lib.json"
+    }
+  ]
 }
