@@ -3,7 +3,6 @@
 import { defineConfig } from "vite";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 import viteReact from "@vitejs/plugin-react";
-import tsconfigPaths from "vite-tsconfig-paths";
 import { cloudflare } from "@cloudflare/vite-plugin";
 import tailwindcss from "@tailwindcss/vite";
 
@@ -13,21 +12,13 @@ export default defineConfig({
   },
   plugins: [
     tailwindcss(),
-    // Enables Vite to resolve imports using path aliases.
-    tsconfigPaths(),
     tanstackStart({
-      srcDirectory: "src", // This is the default
+      srcDirectory: "src",
       router: {
-        // Specifies the directory TanStack Router uses for your routes.
-        routesDirectory: "app", // Defaults to "routes", relative to srcDirectory
+        routesDirectory: "app",
       },
     }),
     viteReact(),
     cloudflare({ viteEnvironment: { name: "ssr" } }),
   ],
-  build: {
-    rollupOptions: {
-      external: ["cloudflare:workers"],
-    },
-  },
 });
