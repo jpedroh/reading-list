@@ -203,6 +203,9 @@ importers:
 
   packages/articles-list:
     dependencies:
+      '@reading-list/shared-articles-filter-provider':
+        specifier: workspace:*
+        version: link:../shared-articles-filter-provider
       '@reading-list/shared-database':
         specifier: workspace:*
         version: link:../shared-database
