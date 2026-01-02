@@ -204,7 +204,14 @@ importers:
         specifier: workspace:*
         version: link:../shared-database
 
-  packages/shared-articles-filter-provider: {}
+  packages/shared-articles-filter-provider:
+    dependencies:
+      jotai:
+        specifier: ^2.11.0
+        version: 2.16.1(@babel/core@7.28.5)(@babel/template@7.27.2)(@types/react@18.3.12)(react@18.3.1)
+      jotai-location:
+        specifier: ^0.5.5
+        version: 0.5.5(jotai@2.16.1(@babel/core@7.28.5)(@babel/template@7.27.2)(@types/react@18.3.12)(react@18.3.1))
 
   packages/shared-database: {}
 

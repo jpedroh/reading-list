@@ -11,8 +11,7 @@
     "lint": "nx affected -t=lint",
     "test:e2e": "nx test:e2e",
     "db:push": "drizzle-kit push:mysql --config ./drizzle.config.ts",
-    "prepare": "husky",
-    "postinstall": "nx cf-typegen @reading-list/web"
+    "prepare": "husky"
   },
   "dependencies": {
     "@faker-js/faker": "^9.5.0",

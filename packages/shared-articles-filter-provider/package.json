@@ -12,6 +12,10 @@
     "lint": "eslint .",
     "test": "vitest --watch=false ."
   },
+  "dependencies": {
+    "jotai": "^2.11.0",
+    "jotai-location": "^0.5.5"
+  },
   "nx": {
     "tags": [
       "type:shared"
