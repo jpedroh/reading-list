@@ -1,9 +1,10 @@
 import { desc, sql } from "drizzle-orm";
-import { articleTags, db } from "@reading-list/shared-database";
+import { type DatabaseConnection } from "@reading-list/shared-database/connection";
+import { articleTags } from "@reading-list/shared-database/schema";
 
 export type Tag = Awaited<ReturnType<typeof fetchAvailableTags>>[number];
 
-export async function fetchAvailableTags() {
+export async function fetchAvailableTags(db: DatabaseConnection) {
   return db
     .select({
       name: articleTags.tag,

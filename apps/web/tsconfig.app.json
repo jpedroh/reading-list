@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/lib"
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "./worker-configuration.d.ts"],
+  "exclude": ["src/**/*.test.ts"],
+  "references": []
+}

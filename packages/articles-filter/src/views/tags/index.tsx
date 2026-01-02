@@ -1,9 +1,7 @@
-"use client";
-
-import { ChangeEvent } from "react";
+import type { ChangeEvent } from "react";
 import * as S from "./styles";
 import { useArticlesFilter } from "@reading-list/shared-articles-filter-provider";
-import { Tag } from "../../services/fetch-available-tags";
+import type { Tag } from "../../services/fetch-available-tags";
 
 type Props = {
   availableTags: Tag[];

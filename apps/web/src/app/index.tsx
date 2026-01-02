@@ -3,6 +3,7 @@ import {
   fetchAvailableTags,
 } from "@reading-list/articles-filter";
 import { ArticlesList, fetchArticles } from "@reading-list/articles-list";
+import { makeDatabaseConnection } from "@reading-list/shared-database/connection";
 import {
   Button,
   HeaderRoot,
@@ -11,14 +12,20 @@ import {
 } from "@reading-list/shared-ui";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { createServerOnlyFn } from "@tanstack/react-start";
+import { env } from "cloudflare:workers";
 
 export const Route = createFileRoute("/")({
-  loader: createServerOnlyFn(async () => ({
-    articles: await fetchArticles(),
-    availableTags: await fetchAvailableTags(),
-    // articles: [],
-    // availableTags: [],
-  })),
+  loader: createServerOnlyFn(async () => {
+    const dbConnection = makeDatabaseConnection({
+      authToken: env.TURSO_AUTH_TOKEN,
+      url: env.TURSO_CONNECTION_URL,
+    });
+
+    return {
+      articles: await fetchArticles(dbConnection),
+      availableTags: await fetchAvailableTags(dbConnection),
+    };
+  }),
   component: Home,
 });
 
