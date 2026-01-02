@@ -12,6 +12,9 @@
   "exclude": ["src/**/*.test.ts"],
   "references": [
     {
+      "path": "../../packages/articles-filter/tsconfig.lib.json"
+    },
+    {
       "path": "../../packages/shared-ui/tsconfig.lib.json"
     },
     {
