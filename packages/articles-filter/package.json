@@ -13,7 +13,9 @@
     "test": "vitest --watch=false ."
   },
   "dependencies": {
-    "@reading-list/shared-database": "workspace:*"
+    "@reading-list/shared-database": "workspace:*",
+    "@reading-list/shared-ui": "workspace:*",
+    "@reading-list/shared-articles-filter-provider": "workspace:*"
   },
   "nx": {
     "tags": [

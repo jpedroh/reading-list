@@ -1,17 +1,10 @@
 import { useAtom } from "jotai";
 import { atomWithHash } from "jotai-location";
 
-const searchTermAtom = atomWithHash("searchTerm", "");
-const tagsAtom = atomWithHash("tags", new Array<string>());
+const searchTermAtom = atomWithHash<string>("searchTerm", "");
+const tagsAtom = atomWithHash<string[]>("tags", []);
 
-type UseArticlesFilter = {
-  searchTerm: string;
-  tags: string[];
-  setSearchTerm: (x: string) => void;
-  setTags: (x: string[]) => void;
-};
-
-export function useArticlesFilter(): UseArticlesFilter {
+export function useArticlesFilter() {
   const [searchTerm, setSearchTerm] = useAtom(searchTermAtom);
   const [tags, setTags] = useAtom(tagsAtom);
 

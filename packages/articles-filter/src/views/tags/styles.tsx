@@ -1,7 +1,9 @@
-import { ComponentProps } from "react";
+import type { ComponentProps } from "react";
 import { twc } from "react-twc";
 
-export const Container = twc.div`flex md:flex-col gap-2 overflow-auto`;
+export const Container = twc.div<
+  ComponentProps<"div">
+>`flex md:flex-col gap-2 overflow-auto`;
 
 export const TagItem = twc.label<
   ComponentProps<"label"> & { checked: boolean }

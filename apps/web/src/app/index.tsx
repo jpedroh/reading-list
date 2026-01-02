@@ -4,13 +4,8 @@ import {
 } from "@reading-list/articles-filter";
 import { ArticlesList, fetchArticles } from "@reading-list/articles-list";
 import { makeDatabaseConnection } from "@reading-list/shared-database/connection";
-import {
-  Button,
-  HeaderRoot,
-  HeaderTitle,
-  Content,
-} from "@reading-list/shared-ui";
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Content, HeaderRoot, HeaderTitle } from "@reading-list/shared-ui";
+import { createFileRoute } from "@tanstack/react-router";
 import { createServerOnlyFn } from "@tanstack/react-start";
 import { env } from "cloudflare:workers";
 
@@ -36,9 +31,6 @@ function Home() {
     <>
       <HeaderRoot>
         <HeaderTitle>My Reading List</HeaderTitle>
-        {/* <Button asChild>
-          <Link href={"/add-article"}>Add new article</Link>
-        </Button> */}
       </HeaderRoot>
       <Content.Root>
         <Content.Aside>

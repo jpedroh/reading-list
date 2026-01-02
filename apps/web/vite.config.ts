@@ -1,3 +1,5 @@
+/// <reference types="vite/client" />
+
 import { defineConfig } from "vite";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 import viteReact from "@vitejs/plugin-react";

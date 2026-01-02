@@ -1,14 +1,12 @@
 "use client";
 
 import { CreatableSelect, Input, Modal } from "@reading-list/shared-ui";
-import { useRouter } from "next/navigation";
 import { useCallback, useRef } from "react";
 import { useFormState } from "react-dom";
 import { addArticle } from "../../services/add-article";
 import { fetchTags } from "../../services/fetch-tags";
 import { getTitleFromUrl } from "../../services/get-title-from-url";
 import { ErrorAlert } from "./error-alert";
-import styles from "./index.module.css";
 import { SubmitButton } from "./submit-button";
 
 type Props = {
@@ -45,7 +43,7 @@ export function AddArticleDialog({ availableTags }: Props) {
     <Modal isOpen={true} isDismissable onOpenChange={closeModal}>
       <Modal.Title>Add new article</Modal.Title>
 
-      <form action={formAction} className={styles.container}>
+      <form action={formAction}>
         <label>
           <span>URL</span>
           <Input

@@ -11,6 +11,7 @@
   "dependencies": {
     "@reading-list/articles-filter": "workspace:*",
     "@reading-list/articles-list": "workspace:*",
-    "@reading-list/shared-database": "workspace:*"
+    "@reading-list/shared-database": "workspace:*",
+    "@reading-list/shared-ui": "workspace:*"
   }
 }
