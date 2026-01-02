@@ -1,6 +1,6 @@
 import { faker } from "@faker-js/faker";
 import { expect, test } from "@playwright/test";
-import { env } from "@reading-list/modules/shared/env";
+import { env } from "@reading-list/shared-env";
 import { generateKey, totp } from "otp-io";
 import { hmac } from "otp-io/crypto";
 import { createArticle } from "../utils/create-article";

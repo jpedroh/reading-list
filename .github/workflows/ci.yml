@@ -26,5 +26,6 @@ jobs:
           OTP_SERVICE: ${{ secrets.otp_service }}
           TURSO_CONNECTION_URL: ${{ secrets.turso_connection_url }}
           TURSO_AUTH_TOKEN: ${{ secrets.turso_auth_token }}
+      - run: pnpm nx affected --target=typecheck
       - run: pnpm nx affected --target=lint
       - run: pnpm nx affected --target=test

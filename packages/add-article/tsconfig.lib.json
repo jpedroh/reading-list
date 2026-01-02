@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/lib"
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["src/**/*.test.ts"],
+  "references": [
+    {
+      "path": "../shared-ui/tsconfig.lib.json"
+    },
+    {
+      "path": "../shared-env/tsconfig.lib.json"
+    }
+  ]
+}

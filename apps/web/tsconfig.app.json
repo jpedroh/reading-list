@@ -1,0 +1,27 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/lib"
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "./worker-configuration.d.ts",
+    "./vite.config.ts"
+  ],
+  "exclude": ["src/**/*.test.ts"],
+  "references": [
+    {
+      "path": "../../packages/articles-filter/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/shared-ui/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/shared-database/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/articles-list/tsconfig.lib.json"
+    }
+  ]
+}
