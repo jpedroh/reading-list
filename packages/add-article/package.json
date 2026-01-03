@@ -12,6 +12,11 @@
     "lint": "eslint .",
     "test": "vitest --watch=false ."
   },
+  "dependencies": {
+    "@reading-list/shared-database": "workspace:*",
+    "@reading-list/shared-ui": "workspace:*",
+    "uuid": "^13.0.0"
+  },
   "nx": {
     "tags": [
       "type:feature"

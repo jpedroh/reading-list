@@ -1,19 +1,18 @@
-"use server";
-
+import { createServerFn } from "@tanstack/react-start";
 import parse from "node-html-parser";
 import { z } from "zod";
 
-export async function getTitleFromUrl(url: string) {
-  if (z.string().url().safeParse(url).success === false) {
-    return "";
-  }
+const UrlSchema = z.string().url();
 
-  const pageHtml = await fetch(url).then((r) => r.text());
-  const titleElement = parse(pageHtml).querySelector("title");
+export const getTitleFromUrl = createServerFn({ method: "POST" })
+  .inputValidator(UrlSchema)
+  .handler(async ({ data, signal, context }) => {
+    const response = await fetch(data, { signal });
+    if (!response.ok) return "";
 
-  if (!titleElement) {
-    return "";
-  }
+    const pageHtml = await response.text();
+    const titleElement = parse(pageHtml).querySelector("title");
+    if (!titleElement) return "";
 
-  return titleElement.innerText;
-}
+    return titleElement.innerText;
+  });

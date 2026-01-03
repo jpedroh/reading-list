@@ -1,19 +1,9 @@
-"use server";
-
-import {
-  NewArticle,
-  articleTags,
-  articles,
-  db,
-} from "@reading-list/shared-database";
-import { env } from "@reading-list/shared-env";
-import * as Sentry from "@sentry/nextjs";
-import { revalidatePath } from "next/cache";
+import { type DatabaseConnection } from "@reading-list/shared-database/connection";
+import { createServerFn } from "@tanstack/react-start";
 import { generateKey, totp } from "otp-io";
 import { hmac } from "otp-io/crypto";
 import { z } from "zod";
-
-type Result<T> = { success: true; data: T } | { success: false; error: string };
+import { v4 as uuidv4 } from "uuid";
 
 const addArticleSchema = z.object({
   url: z.string().url(),
@@ -22,39 +12,24 @@ const addArticleSchema = z.object({
   otp: z.string().max(6),
 });
 
-export async function addArticle(formData: FormData): Promise<Result<void>> {
-  try {
-    const payload = addArticleSchema.safeParse({
-      url: formData.get("url"),
-      title: formData.get("title"),
-      tags: formData.getAll("tags"),
-      otp: formData.get("otp"),
-    });
+type NewArticle = Omit<z.infer<typeof addArticleSchema>, "tags">;
 
-    if (!payload.success) {
-      return { success: false, error: "Validation error" };
-    }
-
+export const addArticle = createServerFn({ method: "POST" })
+  .inputValidator((data) => addArticleSchema.parse(data))
+  .handler(async (payload) => {
     if (!(await isOtpValid(payload.data.otp))) {
-      return { success: false, error: "Invalid OTP provided" };
+      throw new Error("Invalid OTP provided");
     }
+
     await saveArticle(
       {
-        id: self.crypto.randomUUID(),
+        id: uuidv4(),
         title: payload.data.title,
         url: payload.data.url,
       },
       payload.data.tags,
     );
-
-    revalidatePath("/");
-
-    return { success: true, data: undefined };
-  } catch (error) {
-    Sentry.captureException(error);
-    return { success: false, error: "Internal server error" };
-  }
-}
+  });
 
 async function isOtpValid(token: string) {
   const isDevBypass = env.VERCEL_ENV !== "production" && token === "000000";
