@@ -5,8 +5,7 @@
     "serve": "vite dev",
     "build": "vite build",
     "start": "node .output/server/index.mjs",
-    "cf-typegen": "wrangler types",
-    "postinstall": "npm run cf-typegen"
+    "cf-typegen": "wrangler types"
   },
   "dependencies": {
     "@reading-list/articles-filter": "workspace:*",
