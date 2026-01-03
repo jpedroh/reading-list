@@ -40,7 +40,6 @@ export async function addArticle(formData: FormData): Promise<Result<void>> {
     }
     await saveArticle(
       {
-        // eslint-disable-next-line
         id: self.crypto.randomUUID(),
         title: payload.data.title,
         url: payload.data.url,
