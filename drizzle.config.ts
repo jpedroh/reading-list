@@ -3,7 +3,7 @@ import "dotenv/config";
 import type { Config } from "drizzle-kit";
 
 export default {
-  schema: "./src/modules/shared/database/src/schema.ts",
+  schema: "./packages/shared-database/src/schema.ts",
   out: "./drizzle/generated",
   dialect: "turso",
   dbCredentials: {
