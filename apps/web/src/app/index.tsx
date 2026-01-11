@@ -3,21 +3,14 @@ import {
   fetchAvailableTags,
 } from "@reading-list/articles-filter";
 import { ArticlesList, fetchArticles } from "@reading-list/articles-list";
-import { makeDatabaseConnection } from "@reading-list/shared-database/connection";
 import { Content, HeaderRoot, HeaderTitle } from "@reading-list/shared-ui";
 import { createFileRoute } from "@tanstack/react-router";
 import { createServerFn } from "@tanstack/react-start";
-import { env } from "cloudflare:workers";
 
-const indexLoader = createServerFn().handler(async () => {
-  const dbConnection = makeDatabaseConnection({
-    authToken: env.TURSO_AUTH_TOKEN,
-    url: env.TURSO_CONNECTION_URL,
-  });
-
+const indexLoader = createServerFn().handler(async ({ context }) => {
   return {
-    articles: await fetchArticles(dbConnection),
-    availableTags: await fetchAvailableTags(dbConnection),
+    articles: await fetchArticles(context.db),
+    availableTags: await fetchAvailableTags(context.db),
   };
 });
 
