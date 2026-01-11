@@ -14,11 +14,17 @@ export default defineConfig({
     tailwindcss(),
     tanstackStart({
       srcDirectory: "src",
+      server: { entry: "./server.ts" },
       router: {
         routesDirectory: "app",
       },
     }),
     viteReact(),
-    cloudflare({ viteEnvironment: { name: "ssr" } }),
+    cloudflare({
+      viteEnvironment: { name: "ssr" },
+      config: {
+        main: "./src/server.ts",
+      },
+    }),
   ],
 });
