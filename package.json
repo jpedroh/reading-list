@@ -21,7 +21,7 @@
     "@libsql/client": "^0.14.0",
     "@tanstack/react-router": "^1.144.0",
     "@tanstack/react-start": "^1.149.0",
-    "dotenv": "^16.4.7",
+    "dotenv": "^17.2.3",
     "drizzle-orm": "^0.39.3",
     "jotai": "^2.11.0",
     "jotai-location": "^0.5.5",
