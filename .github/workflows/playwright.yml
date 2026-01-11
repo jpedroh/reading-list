@@ -32,7 +32,7 @@ jobs:
       OTP_USER: ${{ secrets.OTP_USER }}
       OTP_SERVICE: ${{ secrets.OTP_SERVICE }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
       - uses: pnpm/action-setup@v4.2.0
