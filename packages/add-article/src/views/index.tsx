@@ -23,41 +23,51 @@ export function AddArticleDialog({
         method="post"
         encType={"multipart/form-data"}
       >
-        <label>
-          <span>URL</span>
+        <div>
+          <label htmlFor="url">
+            <span>URL</span>
+          </label>
           <Input
-            autoFocus
+            id="url"
             name="url"
             type={"text"}
             required
             placeholder="https://example.com"
           />
-        </label>
+        </div>
 
-        <label>
-          <span>Title</span>
+        <div>
+          <label htmlFor="title">Title</label>
           <Input
+            id="title"
             name="title"
             type={"text"}
             required
             placeholder="Example title"
           />
-        </label>
+        </div>
 
-        <label>
-          <span>Tags</span>
+        <div>
+          <label htmlFor="tags">Tags</label>
           <CreatableSelect
+            id="tags"
             name="tags"
             required
             isMulti={true}
             options={availableTags.map((v) => ({ value: v, label: v }))}
           />
-        </label>
+        </div>
 
-        <label>
-          <span>OTP</span>
-          <Input name="otp" type={"text"} required placeholder="000000" />
-        </label>
+        <div>
+          <label htmlFor="otp">OTP</label>
+          <Input
+            id="otp"
+            name="otp"
+            type={"text"}
+            required
+            placeholder="000000"
+          />
+        </div>
 
         <Button type="submit">Add</Button>
       </S.Form>
