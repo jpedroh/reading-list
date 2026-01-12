@@ -12,7 +12,7 @@
   "exclude": ["src/**/*.test.ts"],
   "references": [
     {
-      "path": "../../packages/articles-filter/tsconfig.lib.json"
+      "path": "../../packages/add-article/tsconfig.lib.json"
     },
     {
       "path": "../../packages/shared-ui/tsconfig.lib.json"
@@ -22,6 +22,12 @@
     },
     {
       "path": "../../packages/articles-list/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/articles-filter/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/shared-eslint-config/tsconfig.lib.json"
     }
   ]
 }

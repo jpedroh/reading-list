@@ -1,1 +1,0 @@
-export { AddArticleEntrypoint } from "./views";
