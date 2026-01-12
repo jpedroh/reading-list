@@ -1,29 +1,28 @@
-import { CreatableSelect, Input, Modal } from "@reading-list/shared-ui";
-import { getTitleFromUrl } from "../services/get-title-from-url";
-import { useRef } from "react";
+import { Button, CreatableSelect, Input, Modal } from "@reading-list/shared-ui";
+import * as S from "./styles";
 
 type Props = {
   isOpen: boolean;
   onDismiss: () => void;
   availableTags: string[];
+  formActionUrl: string;
 };
 
-export function AddArticleDialog({ availableTags, isOpen, onDismiss }: Props) {
-  const titleRef = useRef<HTMLInputElement>(null);
-
-  async function handleUrlChange(url: string) {
-    if (!url) return;
-    const title = await getTitleFromUrl({ data: url });
-    if (titleRef.current) {
-      titleRef.current.value = title;
-    }
-  }
-
+export function AddArticleDialog({
+  availableTags,
+  formActionUrl,
+  isOpen,
+  onDismiss,
+}: Props) {
   return (
     <Modal isOpen={isOpen} isDismissable onOpenChange={onDismiss}>
       <Modal.Title>Add new article</Modal.Title>
 
-      <form>
+      <S.Form
+        action={formActionUrl}
+        method="post"
+        encType={"multipart/form-data"}
+      >
         <label>
           <span>URL</span>
           <Input
@@ -31,7 +30,6 @@ export function AddArticleDialog({ availableTags, isOpen, onDismiss }: Props) {
             name="url"
             type={"text"}
             required
-            onBlur={(evt) => handleUrlChange(evt.target.value)}
             placeholder="https://example.com"
           />
         </label>
@@ -39,7 +37,6 @@ export function AddArticleDialog({ availableTags, isOpen, onDismiss }: Props) {
         <label>
           <span>Title</span>
           <Input
-            ref={titleRef}
             name="title"
             type={"text"}
             required
@@ -62,9 +59,8 @@ export function AddArticleDialog({ availableTags, isOpen, onDismiss }: Props) {
           <Input name="otp" type={"text"} required placeholder="000000" />
         </label>
 
-        {/*     {state && !state?.success && <ErrorAlert>{state.error}</ErrorAlert>}
-        <SubmitButton>Add</SubmitButton> */}
-      </form>
+        <Button type="submit">Add</Button>
+      </S.Form>
     </Modal>
   );
 }
