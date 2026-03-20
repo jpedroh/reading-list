@@ -17,7 +17,7 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: "pnpm"
-      - uses: nrwl/nx-set-shas@v4
+      - uses: nrwl/nx-set-shas@v5
       - run: pnpm install
       - run: pnpm nx affected --target=build
         env:
