@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@faker-js/faker": "^9.5.0",
-    "@libsql/client": "^0.14.0",
+    "@libsql/client": "^0.17.2",
     "@tanstack/react-router": "^1.144.0",
     "@tanstack/react-start": "^1.149.0",
     "dotenv": "^16.4.7",
