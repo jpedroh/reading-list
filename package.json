@@ -51,7 +51,7 @@
     "@reading-list/shared-eslint-config": "workspace:*",
     "@tailwindcss/vite": "^4.1.18",
     "@testing-library/react": "16.2.0",
-    "@types/node": "^24.0.0",
+    "@types/node": "^25.6.0",
     "@types/qrcode": "^1.5.5",
     "@types/react": "18.3.12",
     "@types/react-dom": "18.3.1",
